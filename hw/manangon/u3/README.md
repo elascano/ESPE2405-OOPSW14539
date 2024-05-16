@@ -1,3 +1,3 @@
 # ESPE2405-OOPSW14539
-Object Oriented Programming workshops
+Object Oriented Programming homeworks
 Zaith Manangón
