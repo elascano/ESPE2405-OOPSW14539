@@ -1,1 +1,1 @@
-Object Oriented Programming workshops
+Object Oriented Programming homeworks
