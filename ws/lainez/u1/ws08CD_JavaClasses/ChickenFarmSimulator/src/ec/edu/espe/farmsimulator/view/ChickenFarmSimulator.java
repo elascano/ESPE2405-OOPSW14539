@@ -26,14 +26,8 @@ public class ChickenFarmSimulator {
         Date bornOnDate = new Date();
         chicken = new Chicken(id, name, color, age, molting, bornOnDate);
         System.out.println("chicken 2 -->" +chicken);
-    }
-}
-
-
-
-
-//Chicken chicken = new Chicken(1, "lucy", "white and brown", 4, true, new Date());
         
-  //      System.out.println("chicken "+chicken);
         //CREAR FILE MANAGE 
         //CREAR UN METODO SAVE
+    }
+}
