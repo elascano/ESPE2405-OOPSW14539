@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package ec.edu.espe.farmsimulator.view;
 
 import ec.edu.espe.farmsimulator.model.Chicken;
@@ -6,16 +9,16 @@ import java.util.Date;
 
 /**
  *
- * @author Mario Anrrango A-Byte Wizards, DCCO ESPE
+ * @author Adrian Padilla
  */
 public class ChickenFarmSimulator {
     public static void main(String[] args) {
-        System.out.println("Mario's Chicken Farm Simulator");
+        System.out.println("Adrian's Chicken Farm Simulator");
         Chicken chicken = new Chicken(0,"Lucy","White and brown",2,true,new Date());
         System.out.println("Chicken --> " + chicken);
         int id=2;
-        String name= "Maruja";
-        String color= "black";
+        String name= "Tin";
+        String color= "White";
         int age=1;
         boolean molting=false;
         Date bornOnDate=new Date();
