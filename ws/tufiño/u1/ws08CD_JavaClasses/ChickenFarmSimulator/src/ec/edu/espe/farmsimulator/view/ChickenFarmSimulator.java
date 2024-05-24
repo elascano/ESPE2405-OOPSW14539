@@ -17,8 +17,8 @@ public class ChickenFarmSimulator {
         Chicken chicken = new Chicken(0,"Lucy","White and brown",2,true,new Date());
         System.out.println("Chicken --> " + chicken);
         int id=2;
-        String name= "Maruja";
-        String color= "black";
+        String name= "Chanita";
+        String color= "Yellow";
         int age=1;
         boolean molting=false;
         Date bornOnDate=new Date();
