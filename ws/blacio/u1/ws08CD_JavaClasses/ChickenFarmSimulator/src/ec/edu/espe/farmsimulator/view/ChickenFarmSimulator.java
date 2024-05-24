@@ -22,8 +22,8 @@ public class ChickenFarmSimulator {
         
         chicken = new Chicken(id,name,color,age,molting, bornOnDate);
         
-        System.out.println("chicken 2 --> " chicken);
-        
+        System.out.println("Chicken 2 --> " + chicken + ", " + name + ", " + color + ", " + age + ", " + molting + ", " + bornOnDate);
+            
     }
   
 }
