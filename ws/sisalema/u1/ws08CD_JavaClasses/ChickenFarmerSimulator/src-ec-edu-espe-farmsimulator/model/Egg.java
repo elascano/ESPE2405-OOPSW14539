@@ -6,7 +6,7 @@ package ec.edu.espe.farmsimulator.model;
 
 /**
  *
- * @author Yostin Sisalema, Overnight Developers Squad, DCCO-ESPE
+ * @author Yostin Sisalema,Code Masters, DCCO-ESPE
  */
 public class Egg {
     

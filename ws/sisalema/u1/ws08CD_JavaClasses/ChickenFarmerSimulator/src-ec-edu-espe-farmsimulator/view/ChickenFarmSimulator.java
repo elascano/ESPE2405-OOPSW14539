@@ -8,7 +8,7 @@ import ec.edu.espe.farmsimulator.model.Chicken;
 import java.util.Date;
 /**
  *
- * @author Yostin Sisalema,Overnight Developers Squad, DCCO-ESPE
+ * @author Yostin Sisalema,Code Masters, DCCO-ESPE
  */
 public class ChickenFarmSimulator {
         public static void main(String[] args) {

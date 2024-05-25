@@ -6,7 +6,7 @@ package ec.edu.espe.farmsimulator.model;
 import java.util.Date;
 /**
  *
- * @author Yostin Sisalema,Overnight Developers Squad, DCCO-ESPE
+ * @author Yostin Sisalema,Code Masters, DCCO-ESPE
  */
 public class Chicken {
     private int id;
