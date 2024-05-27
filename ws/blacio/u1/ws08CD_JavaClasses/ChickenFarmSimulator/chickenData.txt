@@ -1,0 +1,21 @@
+ID: 0
+Name: Lucy
+Color: White and brown
+Age: 2
+Molting: true
+Born on Date: Mon May 27 08:25:04 COT 2024
+
+ID: 1
+Name: Maruja
+Color: Black
+Age: 1
+Molting: false
+Born on Date: Mon May 27 08:25:04 COT 2024
+
+ID: 2
+Name: Marcela
+Color: White
+Age: 3
+Molting: false
+Born on Date: Mon May 27 08:25:04 COT 2024
+
