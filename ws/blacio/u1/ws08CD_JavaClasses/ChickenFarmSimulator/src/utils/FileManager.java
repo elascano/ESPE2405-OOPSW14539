@@ -1,5 +1,5 @@
+package utils;
 
-package ec.edu.espe.farmsimulator.utils;
 import ec.edu.espe.farmsimulator.model.Chicken;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,36 +13,10 @@ import java.util.Set;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class FileManager {
-    
-    public static Set<Integer> loadChickenIdsFromFile(String filename) throws IOException {
-        Set<Integer> chickenIds = new HashSet<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                if (line.startsWith("ID: ")) {
-                    int id = Integer.parseInt(line.substring(4));
-                    chickenIds.add(id);
-                }
-            }
-        }
-        return chickenIds;
-    }
-    
-    public static void saveChickenToFile(Chicken chicken, String filename) throws IOException {
-        Set<Integer> chickenIds = loadChickenIdsFromFile(filename);
-        if (chickenIds.contains(chicken.getId())) {
-            System.out.println("Chicken with ID " + chicken.getId() + " already exists. Skipping.");
-            return;
-        }
+    public static void save(String data, String fileName, String type) throws IOException {
 
-        try (FileWriter writer = new FileWriter(filename,true)) {
-          writer.write("ID: " + chicken.getId() + "\n");
-          writer.write("Name: " + chicken.getName() + "\n");
-          writer.write("Color: " + chicken.getColor() + "\n");
-          writer.write("Age: " + chicken.getAge() + "\n");
-          writer.write("Molting: " + chicken.isMolting() + "\n");
-          writer.write("Born on Date: " + chicken.getBornOnDate() + "\n");
-          writer.write("\n");
+        try (FileWriter writer = new FileWriter(fileName + "." + type, true)) {
+            writer.write(data + "\n");
         }
     }
 }
