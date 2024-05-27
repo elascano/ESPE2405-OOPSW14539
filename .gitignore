@@ -21,6 +21,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+<<<<<<< HEAD
 replay_pid*
 /ws/anrrango/u1/ws08JavaClasses/ChickenFarmSimulator/nbproject/private/
 /ws/anrrango/u1/ws08JavaClasses/ChickenFarmSimulator/ChickenFarmSimulator/nbproject/private/
@@ -46,3 +47,6 @@ replay_pid*
 /ws/saraguro/u1/WS08CD_JavaClass/ChickenFarmerSimulator/nbproject/private/
 /ws/santi/u1/WS08 ChickenFarmSimulator/ChickenFarmSimulator/nbproject/private/
 /ws/santi/u1/WS08 ChickenFarmSimulator/ChickenFarmSimulator/build/
+=======
+replay_pid*
+>>>>>>> d193db3cedad09bfc44e6769bf649ac1aad435af
