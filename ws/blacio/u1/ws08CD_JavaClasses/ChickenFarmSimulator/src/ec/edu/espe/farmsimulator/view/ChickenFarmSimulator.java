@@ -19,7 +19,7 @@ public class ChickenFarmSimulator {
         List<Chicken> chickens = new ArrayList<>();
         chickens.add(new Chicken(0, "Lucy", "White and brown", 2, true, new Date()));
         chickens.add(new Chicken(1, "Maruja", "Black", 1, false, new Date()));
-        chickens.add(new Chicken(2, "Clucky", "White", 3, false, new Date()));
+        chickens.add(new Chicken(2, "Marcela", "White", 3, false, new Date()));
 
         String folderPath = "output";
         File folder = new File(folderPath);
