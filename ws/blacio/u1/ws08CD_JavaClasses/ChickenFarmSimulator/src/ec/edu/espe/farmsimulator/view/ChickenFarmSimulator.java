@@ -1,6 +1,6 @@
 package ec.edu.espe.farmsimulator.view;
 
-import ec.edu.espe.farmsimulator.controller.SaveFile;
+import ec.edu.espe.farmsimulator.utils.FileManager;
 import ec.edu.espe.farmsimulator.model.Chicken;
 import java.io.File;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class ChickenFarmSimulator {
         for (Chicken chicken : chickens) {
             System.out.println("Saving Chicken --> " + chicken);  
         try {
-            SaveFile.saveChickenToFile(chicken, "chickenData.txt");
+            FileManager.saveChickenToFile(chicken, "chickenData.txt");
             System.out.println("Chicken data saved successfully.");
         } catch (IOException e) {
             System.err.println("An error occurred while saving chicken data: " + e.getMessage());
