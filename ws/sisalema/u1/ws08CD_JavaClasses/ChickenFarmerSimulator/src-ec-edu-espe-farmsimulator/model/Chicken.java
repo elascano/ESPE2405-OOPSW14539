@@ -16,18 +16,34 @@ public class Chicken {
     private boolean molting;
     private Date bornOnDate;
 
-    public Chicken(int id, String name, String color, int age, boolean molting, Date bornOnDate) {
+
+    @Override
+    public String toString() {
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", molting=" + molting + ", BornOnDate=" + BornOnDate + '}';
+    }
+    
+    public String toString(int type) {
+        String chickenData="";
+        if(type == 1){      //csv
+            chickenData= id + "," + name + "," + color + "," + age + "," + molting + "," + BornOnDate;
+        }
+        if(type == 2){      //txt
+            
+        }
+        if (type == 3){     //json
+           
+        }
+        return chickenData;
+    }
+
+    public Chicken(int id, String name, String color, int age, boolean molting, Date BornOnDate) {
         this.id = id;
         this.name = name;
         this.color = color;
         this.age = age;
         this.molting = molting;
-        this.bornOnDate = bornOnDate;
+        this.BornOnDate = BornOnDate;
     }
-    @Override
-    public String toString() {
-    return "Chicken{" + "id=" + id +", name='" + name + '\'' +", color='" + color + '\'' +", age=" + age +", molting=" + molting +", bornOnDate=" + bornOnDate +'}';
-}
     /**
      * @return the id
      */
