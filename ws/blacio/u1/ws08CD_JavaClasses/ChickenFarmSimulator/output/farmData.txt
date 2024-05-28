@@ -1,0 +1,6 @@
+Farmer ID: 43
+Name: Julio
+ChickenCoop ID: 12
+Chicken{id=35, name=Carla, color=Brown, age=3, molting=true, BornOnDate=Mon Aug 03 00:00:00 COT 2020}
+
+

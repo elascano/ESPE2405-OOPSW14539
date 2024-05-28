@@ -3,22 +3,21 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Marco Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class Cell {
     private int row;
     private int col;
-
-    public Cell(int row, int col) {
-        this.row = row;
-        this.col = col;
-    }
 
     @Override
     public String toString() {
         return "Cell{" + "row=" + row + ", col=" + col + '}';
     }
     
+    public Cell(int row, int col) {
+        this.row = row;
+        this.col = col;
+    }
 
     /**
      * @return the row

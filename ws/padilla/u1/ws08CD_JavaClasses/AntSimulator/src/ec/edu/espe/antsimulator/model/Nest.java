@@ -3,18 +3,21 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Marco Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class Nest {
     private Cell position;
     private Food stockPile[];
 
+    public Nest(Cell position, Food[] stockPile) {
+        this.position = position;
+        this.stockPile = stockPile;
+    }
+
     @Override
     public String toString() {
         return "Nest{" + "position=" + position + ", stockPile=" + stockPile + '}';
     }
-
-    
     
     /**
      * @return the position
@@ -30,12 +33,6 @@ public class Nest {
         this.position = position;
     }
 
-    public Nest(Cell position, Food[] stockPile) {
-        this.position = position;
-        this.stockPile = stockPile;
-    }
-
-    
     /**
      * @return the stockPile
      */

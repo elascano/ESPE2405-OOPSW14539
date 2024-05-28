@@ -3,23 +3,22 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Marco Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class FoodPile {
     private Cell position;
-    private int pileAmount;
+    private int PileAmount;
     
     public Food yieldFood(int amount){
         Food food = new Food(amount);
         return food;
     }
 
-    public FoodPile(Cell position, int pileAmount) {
+    public FoodPile(Cell position, int PileAmount) {
         this.position = position;
-        this.pileAmount = pileAmount;
+        this.PileAmount = PileAmount;
     }
 
-    
     /**
      * @return the position
      */
@@ -35,19 +34,18 @@ public class FoodPile {
     }
 
     /**
-     * @return the pileAmount
+     * @return the PileAmount
      */
     public int getPileAmount() {
-        return pileAmount;
+        return PileAmount;
     }
 
     /**
-     * @param pileAmount the pileAmount to set
+     * @param PileAmount the PileAmount to set
      */
-    public void setPileAmount(int pileAmount) {
-        this.pileAmount = pileAmount;
+    public void setPileAmount(int PileAmount) {
+        this.PileAmount = PileAmount;
     }
-    
     
     
 }
