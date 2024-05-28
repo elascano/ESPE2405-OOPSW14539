@@ -6,8 +6,11 @@ package ec.edu.espe.farmsimulator.model;
 
 /**
  *
- * @author ERICK
+ * @author Erick
  */
 public class Egg {
+    int id;
+            
+            
     
 }

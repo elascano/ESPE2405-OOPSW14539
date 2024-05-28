@@ -1,38 +1,51 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ec.edu.espe.farmsimulator.model;
 
 import java.util.Date;
 
 /**
  *
- * @author ERICK
+ * @author Erick
  */
 public class Chicken {
     private int id;
-    private String color;
     private String name;
+    private String color;
     private int age;
     private boolean molting;
-    private Date bornObDate;
+    private Date BornOnDate;
 
     @Override
     public String toString() {
-        return "Chicken{" + "id=" + id + ", color=" + color + ", name=" + name + ", age=" + age + ", molting=" + molting + ", bornObDate=" + bornObDate + '}';
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", molting=" + molting + ", BornOnDate=" + BornOnDate + '}';
+    }
+    
+    
+    public String toString(int type) {
+        String chickenData="";
+        if(type == 1){      //csv
+            chickenData= id + "," + name + "," + color + "," + age + "," + molting + "," + BornOnDate;
+        }
+        if(type == 2){      //txt
+            
+        }
+        if (type == 3){     //json
+           
+        }
+        return chickenData;
     }
 
-    public Chicken(int id, String color, String name, int age, boolean molting, Date bornObDate) {
+    public Chicken(int id, String name, String color, int age, boolean molting, Date BornOnDate) {
         this.id = id;
-        this.color = color;
         this.name = name;
+        this.color = color;
         this.age = age;
         this.molting = molting;
-        this.bornObDate = bornObDate;
+        this.BornOnDate = BornOnDate;
     }
-
     
+    
+
     /**
      * @return the id
      */
@@ -48,20 +61,6 @@ public class Chicken {
     }
 
     /**
-     * @return the color
-     */
-    public String getColor() {
-        return color;
-    }
-
-    /**
-     * @param color the color to set
-     */
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    /**
      * @return the name
      */
     public String getName() {
@@ -73,6 +72,20 @@ public class Chicken {
      */
     public void setName(String name) {
         this.name = name;
+    }
+
+    /**
+     * @return the color
+     */
+    public String getColor() {
+        return color;
+    }
+
+    /**
+     * @param color the color to set
+     */
+    public void setColor(String color) {
+        this.color = color;
     }
 
     /**
@@ -104,17 +117,17 @@ public class Chicken {
     }
 
     /**
-     * @return the bornObDate
+     * @return the BornOnDate
      */
-    public Date getBornObDate() {
-        return bornObDate;
+    public Date getBornOnDate() {
+        return BornOnDate;
     }
 
     /**
-     * @param bornObDate the bornObDate to set
+     * @param BornOnDate the BornOnDate to set
      */
-    public void setBornObDate(Date bornObDate) {
-        this.bornObDate = bornObDate;
+    public void setBornOnDate(Date BornOnDate) {
+        this.BornOnDate = BornOnDate;
     }
     
     
