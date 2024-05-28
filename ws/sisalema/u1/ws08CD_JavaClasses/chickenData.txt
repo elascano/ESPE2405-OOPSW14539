@@ -1,0 +1,20 @@
+ID: 0
+Name: Marcos
+Color: brown
+Age: 1
+Molting: true
+Born on Date: Mon May 27 08:39:04 COT 2024
+
+ID: 1
+Name: Maruja
+Color: Black
+Age: 3
+Molting: false
+Born on Date: Mon May 27 08:39:04 COT 2024
+
+ID: 2
+Name: Oscar
+Color: White
+Age: 4
+Molting: false
+Born on Date: Mon May 27 08:39:04 COT 2024
