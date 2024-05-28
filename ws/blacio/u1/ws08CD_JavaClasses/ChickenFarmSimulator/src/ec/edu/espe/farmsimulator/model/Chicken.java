@@ -1,6 +1,6 @@
-
 package ec.edu.espe.farmsimulator.model;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -11,41 +11,46 @@ public class Chicken {
     private int id;
     private String name;
     private String color;
-    private int age;
     private boolean molting;
     private Date BornOnDate;
 
     @Override
     public String toString() {
-        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", molting=" + molting + ", BornOnDate=" + BornOnDate + '}';
+        return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + getAge() + ", molting=" + molting + ", BornOnDate=" + BornOnDate + '}';
     }
     
     public String toString(int type) {
-        String chickenData="";
-        if(type == 1){      //csv
-            chickenData= id + "," + name + "," + color + "," + age + "," + molting + "," + BornOnDate;
-        }
-        if(type == 2){      //txt
-            
-        }
-        if (type == 3){     //json
-           
+        String chickenData = "";
+        if (type == 1) { // csv
+            chickenData = id + "," + name + "," + color + "," + getAge() + "," + molting + "," + BornOnDate;
+        } else if (type == 2) { // txt
+            chickenData = "Chicken{id=" + id + ", name=" + name + ", color=" + color + ", age=" + getAge() + ", molting=" + molting + ", BornOnDate=" + BornOnDate + "}";
+        } else if (type == 3) { // json
+            chickenData = "{ \"id\": " + id + ", \"name\": \"" + name + "\", \"color\": \"" + color + "\", \"age\": " + getAge() + ", \"molting\": " + molting + ", \"BornOnDate\": \"" + BornOnDate + "\" }";
         }
         return chickenData;
     }
 
-    public Chicken(int id, String name, String color, int age, boolean molting, Date BornOnDate) {
+    public Chicken(int id, String name, String color, boolean molting, Date BornOnDate) {
         this.id = id;
         this.name = name;
         this.color = color;
-        this.age = age;
         this.molting = molting;
         this.BornOnDate = BornOnDate;
     }
 
-    /**
-     * @return the id
-     */
+    public int getAge() {
+        Calendar birth = Calendar.getInstance();
+        birth.setTime(BornOnDate);
+        Calendar today = Calendar.getInstance();
+        int age = today.get(Calendar.YEAR) - birth.get(Calendar.YEAR);
+        if (today.get(Calendar.DAY_OF_YEAR) < birth.get(Calendar.DAY_OF_YEAR)) {
+            age--;
+        }
+        return age;
+    }
+
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -84,21 +89,7 @@ public class Chicken {
     public void setColor(String color) {
         this.color = color;
     }
-
-    /**
-     * @return the age
-     */
-    public int getAge() {
-        return age;
-    }
-
-    /**
-     * @param age the age to set
-     */
-    public void setAge(int age) {
-        this.age = age;
-    }
-
+    
     /**
      * @return the molting
      */
@@ -126,6 +117,4 @@ public class Chicken {
     public void setBornOnDate(Date BornOnDate) {
         this.BornOnDate = BornOnDate;
     }
-    
-    
 }
