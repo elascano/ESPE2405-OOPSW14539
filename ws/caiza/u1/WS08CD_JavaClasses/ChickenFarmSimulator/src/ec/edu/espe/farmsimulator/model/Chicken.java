@@ -19,7 +19,23 @@ public class Chicken {
     public String toString() {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", molting=" + molting + ", BornOnDate=" + BornOnDate + '}';
     }
-
+    
+    public String toString(int type){
+        
+    String chickenData="";
+    
+    if (type == 1){ //csv
+            chickenData = id + "," + name + "," + color + "," + age + "," + molting + "," + BornOnDate;
+        }
+    if (type == 2){ //txt
+            chickenData = id + "," + name + "," + color + "," + age + "," + molting + "," + BornOnDate;
+        }
+    if (type == 3){ //csv
+            chickenData = id + "," + name + "," + color + "," + age + "," + molting + "," + BornOnDate;
+        }
+        return chickenData;
+    }
+    
     public Chicken(int id, String name, String color, int age, boolean molting, Date BornOnDate) {
         this.id = id;
         this.name = name;
@@ -28,7 +44,7 @@ public class Chicken {
         this.molting = molting;
         this.BornOnDate = BornOnDate;
     }
-
+    
     /**
      * @return the id
      */
@@ -112,6 +128,5 @@ public class Chicken {
     public void setBornOnDate(Date BornOnDate) {
         this.BornOnDate = BornOnDate;
     }
-    
-    
+      
 }
