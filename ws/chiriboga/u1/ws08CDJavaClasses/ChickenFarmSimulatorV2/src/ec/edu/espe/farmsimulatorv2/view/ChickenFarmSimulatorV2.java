@@ -1,20 +1,19 @@
-package ec.edu.espe.farmsimulator.view;
+package ec.edu.espe.farmsimulatorv2.view;
 
-import ec.edu.espe.farmsimulator.model.Chicken;
-import ec.edu.espe.farmsimulator.model.ChickenCoop;
-import ec.edu.espe.farmsimulator.model.ChickenFarmer;
+import ec.edu.espe.farmsimulatorv2.model.ChickenV2;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 import java.io.IOException;
-import utilg.FileManager;
+import utilgV2.FileManagerV2;
+
 
 
 /**
  * @autor Kerlly Chiriboga, ODS
  */
-public class ChickenFarmSimulator {
+public class ChickenFarmSimulatorV2 {
     public static void main(String[] args) {
         System.out.println("Kerlly's Chicken Farm Simulator");
 
@@ -25,18 +24,12 @@ public class ChickenFarmSimulator {
         System.out.println("Enter file type to save (csv/txt): ");
         String fileType = scanner.nextLine().toLowerCase();
 
-        System.out.println("Enter Chicken Coop ID: ");
-        int coopId = scanner.nextInt();
-        scanner.nextLine();
-
-        Chicken[] chickens = new Chicken[2];
-
-        for (int i = 0; i < chickens.length; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("Enter chicken data " + (i + 1) + ":");
             System.out.println("ID: ");
             int id = scanner.nextInt();
 
-            scanner.nextLine();
+            scanner.nextLine(); 
 
             System.out.println("Name: ");
             String name = scanner.nextLine();
@@ -47,7 +40,7 @@ public class ChickenFarmSimulator {
             System.out.println("Molting (true/false): ");
             boolean molting = scanner.nextBoolean();
 
-            scanner.nextLine();
+            scanner.nextLine(); 
 
             Date bornOnDate = null;
             while (bornOnDate == null) {
@@ -61,31 +54,19 @@ public class ChickenFarmSimulator {
                 }
             }
 
-            Chicken chicken = new Chicken(id, name, color, molting, bornOnDate);
-            chickens[i] = chicken;
+            ChickenV2 chicken = new ChickenV2(id, name, color, molting, bornOnDate);
+
+            System.out.println("Chicken data: " + chicken.toString()); 
+
+            String data = chicken.toCSV();
+
+            try {
+                FileManagerV2.save(data, "chickensV2", fileType);
+            } catch (IOException e) {
+                System.err.println("An error occurred while saving the data: " + e.getMessage());
+            }
         }
 
-        ChickenCoop chickenCoop = new ChickenCoop(coopId, chickens);
-
-        System.out.println("Enter Chicken Farmer ID: ");
-        int farmerId = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Enter Chicken Farmer Name: ");
-        String farmerName = scanner.nextLine();
-
-        ChickenCoop[] coops ={chickenCoop} ;
-        ChickenFarmer chickenFarmer = new ChickenFarmer(farmerId, farmerName, coops);
-
-        String farmerData = chickenFarmer.toString();
-
-        try {
-            FileManager.save(farmerData, "ChickenFarmSimulatorData", fileType);
-        } catch (IOException e) {
-            System.err.println("An error occurred while saving the data: " + e.getMessage());
-        }
-
-        System.out.println("All chickens and farmer have been saved!");
-        System.out.println(chickenFarmer);
+        System.out.println("¡All chickens have been saved!");
     }
 }

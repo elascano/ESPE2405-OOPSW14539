@@ -1,10 +1,10 @@
-package utilg;
+package utilgV2;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileManager{
+public class FileManagerV2 {
 
     public static void save(String data, String fileName, String type) throws IOException {
         if (!type.equalsIgnoreCase("csv") && !type.equalsIgnoreCase("txt")) {
