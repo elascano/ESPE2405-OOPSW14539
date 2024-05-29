@@ -1,14 +1,10 @@
-package ec.edu.espe.farmsimulator.model;
+package ec.edu.espe.farmsimulatorv2.model;
 
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
+import java.util.Calendar;
 
-/**
- *
- * @autor Kerlly Chiriboga, ODS
- */
-public class Chicken {
+public class ChickenV2 {
     private int id;
     private String name;
     private String color;
@@ -16,18 +12,7 @@ public class Chicken {
     private boolean molting;
     private Date bornOnDate;
 
-    @Override
-    public String toString() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        return "Chicken {" + id + "," + name + "," + color + "," + age +  "," + molting + "," + dateFormat.format(bornOnDate) + '}';
-    }
-    
-    public String toCSV() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        return id + "," + name + "," + color + "," + age + "," + molting + "," + dateFormat.format(bornOnDate);
-    }
-
-    public Chicken(int id, String name, String color, boolean molting, Date bornOnDate) {
+    public ChickenV2(int id, String name, String color, boolean molting, Date bornOnDate) {
         this.id = id;
         this.name = name;
         this.color = color;
@@ -35,7 +20,7 @@ public class Chicken {
         this.age = computeAge(bornOnDate);
         this.molting = molting;
     }
-    
+
     private int computeAge(Date bornOnDate) {
         Calendar birth = Calendar.getInstance();
         birth.setTime(bornOnDate);
@@ -48,52 +33,106 @@ public class Chicken {
         }
         return years;
     }
+
+    public String toCSV() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return getId() + "," + getName() + "," + getColor() + "," + getAge() + "," + isMolting() + "," + dateFormat.format(getBornOnDate());
+    }
+
+    @Override
+    public String toString() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        return "ChickenV2{" +
+                "id=" + getId() +
+                ", name='" + getName() + '\'' +
+                ", color='" + getColor() + '\'' +
+                ", age=" + getAge() +
+                ", molting=" + isMolting() +
+                ", bornOnDate=" + dateFormat.format(getBornOnDate()) +
+                '}';
+    }
+
+    /**
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * @param id the id to set
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * @param name the name to set
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * @return the color
+     */
     public String getColor() {
         return color;
     }
 
+    /**
+     * @param color the color to set
+     */
     public void setColor(String color) {
         this.color = color;
     }
 
+    /**
+     * @return the age
+     */
     public int getAge() {
         return age;
     }
 
+    /**
+     * @param age the age to set
+     */
     public void setAge(int age) {
         this.age = age;
     }
 
+    /**
+     * @return the molting
+     */
     public boolean isMolting() {
         return molting;
     }
 
+    /**
+     * @param molting the molting to set
+     */
     public void setMolting(boolean molting) {
         this.molting = molting;
     }
 
+    /**
+     * @return the bornOnDate
+     */
     public Date getBornOnDate() {
         return bornOnDate;
     }
 
+    /**
+     * @param bornOnDate the bornOnDate to set
+     */
     public void setBornOnDate(Date bornOnDate) {
         this.bornOnDate = bornOnDate;
-        this.age = computeAge(bornOnDate);
     }
 }
