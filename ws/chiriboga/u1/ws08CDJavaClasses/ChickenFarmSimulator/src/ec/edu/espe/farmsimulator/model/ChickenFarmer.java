@@ -40,7 +40,7 @@ public class ChickenFarmer {
     }
 
     /**
-     * @param id the id to set
+     * @param id 
      */
     public void setId(int id) {
         this.id = id;
@@ -54,7 +54,7 @@ public class ChickenFarmer {
     }
 
     /**
-     * @param name the name to set
+     * @param name 
      */
     public void setName(String name) {
         this.name = name;
@@ -68,7 +68,7 @@ public class ChickenFarmer {
     }
 
     /**
-     * @param coops the coops to set
+     * @param coops 
      */
     public void setCoops(ChickenCoop[] coops) {
         this.coops = coops;

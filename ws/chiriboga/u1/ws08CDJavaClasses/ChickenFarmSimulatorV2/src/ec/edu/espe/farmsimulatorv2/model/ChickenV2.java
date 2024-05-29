@@ -60,7 +60,7 @@ public class ChickenV2 {
     }
 
     /**
-     * @param id the id to set
+     * @param id 
      */
     public void setId(int id) {
         this.id = id;
@@ -74,7 +74,7 @@ public class ChickenV2 {
     }
 
     /**
-     * @param name the name to set
+     * @param name 
      */
     public void setName(String name) {
         this.name = name;
@@ -88,7 +88,7 @@ public class ChickenV2 {
     }
 
     /**
-     * @param color the color to set
+     * @param color 
      */
     public void setColor(String color) {
         this.color = color;
@@ -116,7 +116,7 @@ public class ChickenV2 {
     }
 
     /**
-     * @param molting the molting to set
+     * @param molting 
      */
     public void setMolting(boolean molting) {
         this.molting = molting;
@@ -130,7 +130,7 @@ public class ChickenV2 {
     }
 
     /**
-     * @param bornOnDate the bornOnDate to set
+     * @param bornOnDate 
      */
     public void setBornOnDate(Date bornOnDate) {
         this.bornOnDate = bornOnDate;

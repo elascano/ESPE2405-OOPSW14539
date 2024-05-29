@@ -38,7 +38,7 @@ public class ChickenCoop {
     }
 
     /**
-     * @param id the id to set
+     * @param id 
      */
     public void setId(int id) {
         this.id = id;
@@ -52,7 +52,7 @@ public class ChickenCoop {
     }
 
     /**
-     * @param chickens the chickens to set
+     * @param chickens 
      */
     public void setChickens(Chicken[] chickens) {
         this.chickens = chickens;
