@@ -5,30 +5,30 @@ package ec.edu.espe.farmsimulator.model;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class ChickenFarmer {
-    private int id;
-    private String name;
+    private int farmerId;
+    private String farmerName;
     private ChickenCoop[] coops;
 
     @Override
     public String toString() {
-        return "ChickenFarmer{" + "id=" + id + ", name=" + name + ", coops=" + coops + '}';
+        return "ChickenFarmer{" + "id=" + farmerId + ", name=" + farmerName + ", coops=" + coops + '}';
     }
 
     public String toString(int type) {
         StringBuilder farmerData = new StringBuilder();
         if (type == 1) { // csv
-            farmerData.append(id).append(",").append(name).append(",");
+            farmerData.append(farmerId).append(",").append(farmerName).append(",");
             for (ChickenCoop coop : coops) {
                 farmerData.append(coop.toString(1)).append(";");
             }
         } else if (type == 2) { // txt
-            farmerData.append("Farmer ID: ").append(id).append("\n")
-                      .append("Name: ").append(name).append("\n");
+            farmerData.append("Farmer ID: ").append(farmerId).append("\n")
+                      .append("Name: ").append(farmerName).append("\n");
             for (ChickenCoop coop : coops) {
                 farmerData.append(coop.toString(2)).append("\n");
             }
         } else if (type == 3) { // json
-            farmerData.append("{\n  \"id\": ").append(id).append(",\n  \"name\": \"").append(name).append("\",\n  \"coops\": [\n");
+            farmerData.append("{\n  \"id\": ").append(farmerId).append(",\n  \"name\": \"").append(farmerName).append("\",\n  \"coops\": [\n");
             for (int i = 0; i < coops.length; i++) {
                 farmerData.append(coops[i].toString(3));
                 if (i < coops.length - 1) {
@@ -41,25 +41,25 @@ public class ChickenFarmer {
     }
 
     public ChickenFarmer(int id, String name, ChickenCoop[] coops) {
-        this.id = id;
-        this.name = name;
+        this.farmerId = id;
+        this.farmerName = name;
         this.coops = coops;
     }
         
     public int getId() {
-        return id;
+        return farmerId;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.farmerId = id;
     }
 
     public String getName() {
-        return name;
+        return farmerName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.farmerName = name;
     }
 
     public ChickenCoop[] getCoops() {
