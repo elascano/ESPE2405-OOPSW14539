@@ -1,0 +1,12 @@
+{
+  "id": 22,
+  "name": "Julio",
+  "coops": [
+{
+  "id": 11,
+  "chickens": [
+{ "id": 66, "name": "Carla", "color": "White", "age": 3, "molting": true, "BornOnDate": "Mon Aug 03 00:00:00 COT 2020" }
+  ]
+}
+  ]
+}

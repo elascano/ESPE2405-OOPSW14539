@@ -47,7 +47,7 @@ public class ChickenFarmSimulator {
 
                 System.out.print("ID: ");
                 int farmerId = scanner.nextInt();
-                scanner.nextLine(); // Consume the newline
+                scanner.nextLine();
 
                 System.out.print("Name: ");
                 String farmerName = scanner.nextLine();
@@ -73,7 +73,7 @@ public class ChickenFarmSimulator {
 
                         System.out.print("ID: ");
                         int chickenId = scanner.nextInt();
-                        scanner.nextLine(); // Consume the newline
+                        scanner.nextLine(); 
 
                         System.out.print("Name: ");
                         String chickenName = scanner.nextLine();
