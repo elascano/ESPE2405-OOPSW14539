@@ -34,7 +34,7 @@ public class ChickenFarmen {
         chickenData = "ChickenFarmen: id=" + id + ", name=" + name + ": \n" 
                     + chickenFarmer.toString() + "\n";
     } else if (type.equals("json")) { // json
-        chickenData = "{\n"+ "  \"ChickenFarmen\": {\n"+ "    \"id\": \"" + id + "\",\n"+ "    \"name\": \"" + name + "\",\n"+ "    \"chickenFarmer\": [\n"+ chickenFarmer.toString() + "\n"+ "    ]\n"+ "  }\n"+ "}\n";
+        chickenData = "{\n"+ "  \"ChickenFarmen\": {\n"+"    \"id\": \"" + id + "\",\n"+ "    \"name\": \"" + name + "\",\n"+ "    \"chickenFarmer\": [\n"+ chickenFarmer.toString() + "\n"+ "    ]\n"+ "  }\n"+ "}\n";
     }
         return chickenData;
     }
