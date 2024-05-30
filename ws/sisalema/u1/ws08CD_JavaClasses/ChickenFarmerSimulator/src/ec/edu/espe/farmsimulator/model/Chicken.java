@@ -45,11 +45,11 @@ public class Chicken {
     public String toString(String type) {
         String chickenData = "";
         if (type.equals("csv")) { // csv
-            chickenData = id + "," + name + "," + color + "," + CalculationAge(bornOnDate) + "," + molting + "," + getBornOnDate();
+            chickenData = "Chicken, " + id + ", " + name + ", " + color + ", " + CalculationAge(bornOnDate) + ", " + molting + ", " + getBornOnDate();
         } else if (type.equals("txt")) { // txt
-            chickenData = "Chicken{id=" + id + ", name=" + name + ", color=" + color + ", age=" + CalculationAge(bornOnDate) + ", molting=" + molting + ", BornOnDate=" + getBornOnDate() + "}";
+            chickenData = "Chicken {id=" + id + ", name=" + name + ", color=" + color + ", age=" + CalculationAge(bornOnDate) + ", molting=" + molting + ", BornOnDate=" + getBornOnDate() + "}";
         } else if (type.equals("json")) { // json
-            chickenData = "{ \"id\": " + id + ", \"name\": \"" + name + "\", \"color\": \"" + color + "\", \"age\": " + CalculationAge(bornOnDate) + ", \"molting\": " + molting + ", \"BornOnDate\": \"" + getBornOnDate()+ "\" }";
+            chickenData = "{\n"+ "  \"Chicken\": {\n"+ "    \"id\": " + id + ",\n"+ "    \"name\": \"" + name + "\",\n"+ "    \"color\": \"" + color + "\",\n"+ "    \"age\": " + CalculationAge(bornOnDate) + ",\n"+ "    \"molting\": " + molting + ",\n"+ "    \"BornOnDate\": \"" + getBornOnDate() + "\"\n"+ "  }\n"+ "}";
         }
         return chickenData;
     }
