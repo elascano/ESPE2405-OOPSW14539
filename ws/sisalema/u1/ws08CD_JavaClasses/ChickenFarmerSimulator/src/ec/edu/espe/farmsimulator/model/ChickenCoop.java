@@ -24,12 +24,12 @@ public String toString(String type) {
             chickensType.append(chicken.toString(type)).append("\n");
         }
     }
-    if (type.equals("csv")) { // csv
-        chickenData = "ChickenCoop, id=" + id + ", chickensCoop=" + chickensType.toString();
+     if (type.equals("csv")) { // csv
+        chickenData = "ChickenCoop, id=" + id + ", \n" + chickensType.toString();
     } else if (type.equals("txt")) { // txt
-        chickenData = "ChickenCoop: id=" + id + ", chickensCoop=" + chickensType.toString()+"\n";
+        chickenData = "ChickenCoop: id=" + id + ", \n" + chickensType.toString()+"\n";
     } else if (type.equals("json")) { // json
-        chickenData = "{\"ChickenCoop\": {\"id\": \"" + id + "\", \"chickensCoop\": \"" + chickensType.toString() + "\"}}"+"\n";
+        chickenData = "{\"ChickenCoop\": {\"id\": \"" + id + "\", \"\n" + chickensType.toString() + "\"}}"+"\n";
     }
     return chickenData;
 }
