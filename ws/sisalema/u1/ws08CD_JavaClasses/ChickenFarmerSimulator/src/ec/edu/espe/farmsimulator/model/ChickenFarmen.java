@@ -28,14 +28,16 @@ public class ChickenFarmen {
         }
     }
     if (type.equals("csv")) { // csv
-        chickenData = "ChickenFarmen, id=" + id + ", name=" + name + ", coops=" + chickenFarmer.toString();
+        chickenData = "ChickenFarmen, id=" + id + ", name=" + name + ", \n" 
+                    + chickenFarmer.toString();
     } else if (type.equals("txt")) { // txt
-        chickenData = "ChickenFarmen: id=" + id + ", name=" + name + ", coops=" + chickenFarmer.toString()+"\n";
+        chickenData = "ChickenFarmen: id=" + id + ", name=" + name + ": \n" 
+                    + chickenFarmer.toString() + "\n";
     } else if (type.equals("json")) { // json
-        chickenData = "{\"ChickenFarmen\": {\"id\": \"" + id + "\", \"name\": \"" + name + "\", \"coops\": \"[" + chickenFarmer.toString() + "\"]}}\n";
+        chickenData = "{\n"+ "  \"ChickenFarmen\": {\n"+ "    \"id\": \"" + id + "\",\n"+ "    \"name\": \"" + name + "\",\n"+ "    \"chickenFarmer\": [\n"+ chickenFarmer.toString() + "\n"+ "    ]\n"+ "  }\n"+ "}\n";
     }
-    return chickenData;
-}
+        return chickenData;
+    }
     
         public int getId() {
         return id;
