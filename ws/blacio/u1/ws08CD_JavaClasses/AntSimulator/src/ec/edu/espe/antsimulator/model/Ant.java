@@ -3,7 +3,7 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author David Pilaguano DCCO-ESPE
  */
 public class Ant {
     private Cell position;
