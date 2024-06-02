@@ -22,6 +22,22 @@ public class Chicken {
     public String toString() {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", molting=" + molting + ", bornOnDate=" + bornOnDate + '}';
     }
+    
+    public String toString(int type) {
+        String chickenData = "";
+        if(type == 1){ //CSV coma separeted value
+            chickenData = id + ", " + name + ", " + color + ", " + age + ", " + molting + ", " + bornOnDate;
+        }
+        if(type == 2){ //txt
+            chickenData = "Chicken{id=" + id + ", name=" + name + ", color=" + color + ", age=" + getAge() + ", molting=" + molting + ", BornOnDate=" + bornOnDate + "}";
+        }
+        if(type == 3){ //jason
+            chickenData = "{ \"id\": " + id + ", \"name\": \"" + name + "\", \"color\": \"" + color + "\", \"age\": " + getAge() + ", \"molting\": " + molting + ", \"BornOnDate\": \"" + bornOnDate + "\" }";
+        }
+        return chickenData;
+    }
+    
+    
 
     public Chicken(int id, String name, String color, int age, boolean molting, Date bornOnDate) {
         this.id = id;
