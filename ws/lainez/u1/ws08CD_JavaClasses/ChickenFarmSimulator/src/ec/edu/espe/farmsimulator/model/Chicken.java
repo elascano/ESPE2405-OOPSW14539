@@ -25,7 +25,7 @@ public class Chicken {
     
     public String toString(int type) {
         String chickenData = "";
-        if(type == 1){ //CSV coma separeted value
+        if(type == 1){ //csv
             chickenData = id + ", " + name + ", " + color + ", " + age + ", " + molting + ", " + bornOnDate;
         }
         if(type == 2){ //txt
