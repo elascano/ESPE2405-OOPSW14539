@@ -3,39 +3,37 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Marco Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class Colony {
+    private Nest nest;
+    private Ant ants[];
     
-   private Nest nest;
-   private Ant ants[];
-   
-   public void run(){
-       System.out.println("The colony is running");
-   }
+    public void run(){
+        System.out.println("The colony is runnig");
+    }
 
     @Override
     public String toString() {
         String localAnts = "";
-        for (int i=0; i<ants.length;i++ ){
+        for(int i=0;i<ants.length;i++){
             localAnts = localAnts + ants[i];
         }
         return "Colony{" + "nest=" + nest + ", ants=" + localAnts + '}';
     }
-   
-   
+
     public Colony(Nest nest, int size) {
         this.ants = new Ant[size];
         this.nest = nest;
         this.ants = ants;
     }
-      
-    public Colony(Nest nest, Ant[] ants) {
+
+     public Colony(Nest nest, Ant[] ants) {
         this.ants = new Ant[ants.length];
         this.nest = nest;
         this.ants = ants;
     }
-   
+        
     /**
      * @return the nest
      */
@@ -63,6 +61,6 @@ public class Colony {
     public void setAnts(Ant[] ants) {
         this.ants = ants;
     }
-   
-   
+    
+    
 }

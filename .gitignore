@@ -21,15 +21,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
 replay_pid*
 /ws/anrrango/u1/ws08JavaClasses/ChickenFarmSimulator/nbproject/private/
 /ws/anrrango/u1/ws08JavaClasses/ChickenFarmSimulator/ChickenFarmSimulator/nbproject/private/
 /ws/anrrango/u1/ws08JavaClasses/ChickenFarmSimulator/build/
-<<<<<<< HEAD
-/ws/anrrango/u1/ws08JavaClasses/JavaApplication2/nbproject/private/
-/ws/anrrango/u1/ws08JavaClasses/AntSimulator/nbproject/private/
-/ws/anrrango/u1/ws08JavaClasses/AntSimulator/build/
-=======
 /ws/tufiño/u1/ws08CD_JavaClasses/AntSimulator/nbproject/private/
 /ws/tufiño/u1/ws08CD_JavaClasses/AntSimulator/build/
 /ws/blacio/u1/ws08CD_JavaClasses/AntSimulator/nbproject/private/
@@ -37,7 +33,18 @@ replay_pid*
 
 /ws/ona/u1/ws08CD_JavaClasses/AndSimulator/ChickenFarm/nbproject/private/
 /ws/ona/u1/ws08CD_JavaClasses/AndSimulator/build/
->>>>>>> d96dece4d79d3798e6f585348fb96230a3fd2723
-/ws/lainez/u1/ws10Collections/CollectionsProject/nbproject/private/
-/ws/lainez/u1/ws10Collections/Collections/nbproject/private/
-/ws/lainez/u1/ws10Collections/Collections/build/
+/ws/caiza/u1/WS08CD_JavaClasses/ChickenFarmSimulator/nbproject/private/
+/ws/caiza/u1/WS08CD_JavaClasses/AntSimulator/nbproject/private/
+/ws/saraguro/u1/WS08CD_JavaClass/AntColonySimulator/build/
+/ws/saraguro/u1/WS08CD_JavaClass/AntColonySimulator/nbproject/private/
+/ws/saraguro/u1/WS08CD_JavaClass/ChickenFarmerSimulator/build/
+/ws/saraguro/u1/WS08CD_JavaClass/ChickenFarmerSimulator/nbproject/private/
+/ws/santi/u1/WS08 ChickenFarmSimulator/ChickenFarmSimulator/nbproject/private/
+/ws/santi/u1/WS08 ChickenFarmSimulator/ChickenFarmSimulator/build/
+=======
+replay_pid*
+/ws/chiriboga/u1/ws08CDJavaClasses/ChickenFarmSimulatorV2/nbproject/private/
+/ws/chiriboga/u1/ws08CDJavaClasses/ChickenFarmSimulatorV2/build/
+/ws/anrrango/u1/ws10Collections/Collections/nbproject/private/
+/ws/anrrango/u1/ws10Collections/Collections/build/
+>>>>>>> a811fcea754527966d7d8aa9dc9928310ea231f3

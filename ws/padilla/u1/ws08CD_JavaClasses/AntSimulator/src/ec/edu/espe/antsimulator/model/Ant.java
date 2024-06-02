@@ -3,11 +3,17 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Marco Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class Ant {
     private Cell position;
     private int weight;
+
+    @Override
+    public String toString() {
+        return "Ant{" + "position=" + position + ", weight=" + weight + '}';
+    }
+    
     
     public void run(){
         System.out.println("Ant is running");
@@ -16,17 +22,11 @@ public class Ant {
     public void carry(Food food){
         System.out.println("This ant is carrying --> " + food);
     }
-    
+                
     public Ant(Cell position, int weight) {
         this.position = position;
         this.weight = weight;
     }
-
-    @Override
-    public String toString() {
-        return "Ant{" + "position=" + position + ", weight=" + weight + '}';
-    }
-
     
     /**
      * @return the position
@@ -55,6 +55,7 @@ public class Ant {
     public void setWeight(int weight) {
         this.weight = weight;
     }
+    
     
     
 }
