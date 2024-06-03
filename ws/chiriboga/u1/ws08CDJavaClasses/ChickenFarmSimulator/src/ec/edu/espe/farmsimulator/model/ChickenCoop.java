@@ -1,14 +1,16 @@
 package ec.edu.espe.farmsimulator.model;
 
+import java.util.List;
+
 /**
  *
  * @autor Kerlly Chiriboga, ODS
  */
 public class ChickenCoop {
     private int id;
-    private Chicken[] chickens;
+    private List<Chicken> chickens;
 
-    public ChickenCoop(int id, Chicken[] chickens) {
+    public ChickenCoop(int id, List<Chicken> chickens) {
         this.id = id;
         this.chickens = chickens;
     }
@@ -30,33 +32,29 @@ public class ChickenCoop {
         }
         return csvData.toString();
     }
-    /**
-     * @return the id
-     */
+
+    public void addChicken(Chicken chicken) {
+        chickens.add(chicken);
+    }
+
+    public void removeChicken(Chicken chicken) {
+        chickens.remove(chicken);
+    }
+
     public int getId() {
         return id;
     }
 
-    /**
-     * @param id 
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * @return the chickens
-     */
-    public Chicken[] getChickens() {
+    public List<Chicken> getChickens() {
         return chickens;
     }
 
-    /**
-     * @param chickens 
-     */
-    public void setChickens(Chicken[] chickens) {
+    public void setChickens(List<Chicken> chickens) {
         this.chickens = chickens;
     }
-    
 }
 

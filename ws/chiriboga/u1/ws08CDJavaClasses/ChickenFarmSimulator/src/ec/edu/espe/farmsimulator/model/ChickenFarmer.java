@@ -1,5 +1,8 @@
 package ec.edu.espe.farmsimulator.model;
 
+
+import java.util.List;
+
 /**
  *
  * @autor Kerlly Chiriboga, ODS
@@ -7,9 +10,9 @@ package ec.edu.espe.farmsimulator.model;
 public class ChickenFarmer {
     private int id;
     private String name;
-    private ChickenCoop[] coops;
+    private List<ChickenCoop> coops;
 
-    public ChickenFarmer(int id, String name, ChickenCoop[] coops) {
+    public ChickenFarmer(int id, String name, List<ChickenCoop> coops) {
         this.id = id;
         this.name = name;
         this.coops = coops;
@@ -18,13 +21,13 @@ public class ChickenFarmer {
     @Override
     public String toString() {
         StringBuilder coopsInfo = new StringBuilder();
-        for (ChickenCoop coop : getCoops()) {
+        for (ChickenCoop coop : coops) {
             coopsInfo.append(coop.toString()).append("\n");
         }
         return "ChickenFarmer {" + id + "," + name + "} \n" + coopsInfo.toString();
     }
     
-        public String toCSV() {
+    public String toCSV() {
         StringBuilder sb = new StringBuilder();
         sb.append(id).append(",").append(name).append("\n");
         for (ChickenCoop coop : coops) {
@@ -32,46 +35,36 @@ public class ChickenFarmer {
         }
         return sb.toString();
     }
-    /**
-     * @return the id
-     */
+
+    public void addCoop(ChickenCoop coop) {
+        coops.add(coop);
+    }
+
+    public void removeCoop(ChickenCoop coop) {
+        coops.remove(coop);
+    }
+
     public int getId() {
         return id;
     }
 
-    /**
-     * @param id 
-     */
     public void setId(int id) {
         this.id = id;
     }
 
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name 
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return the coops
-     */
-    public ChickenCoop[] getCoops() {
+    public List<ChickenCoop> getCoops() {
         return coops;
     }
 
-    /**
-     * @param coops 
-     */
-    public void setCoops(ChickenCoop[] coops) {
+    public void setCoops(List<ChickenCoop> coops) {
         this.coops = coops;
     }
-
 }
