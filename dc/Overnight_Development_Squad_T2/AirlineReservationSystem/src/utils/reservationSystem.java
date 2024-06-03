@@ -6,6 +6,7 @@ import ec.edu.espe.airlinereservationsystem.model.Flight;
 import ec.edu.espe.airlinereservationsystem.model.Payment;
 import ec.edu.espe.airlinereservationsystem.model.Ticket;
 import enums.TicketClass;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -20,13 +21,14 @@ public class reservationSystem {
     private List<Payment> payments;
     private List<String> offers;
 
-    public reservationSystem(List<Customer> customers, List<Flight> flights, List<Ticket> tickets, List<Payment> payments, List<String> offers) {
-        this.customers = customers;
-        this.flights = flights;
-        this.tickets = tickets;
-        this.payments = payments;
-        this.offers = offers;
+    public reservationSystem() {
+        this.customers = new ArrayList<>();
+        this.flights = new ArrayList<>();
+        this.tickets = new ArrayList<>();
+        this.payments = new ArrayList<>();
+        this.offers = new ArrayList<>();
     }
+
 
     public Customer createCustomer(String name, String email) {
         int customerId = customers.size() + 1;
