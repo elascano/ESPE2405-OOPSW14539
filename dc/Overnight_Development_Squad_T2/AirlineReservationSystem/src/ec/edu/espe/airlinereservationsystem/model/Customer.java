@@ -15,11 +15,11 @@ public class Customer {
     private String email;
     private List<Ticket> tickets;
 
-    public Customer(int customerId, String name, String email, List<Ticket> tickets) {
+    public Customer(int customerId, String name, String email) {
         this.customerId = customerId;
         this.name = name;
         this.email = email;
-        this.tickets = tickets;
+        this.tickets = new ArrayList<>();
     }
 
     public List<Ticket> viewTicketHistory() {
