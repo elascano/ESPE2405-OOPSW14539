@@ -6,7 +6,7 @@ package ec.edu.espe.AcademyGradeRegister.model;
 
 /**
  *
- * @author WINDOWS
+ * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
 public class Parent {
     public static void main(String[] args){

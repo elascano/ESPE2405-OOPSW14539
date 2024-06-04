@@ -6,10 +6,18 @@ package ec.edu.espe.AcademyGradeRegister.model;
 
 /**
  *
- * @author WINDOWS
+ * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
-public class Proffessor {
-    public static void main(String[] args){
-        
+class Grade {
+    private int Score;
+
+    public int getScore() {
+        return Score;
     }
+
+    public void setScore(int Score) {
+        this.Score = Score;
+    }
+    
+    
 }
