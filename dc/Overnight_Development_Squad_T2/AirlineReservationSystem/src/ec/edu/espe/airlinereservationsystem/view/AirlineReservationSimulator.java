@@ -20,7 +20,7 @@ public class AirlineReservationSimulator {
             System.out.println("3. Book Ticket");
             System.out.println("4. Make Payment");
             System.out.println("5. Add Offer");
-            System.out.println("0. Exit");
+            System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine();
@@ -46,7 +46,7 @@ public class AirlineReservationSimulator {
                 case 5:
                     //TODO
                     break;
-                case 0:
+                case 6:
                     System.out.println("Exiting...");
                     break;
                 default:
