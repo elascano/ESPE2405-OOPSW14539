@@ -24,7 +24,6 @@ public class Flight {
         this.arrivalDate = arrivalDate;
     }
 
-    
     /**
      * @return the flightId
      */
@@ -108,6 +107,6 @@ public class Flight {
     public void setArrivalDate(Date arrivalDate) {
         this.arrivalDate = arrivalDate;
     }
-    
-    
+
+
 }
