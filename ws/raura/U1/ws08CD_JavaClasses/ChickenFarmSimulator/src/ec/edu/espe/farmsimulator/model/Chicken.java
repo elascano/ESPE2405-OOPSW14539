@@ -21,6 +21,21 @@ public class Chicken {
         return "Chicken{" + "id=" + id + ", name=" + name + ", color=" + color + ", age=" + age + ", molting=" + molting + ", bornOnDate=" + bornOnDate + '}';
     }
     
+    public String toString(int type){  
+        String chickenData="";
+        if (type==1){  //csv
+            chickenData = id + "," + name + "," + color + "," + age + "," + molting + "," + bornOnDate;
+        }
+        if(type==2){   //txt
+            
+        }
+        if(type==3){  //json
+            
+        }
+        return chickenData;
+    }
+    
+    
     public Chicken(int id, String name, String color, int age, boolean molting, Date bornOnDate) {
         this.id = id;
         this.name = name;
