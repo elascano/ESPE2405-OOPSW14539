@@ -1,7 +1,6 @@
 
 
 package ec.edu.espe.airlinereservationsystem.model;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,31 +12,20 @@ public class Customer {
     private int customerId  ;
     private String name;
     private String email;
-    private List<Ticket> tickets;
+    private List<Ticket> ticketHistory;
 
     public Customer(int customerId, String name, String email) {
         this.customerId = customerId;
         this.name = name;
         this.email = email;
-        this.tickets = new ArrayList<>();
+        this.ticketHistory = new ArrayList<>();
     }
 
-    public List<Ticket> viewTicketHistory() {
-    return tickets;
-    }
-    
     /**
      * @return the customerId
      */
     public int getCustomerId() {
         return customerId;
-    }
-
-    /**
-     * @param customerId the customerId to set
-     */
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
     }
 
     /**
@@ -48,13 +36,6 @@ public class Customer {
     }
 
     /**
-     * @param name the name to set
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
      * @return the email
      */
     public String getEmail() {
@@ -62,23 +43,13 @@ public class Customer {
     }
 
     /**
-     * @param email the email to set
+     * @return the ticketHistory
      */
-    public void setEmail(String email) {
-        this.email = email;
+    public List<Ticket> getTicketHistory() {
+        return ticketHistory;
     }
-
-    /**
-     * @return the tickets
-     */
-    public List<Ticket> getTickets() {
-        return tickets;
+    public void addTicketToHistory(Ticket ticket) {
+        this.ticketHistory.add(ticket);
     }
-
-    /**
-     * @param tickets the tickets to set
-     */
-    public void setTickets(List<Ticket> tickets) {
-        this.tickets = tickets;
-    }
+    
 }

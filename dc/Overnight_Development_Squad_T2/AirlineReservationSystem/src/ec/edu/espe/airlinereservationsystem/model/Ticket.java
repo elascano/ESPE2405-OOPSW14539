@@ -1,11 +1,9 @@
 
 package ec.edu.espe.airlinereservationsystem.model;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+
 import enums.TicketClass;
-import enums.TicketStatus;
+
 
 /**
  *
@@ -18,9 +16,8 @@ public class Ticket {
     private Flight flight;
     private TicketClass ticketClass;
     private int numberOfPeople;
-    private List<Baggage> baggages;
-    private TicketStatus status;
-    private List<TicketStatus> history;
+    private String status;
+    private boolean eTicket;
 
     public Ticket(int ticketId, Customer customer, Flight flight, TicketClass ticketClass, int numberOfPeople) {
         this.ticketId = ticketId;
@@ -28,99 +25,110 @@ public class Ticket {
         this.flight = flight;
         this.ticketClass = ticketClass;
         this.numberOfPeople = numberOfPeople;
-        this.baggages = new ArrayList<>();
-        this.status = TicketStatus.BOOKED;
-        this.history = new ArrayList<>();
+        this.status = "Booked";
+        this.eTicket = true;
     }
 
-    public void addBaggage(Baggage baggage) {
-        baggages.add(baggage);
-    }
-
-    public void sendTicketEmail() {
-        System.out.println("Ticket sent to " + customer.getEmail());
-    }
-
-    public void changeDate(Date newDepartureDate, Date newArrivalDate) {
-        if (ticketClass == TicketClass.BUSINESS) {
-            flight.setDepartureDate(newDepartureDate);
-            flight.setArrivalDate(newArrivalDate);
-        } else {
-            System.out.println("Date change allowed only for business class tickets");
-        }
-    }
-
-    public TicketStatus viewTicketStatus() {
-        return status;
-    }
-
-    public void updateTicketStatus(TicketStatus status) {
-        this.status = status;
-        history.add(status);
-    }
-
+    
+    
+    /**
+     * @return the ticketId
+     */
     public int getTicketId() {
         return ticketId;
     }
 
+    /**
+     * @param ticketId the ticketId to set
+     */
     public void setTicketId(int ticketId) {
         this.ticketId = ticketId;
     }
 
+    /**
+     * @return the customer
+     */
     public Customer getCustomer() {
         return customer;
     }
 
+    /**
+     * @param customer the customer to set
+     */
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
 
+    /**
+     * @return the flight
+     */
     public Flight getFlight() {
         return flight;
     }
 
+    /**
+     * @param flight the flight to set
+     */
     public void setFlight(Flight flight) {
         this.flight = flight;
     }
 
+    /**
+     * @return the ticketClass
+     */
     public TicketClass getTicketClass() {
         return ticketClass;
     }
 
+    /**
+     * @param ticketClass the ticketClass to set
+     */
     public void setTicketClass(TicketClass ticketClass) {
         this.ticketClass = ticketClass;
     }
 
+    /**
+     * @return the numberOfPeople
+     */
     public int getNumberOfPeople() {
         return numberOfPeople;
     }
 
+    /**
+     * @param numberOfPeople the numberOfPeople to set
+     */
     public void setNumberOfPeople(int numberOfPeople) {
         this.numberOfPeople = numberOfPeople;
     }
 
-    public List<Baggage> getBaggages() {
-        return baggages;
-    }
-
-    public void setBaggages(List<Baggage> baggages) {
-        this.baggages = baggages;
-    }
-
-    public TicketStatus getStatus() {
+    /**
+     * @return the status
+     */
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(TicketStatus status) {
+    /**
+     * @param status the status to set
+     */
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public List<TicketStatus> getHistory() {
-        return history;
+    /**
+     * @return the eTicket
+     */
+    public boolean iseTicket() {
+        return eTicket;
     }
 
-    public void setHistory(List<TicketStatus> history) {
-        this.history = history;
+    /**
+     * @param eTicket the eTicket to set
+     */
+    public void seteTicket(boolean eTicket) {
+        this.eTicket = eTicket;
     }
+    
+    
 }
 
