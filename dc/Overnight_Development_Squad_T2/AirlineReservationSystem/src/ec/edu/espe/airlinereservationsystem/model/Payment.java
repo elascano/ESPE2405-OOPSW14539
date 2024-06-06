@@ -1,8 +1,8 @@
 
 
 package ec.edu.espe.airlinereservationsystem.model;
-
-import enums.PaymentMethod;
+import java.io.Serializable;
+import enums.PaymentMethods;
 import java.util.Date;
 
 /**
@@ -11,19 +11,17 @@ import java.util.Date;
  */
 public class Payment {
     private int paymentId;
-    private PaymentMethod method;
+    private PaymentMethods method;
     private double amount;
     private Date date;
 
-    public Payment(int paymentId, PaymentMethod method, double amount, Date date) {
+    public Payment(int paymentId, PaymentMethods method, double amount, Date date) {
         this.paymentId = paymentId;
         this.method = method;
         this.amount = amount;
         this.date = date;
     }
 
-    
-    
     /**
      * @return the paymentId
      */
@@ -32,24 +30,10 @@ public class Payment {
     }
 
     /**
-     * @param paymentId the paymentId to set
-     */
-    public void setPaymentId(int paymentId) {
-        this.paymentId = paymentId;
-    }
-
-    /**
      * @return the method
      */
-    public PaymentMethod getMethod() {
+    public PaymentMethods getMethod() {
         return method;
-    }
-
-    /**
-     * @param method the method to set
-     */
-    public void setMethod(PaymentMethod method) {
-        this.method = method;
     }
 
     /**
@@ -60,26 +44,10 @@ public class Payment {
     }
 
     /**
-     * @param amount the amount to set
-     */
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    /**
      * @return the date
      */
     public Date getDate() {
         return date;
     }
-
-    /**
-     * @param date the date to set
-     */
-    public void setDate(Date date) {
-        this.date = date;
-    }
-    
-    
 
 }
