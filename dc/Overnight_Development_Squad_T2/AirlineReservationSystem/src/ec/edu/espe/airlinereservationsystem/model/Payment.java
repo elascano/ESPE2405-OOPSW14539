@@ -2,7 +2,7 @@
 
 package ec.edu.espe.airlinereservationsystem.model;
 import java.io.Serializable;
-import enums.PaymentMethod;
+import enums.PaymentMethods;
 import java.util.Date;
 
 /**
@@ -11,11 +11,11 @@ import java.util.Date;
  */
 public class Payment {
     private int paymentId;
-    private PaymentMethod method;
+    private PaymentMethods method;
     private double amount;
     private Date date;
 
-    public Payment(int paymentId, PaymentMethod method, double amount, Date date) {
+    public Payment(int paymentId, PaymentMethods method, double amount, Date date) {
         this.paymentId = paymentId;
         this.method = method;
         this.amount = amount;
@@ -32,7 +32,7 @@ public class Payment {
     /**
      * @return the method
      */
-    public PaymentMethod getMethod() {
+    public PaymentMethods getMethod() {
         return method;
     }
 

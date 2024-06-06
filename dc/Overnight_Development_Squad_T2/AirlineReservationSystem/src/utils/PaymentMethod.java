@@ -1,24 +1,21 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 
 package utils;
 
-import enums.PaymentMethod;
+import enums.PaymentMethods;
 import java.util.Date;
 
 /**
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
-public class paymentMethod {
+public class PaymentMethod {
     private int paymentId;
-    private PaymentMethod method;
+    private PaymentMethods method;
     private double amount;
     private Date date;
 
-    public paymentMethod(int paymentId, PaymentMethod method, double amount, Date date) {
+    public PaymentMethod(int paymentId, PaymentMethods method, double amount, Date date) {
         this.paymentId = paymentId;
         this.method = method;
         this.amount = amount;
@@ -42,14 +39,14 @@ public class paymentMethod {
     /**
      * @return the method
      */
-    public PaymentMethod getMethod() {
+    public PaymentMethods getMethod() {
         return method;
     }
 
     /**
      * @param method the method to set
      */
-    public void setMethod(PaymentMethod method) {
+    public void setMethod(PaymentMethods method) {
         this.method = method;
     }
 

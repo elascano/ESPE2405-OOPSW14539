@@ -1,11 +1,11 @@
 package ec.edu.espe.airlinereservationsystem.view;
 
-import utils.reservationSystem;
+import utils.ReservationSystem;
 
 
 public class AirlineReservationSimulator {
     public static void main(String[] args) {
-        reservationSystem reservationSystemInt = new reservationSystem();
+        ReservationSystem reservationSystemInt = new ReservationSystem();
         MenuManager menuManager = new MenuManager(reservationSystemInt);
         menuManager.displayMenu();
     }

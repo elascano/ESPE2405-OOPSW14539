@@ -1,9 +1,9 @@
 
 package ec.edu.espe.airlinereservationsystem.view;
 
-import utils.reservationSystem;
+import utils.ReservationSystem;
 import utils.FAQManager;
-import enums.PaymentMethod;
+import enums.PaymentMethods;
 import enums.TicketClass;
 import ec.edu.espe.airlinereservationsystem.model.Customer;
 import ec.edu.espe.airlinereservationsystem.model.Flight;
@@ -19,10 +19,10 @@ import java.util.Scanner;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class MenuManager {
-    private final reservationSystem reservationSystemInt;
+    private final ReservationSystem reservationSystemInt;
     private final Scanner scanner;
 
-    public MenuManager(reservationSystem reservationSystemInt) {
+    public MenuManager(ReservationSystem reservationSystemInt) {
         this.reservationSystemInt = reservationSystemInt;
         this.scanner = new Scanner(System.in);
     }
@@ -155,7 +155,7 @@ public class MenuManager {
         scanner.nextLine(); // Consume newline
 
         try {
-            PaymentMethod paymentMethod = PaymentMethod.valueOf(paymentMethodStr.toUpperCase());
+            PaymentMethods paymentMethod = PaymentMethods.valueOf(paymentMethodStr.toUpperCase());
             reservationSystemInt.getPaymentManager().makePayment(paymentMethod, amount);
             System.out.println("Payment made successfully!");
         } catch (IllegalArgumentException e) {

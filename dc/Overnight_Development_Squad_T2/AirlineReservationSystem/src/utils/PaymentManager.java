@@ -2,7 +2,7 @@
 package utils;
 
 import ec.edu.espe.airlinereservationsystem.model.Payment;
-import enums.PaymentMethod;
+import enums.PaymentMethods;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -18,7 +18,7 @@ public class PaymentManager {
         this.payments = new ArrayList<>();
     }
 
-    public Payment makePayment(PaymentMethod method, double amount) {
+    public Payment makePayment(PaymentMethods method, double amount) {
         int paymentId = payments.size() + 1;
         Payment payment = new Payment(paymentId, method, amount, new Date());
         payments.add(payment);

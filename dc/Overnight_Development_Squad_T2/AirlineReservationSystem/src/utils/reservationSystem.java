@@ -5,7 +5,7 @@ import ec.edu.espe.airlinereservationsystem.model.Customer;
 import ec.edu.espe.airlinereservationsystem.model.Flight;
 import ec.edu.espe.airlinereservationsystem.model.Payment;
 import ec.edu.espe.airlinereservationsystem.model.Ticket;
-import enums.PaymentMethod;
+import enums.PaymentMethods;
 import enums.TicketClass;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,7 +15,7 @@ import java.util.List;
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
-public class reservationSystem {
+public class ReservationSystem {
 
     private CustomerManager customerManager;
     private FlightManager flightManager;
@@ -24,7 +24,7 @@ public class reservationSystem {
     private OfferManager offerManager;
     private FAQManager faqManager;
 
-    public reservationSystem() {
+    public ReservationSystem() {
         this.customerManager = new CustomerManager();
         this.flightManager = new FlightManager();
         this.ticketManager = new TicketManager();
