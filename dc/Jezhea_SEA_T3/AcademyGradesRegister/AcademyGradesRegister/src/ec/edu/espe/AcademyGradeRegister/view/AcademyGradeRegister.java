@@ -4,15 +4,20 @@
  */
 package ec.edu.espe.AcademyGradeRegister.view;
 
+import ec.edu.espe.AcademyGradeRegister.model.Professor;
+import ec.edu.espe.AcademyGradeRegister.model.Student;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
+
 
 /**
  *
  * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
 public class AcademyGradeRegister {
+    public Scanner scanner = new Scanner(System.in);
+    
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);  
         
@@ -21,17 +26,40 @@ public class AcademyGradeRegister {
         System.out.println("ACADEMY GRADE REGISTER");
         int operation;
         
-            System.out.println("ingresar como docente: ");
-            System.out.println("ingresar como estudiante: ");
-            System.out.println("ingresar como padre de familia: ");
-            System.out.println("ingresar como administrador: ");
+            System.out.println("1. ingresar como docente: ");
+            System.out.println("2. ingresar como estudiante: ");
+            System.out.println("3. ingresar como padre de familia: ");
+            System.out.println("4 ingresar como administrador: ");
+            System.out.println("5. salir del programa.");
             operation = scanner.nextInt();
             
+            switch(operation){
+                case 1:
+                    //enterProfessor();
+                break;
+            }
     
         
         
         
         
+        
+    }
+
+    private void enterProfessor() {
+        System.out.println("ingrese su id: ");
+        String Id = scanner.nextLine();
+        
+        System.out.println("ingrese sus nombres: ");
+        String fistName = scanner.nextLine();
+        
+        System.out.println("ingrese sus apellidos: ");
+        String lastName = scanner.nextLine();
+        
+        System.out.println("ingrese su email: ");
+        String email = scanner.nextLine();
+        
+        //Professor professors = new Professor();
         
     }
 }

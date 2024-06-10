@@ -11,15 +11,13 @@ public class Administrator {
     private String firstName;
     private String lastName;
     private String email;
-    private String department;
 
     // Constructor
-    public Administrator(String adminID, String firstName, String lastName, String email, String department) {
+    public Administrator(String adminID, String firstName, String lastName, String email) {
         this.adminID = adminID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.department = department;
     }
 
     // Getters and Setters
@@ -55,14 +53,6 @@ public class Administrator {
         this.email = email;
     }
 
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
-
     // Method to generate report based on student's grades
     public String generateReport(Student student) {
         double averageGrade = student.calculateAverageGrade();
@@ -87,8 +77,7 @@ public class Administrator {
     public String toString() {
         return "Admin ID: " + adminID + "\n" +
                "Name: " + firstName + " " + lastName + "\n" +
-               "Email: " + email + "\n" +
-               "Department: " + department;
+               "Email: " + email;
     }
 }
 
