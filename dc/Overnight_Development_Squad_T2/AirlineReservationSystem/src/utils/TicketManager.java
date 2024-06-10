@@ -23,7 +23,7 @@ public class TicketManager {
         int ticketId = tickets.size() + 1;
         Ticket ticket = new Ticket(ticketId, customer, flight, ticketClass, numberOfPeople);
         tickets.add(ticket);
-        customer.addTicketToHistory(ticket);
+        customer.addTicket(ticket);
         sendTicketByEmail(customer, ticket);
         return ticket;
     }

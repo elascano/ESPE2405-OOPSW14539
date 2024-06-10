@@ -1,26 +1,29 @@
-
 package ec.edu.espe.airlinereservationsystem.view;
 
 import utils.ReservationSystem;
-import utils.FAQManager;
-import enums.PaymentMethods;
 import enums.TicketClass;
 import ec.edu.espe.airlinereservationsystem.model.Customer;
 import ec.edu.espe.airlinereservationsystem.model.Flight;
 import ec.edu.espe.airlinereservationsystem.model.Ticket;
+import enums.PaymentMethods;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
+import utils.CustomerDataManager;
+import utils.JsonUtils;
 
 /**
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class MenuManager {
+
     private final ReservationSystem reservationSystemInt;
     private final Scanner scanner;
+    private static final String CUSTOMER_DATA_FILE = "customers.json";
 
     public MenuManager(ReservationSystem reservationSystemInt) {
         this.reservationSystemInt = reservationSystemInt;
@@ -34,14 +37,13 @@ public class MenuManager {
             System.out.println("1. Create Customer");
             System.out.println("2. Create Flight");
             System.out.println("3. Book Ticket");
-            System.out.println("4. Make Payment");
-            System.out.println("5. Add Offer");
-            System.out.println("6. View Ticket History");
-            System.out.println("7. Add Baggage");
-            System.out.println("8. Change Flight Date");
-            System.out.println("9. Update Ticket Status");
-            System.out.println("10. View Offers");
-            System.out.println("11. FAQ");
+            System.out.println("4. Add Offer");
+            System.out.println("5. View Ticket History");
+            System.out.println("6. Add Baggage");
+            System.out.println("7. Change Flight Date");
+            System.out.println("8. Update Ticket Status");
+            System.out.println("9. View Offers");
+            System.out.println("10. FAQ");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
@@ -58,27 +60,24 @@ public class MenuManager {
                     bookTicket();
                     break;
                 case 4:
-                    makePayment();
-                    break;
-                case 5:
                     addOffer();
                     break;
-                case 6:
+                case 5:
                     viewTicketHistory();
                     break;
-                case 7:
+                case 6:
                     addBaggage();
                     break;
-                case 8:
+                case 7:
                     changeFlightDate();
                     break;
-                case 9:
+                case 8:
                     updateTicketStatus();
                     break;
-                case 10:
+                case 9:
                     viewOffers();
                     break;
-                case 11:
+                case 10:
                     displayFAQ();
                     break;
                 case 0:
@@ -97,8 +96,13 @@ public class MenuManager {
         String name = scanner.nextLine();
         System.out.print("Enter customer email: ");
         String email = scanner.nextLine();
-        reservationSystemInt.getCustomerManager().createCustomer(name, email);
+
+        Customer customer = reservationSystemInt.getCustomerManager().createCustomer(name, email);
         System.out.println("Customer created successfully!");
+
+        // Save customers to JSON file
+        List<Customer> customers = reservationSystemInt.getCustomerManager().getAllCustomers();
+        CustomerDataManager.saveCustomers(customers);
     }
 
     private void createFlight() {
@@ -115,8 +119,8 @@ public class MenuManager {
         try {
             Date depDate = new SimpleDateFormat("yyyy-MM-dd").parse(depDateStr);
             Date arrDate = new SimpleDateFormat("yyyy-MM-dd").parse(arrDateStr);
-            reservationSystemInt.getFlightManager().createFlight(origin, destination, airline, depDate, arrDate);
-            System.out.println("Flight created successfully!");
+            Flight flight = reservationSystemInt.getFlightManager().createFlight(origin, destination, airline, depDate, arrDate);
+            System.out.println("Flight created successfully! Flight ID: " + flight.getFlightId());
         } catch (ParseException e) {
             System.out.println("Invalid date format. Please try again.");
         }
@@ -127,23 +131,42 @@ public class MenuManager {
         int customerId = scanner.nextInt();
         System.out.print("Enter flight ID: ");
         int flightId = scanner.nextInt();
+        System.out.print("Enter ticket class (ECONOMY/BUSINESS): ");
         scanner.nextLine(); // Consume newline
-        System.out.print("Enter ticket class (ECONOMY, BUSINESS): ");
         String ticketClassStr = scanner.nextLine();
+        TicketClass ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
         System.out.print("Enter number of people: ");
         int numberOfPeople = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
 
         try {
-            TicketClass ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
+            ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
             Customer customer = reservationSystemInt.getCustomerManager().getCustomer(customerId);
             Flight flight = reservationSystemInt.getFlightManager().getFlight(flightId);
-            reservationSystemInt.getTicketManager().bookTicket(customer, flight, ticketClass, numberOfPeople);
+            Ticket ticket = reservationSystemInt.getTicketManager().bookTicket(customer, flight, ticketClass, numberOfPeople);
             System.out.println("Ticket booked successfully!");
+            
+            customer.addTicket(ticket);
+
+            // Calculate total price
+            double totalPrice = ticketClass.getPrice() * numberOfPeople;
+
+            // Proceed to payment
+            System.out.print("Enter payment method (CREDIT_CARD, DEBIT_CARD, PAYPAL): ");
+            scanner.nextLine();
+            String paymentMethodStr = scanner.nextLine();
+            
+
+            PaymentMethods paymentMethod = PaymentMethods.valueOf(paymentMethodStr.toUpperCase());
+            reservationSystemInt.getPaymentManager().makePayment(paymentMethod, totalPrice);
+            System.out.println("Payment made successfully!");
+
+            List<Customer> customers = reservationSystemInt.getCustomerManager().getAllCustomers();
+            JsonUtils.saveCustomersToFile(customers, CUSTOMER_DATA_FILE);
+
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Invalid customer ID or flight ID. Please try again.");
         } catch (IllegalArgumentException e) {
-            System.out.println("Invalid ticket class. Please try again.");
+            System.out.println("Invalid input. Please try again.");
         }
     }
 
@@ -245,4 +268,3 @@ public class MenuManager {
         reservationSystemInt.getFaqManager().displayFAQ();
     }
 }
-

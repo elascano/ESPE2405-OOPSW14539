@@ -1,5 +1,4 @@
 
-
 package utils;
 
 import ec.edu.espe.airlinereservationsystem.model.Flight;
@@ -25,8 +24,13 @@ public class FlightManager {
         return flight;
     }
 
-    public Flight getFlight(int id) {
-        return flights.get(id - 1);
+    public Flight getFlight(int flightId) {
+        for (Flight flight : flights) {
+            if (flight.getFlightId() == flightId) {
+                return flight;
+            }
+        }
+        throw new IndexOutOfBoundsException("Flight not found");
     }
 
     public List<Flight> getAllFlights() {
