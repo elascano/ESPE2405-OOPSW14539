@@ -6,7 +6,6 @@ package utils;
 public class ReservationSystem {
 
     private static ReservationSystem instance;
-
     private CustomerManager customerManager;
     private FlightManager flightManager;
     private TicketManager ticketManager;
@@ -15,15 +14,15 @@ public class ReservationSystem {
     private FAQManager faqManager;
 
     private ReservationSystem() {
-        this.customerManager = new CustomerManager();
         this.flightManager = new FlightManager();
         this.ticketManager = new TicketManager();
         this.paymentManager = new PaymentManager();
         this.offerManager = new OfferManager();
         this.faqManager = new FAQManager();
+        CustomerDataManager.setReservationSystem(this);
     }
 
-    public static ReservationSystem getInstance() {
+    public static synchronized ReservationSystem getInstance() {
         if (instance == null) {
             instance = new ReservationSystem();
         }
@@ -31,6 +30,9 @@ public class ReservationSystem {
     }
 
     public CustomerManager getCustomerManager() {
+        if (customerManager == null) {
+            this.customerManager = new CustomerManager();
+        }
         return customerManager;
     }
 

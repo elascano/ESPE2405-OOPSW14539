@@ -1,6 +1,7 @@
 package utils;
 
 import ec.edu.espe.airlinereservationsystem.model.Customer;
+import ec.edu.espe.airlinereservationsystem.model.Ticket;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -8,14 +9,14 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
- */
 public class CustomerDataManager {
 
     private static final String CUSTOMER_DATA_FILE = "customers.json";
-    
+    private static ReservationSystem reservationSystemInt;
+
+    public static void setReservationSystem(ReservationSystem reservationSystem) {
+        reservationSystemInt = reservationSystem;
+    }
 
     public static void saveCustomers(List<Customer> customers) {
         JSONArray customerArray = new JSONArray();
@@ -46,11 +47,12 @@ public class CustomerDataManager {
 
             for (int i = 0; i < customerArray.length(); i++) {
                 JSONObject customerJson = customerArray.getJSONObject(i);
-                customers.add(Customer.fromJSON(customerJson, ReservationSystem.getInstance().getCustomerManager(), ReservationSystem.getInstance().getFlightManager()));
+                Customer customer = Customer.fromJSON(customerJson, reservationSystemInt.getCustomerManager(), reservationSystemInt.getFlightManager());
+                customers.add(customer);
             }
 
         } catch (FileNotFoundException e) {
-            // No data file found, return an empty list
+            System.out.println("Customer data file not found, creating a new one upon first save.");
         } catch (IOException e) {
             e.printStackTrace();
         }

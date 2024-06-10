@@ -98,7 +98,7 @@ public class MenuManager {
         String email = scanner.nextLine();
 
         Customer customer = reservationSystemInt.getCustomerManager().createCustomer(name, email);
-        System.out.println("Customer created successfully!");
+        System.out.println("Customer created successfully! Customer ID: " + customer.getCustomerId());
 
         // Save customers to JSON file
         List<Customer> customers = reservationSystemInt.getCustomerManager().getAllCustomers();
@@ -144,7 +144,7 @@ public class MenuManager {
             Flight flight = reservationSystemInt.getFlightManager().getFlight(flightId);
             Ticket ticket = reservationSystemInt.getTicketManager().bookTicket(customer, flight, ticketClass, numberOfPeople);
             System.out.println("Ticket booked successfully!");
-            
+
             customer.addTicket(ticket);
 
             // Calculate total price
@@ -154,7 +154,6 @@ public class MenuManager {
             System.out.print("Enter payment method (CREDIT_CARD, DEBIT_CARD, PAYPAL): ");
             scanner.nextLine();
             String paymentMethodStr = scanner.nextLine();
-            
 
             PaymentMethods paymentMethod = PaymentMethods.valueOf(paymentMethodStr.toUpperCase());
             reservationSystemInt.getPaymentManager().makePayment(paymentMethod, totalPrice);
