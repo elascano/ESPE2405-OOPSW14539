@@ -8,7 +8,7 @@ package ec.edu.espe.AcademyGradeRegister.model;
  *
  * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
-import java.util.List;
+import java.util.ArrayList;
 
 public class Professor {
     private String professorID;
@@ -16,14 +16,14 @@ public class Professor {
     private String lastName;
     private String email;
     private String department;
-    private List<String> coursesTaught;
+    private ArrayList<String> coursesTaught;
     private String officeNumber;
     private String phoneNumber;
     private String dateOfHire;
 
     // Constructor
     public Professor(String professorID, String firstName, String lastName, String email, 
-                     String department, List<String> coursesTaught, String officeNumber, 
+                     String department, ArrayList<String> coursesTaught, String officeNumber, 
                      String phoneNumber, String dateOfHire) {
         this.professorID = professorID;
         this.firstName = firstName;
@@ -77,11 +77,11 @@ public class Professor {
         this.department = department;
     }
 
-    public List<String> getCoursesTaught() {
+    public ArrayList<String> getCoursesTaught() {
         return coursesTaught;
     }
 
-    public void setCoursesTaught(List<String> coursesTaught) {
+    public void setCoursesTaught(ArrayList<String> coursesTaught) {
         this.coursesTaught = coursesTaught;
     }
 
