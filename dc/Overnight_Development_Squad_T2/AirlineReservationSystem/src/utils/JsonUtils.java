@@ -16,8 +16,8 @@ import java.util.List;
  */
 public class JsonUtils {
 
-    private static CustomerManager customerManager = new CustomerManager(); 
-    private static FlightManager flightManager = new FlightManager(); 
+    private static CustomerManager customerManager = new CustomerManager();
+    private static FlightManager flightManager = new FlightManager();
 
     public static void saveCustomersToFile(List<Customer> customers, String filename) {
         JSONArray jsonArray = new JSONArray();

@@ -6,6 +6,7 @@ import utils.CustomerManager;
 import utils.FlightManager;
 
 public class Ticket {
+
     private int ticketId;
     private int flightId;
     private int customerId;
@@ -74,5 +75,9 @@ public class Ticket {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public Flight getFlight(FlightManager flightManager) {
+        return flightManager.getFlight(flightId);
     }
 }

@@ -1,4 +1,3 @@
-
 package utils;
 
 import ec.edu.espe.airlinereservationsystem.model.Flight;
@@ -11,6 +10,7 @@ import java.util.List;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class FlightManager {
+
     private List<Flight> flights;
 
     public FlightManager() {

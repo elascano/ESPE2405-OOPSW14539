@@ -132,7 +132,7 @@ public class MenuManager {
         System.out.print("Enter flight ID: ");
         int flightId = scanner.nextInt();
         System.out.print("Enter ticket class (ECONOMY/BUSINESS): ");
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         String ticketClassStr = scanner.nextLine();
         TicketClass ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
         System.out.print("Enter number of people: ");
@@ -144,8 +144,6 @@ public class MenuManager {
             Flight flight = reservationSystemInt.getFlightManager().getFlight(flightId);
             Ticket ticket = reservationSystemInt.getTicketManager().bookTicket(customer, flight, ticketClass, numberOfPeople);
             System.out.println("Ticket booked successfully!");
-
-            customer.addTicket(ticket);
 
             // Calculate total price
             double totalPrice = ticketClass.getPrice() * numberOfPeople;
@@ -174,7 +172,7 @@ public class MenuManager {
         String paymentMethodStr = scanner.nextLine();
         System.out.print("Enter amount: ");
         double amount = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         try {
             PaymentMethods paymentMethod = PaymentMethods.valueOf(paymentMethodStr.toUpperCase());
@@ -198,7 +196,21 @@ public class MenuManager {
         scanner.nextLine(); // Consume newline
         try {
             Customer customer = reservationSystemInt.getCustomerManager().getCustomer(customerId);
-            reservationSystemInt.getTicketManager().viewTicketHistory(customer);
+            List<Ticket> tickets = reservationSystemInt.getTicketManager().getTicketsByCustomer(customer);
+
+            System.out.println("Ticket History for " + customer.getName() + ":");
+            for (Ticket ticket : tickets) {
+                Flight flight = ticket.getFlight(reservationSystemInt.getFlightManager());
+                System.out.println("- Ticket ID: " + ticket.getTicketId()
+                        + ", Flight ID: " + flight.getFlightId()
+                        + ", Origin: " + flight.getOrigin()
+                        + ", Destination: " + flight.getDestination()
+                        + ", Airline: " + flight.getAirline()
+                        + ", Departure Date: " + flight.getDepartureDate()
+                        + ", Arrival Date: " + flight.getArrivalDate()
+                        + ", Class: " + ticket.getTicketClass()
+                        + ", Status: " + ticket.getStatus());
+            }
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Invalid customer ID. Please try again.");
         }
@@ -207,13 +219,13 @@ public class MenuManager {
     private void addBaggage() {
         System.out.print("Enter ticket ID: ");
         int ticketId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter number of carry-on baggage: ");
         int carryOn = scanner.nextInt();
         scanner.nextLine(); // Consume newline
         System.out.print("Enter number of checked baggage: ");
         int checked = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         try {
             Ticket ticket = reservationSystemInt.getTicketManager().getTicket(ticketId);
             reservationSystemInt.getTicketManager().addBaggage(ticket, carryOn, checked);
@@ -226,7 +238,7 @@ public class MenuManager {
     private void changeFlightDate() {
         System.out.print("Enter ticket ID: ");
         int ticketId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter new departure date (yyyy-MM-dd): ");
         String newDepDateStr = scanner.nextLine();
         System.out.print("Enter new arrival date (yyyy-MM-dd): ");
@@ -247,7 +259,7 @@ public class MenuManager {
     private void updateTicketStatus() {
         System.out.print("Enter ticket ID: ");
         int ticketId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         System.out.print("Enter new status: ");
         String status = scanner.nextLine();
         try {

@@ -1,7 +1,8 @@
 package utils;
 
 /**
- * Manages the overall reservation system.
+ *
+ * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class ReservationSystem {
 

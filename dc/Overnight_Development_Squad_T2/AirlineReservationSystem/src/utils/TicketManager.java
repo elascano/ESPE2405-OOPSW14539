@@ -9,9 +9,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * TicketManager manages ticket booking and operations.
  *
- * Author: Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class TicketManager {
 
@@ -67,6 +66,10 @@ public class TicketManager {
         System.out.println("Ticket Class: " + ticket.getTicketClass());
         System.out.println("Number of People: " + ticket.getNumberOfPeople());
         System.out.println("Status: " + ticket.getStatus());
+    }
+
+    public List<Ticket> getTicketsByCustomer(Customer customer) {
+        return customer.getTickets();
     }
 
     public Ticket getTicket(int id) {

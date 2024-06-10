@@ -1,6 +1,5 @@
-
-
 package ec.edu.espe.airlinereservationsystem.model;
+
 import java.io.Serializable;
 import enums.PaymentMethods;
 import java.util.Date;
@@ -10,6 +9,7 @@ import java.util.Date;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class Payment {
+
     private int paymentId;
     private PaymentMethods method;
     private double amount;
