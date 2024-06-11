@@ -10,8 +10,10 @@ import java.util.ArrayList;
  *
  * @author WINDOWS
  */
-public class ProfessorRegistration {
-     private String professorID;
+import java.util.ArrayList;
+
+public class Registration {
+    private String professorID;
     private String firstName;
     private String lastName;
     private String email;
@@ -19,7 +21,7 @@ public class ProfessorRegistration {
     private String phoneNumber;
     private ArrayList<String> coursesTaught;
 
-    public ProfessorRegistration(String professorID, String firstName, String lastName, String email, String department, String phoneNumber, ArrayList<String> coursesTaught) {
+    public Registration(String professorID, String firstName, String lastName, String email, String department, String phoneNumber, ArrayList<String> coursesTaught) {
         this.professorID = professorID;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -89,7 +91,4 @@ public class ProfessorRegistration {
     public void setCoursesTaught(ArrayList<String> coursesTaught) {
         this.coursesTaught = coursesTaught;
     }
-    
-    
-    
 }
