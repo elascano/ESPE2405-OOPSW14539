@@ -17,11 +17,12 @@ public class Computer {
         this.id = id;
         this.brand = brand;
         this.basePrice = basePrice;
-        this.pvp = basePrice+Tax.computerIva(15.0F, basePrice);
-    }
+        this.pvp = basePrice + Tax.computerIva(15.0F, basePrice);   
+        System.out.println("Data Computer: " + this.toString()); 
+     }
 
     @Override
-    public String toString() {
+    public final String toString() {
         return "Computer{" + "id=" + id + ", brand=" + brand + ", basePrice=" + basePrice + ", pvp=" + pvp + '}';
     }
 
@@ -78,9 +79,7 @@ public class Computer {
      * @param pvp the pvp to set according to the ivaPercentage
      */
     public void setPvp() {
-        this.pvp = this.basePrice + Tax.computeIva(ivaPercentage(15.0F), basePrice);
+        this.pvp = this.basePrice + Tax.computerIva(15.0F, pvp);
     }
-    
-    
     
 }

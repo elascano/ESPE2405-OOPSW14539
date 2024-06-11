@@ -12,7 +12,5 @@ public class ShoppingSystem {
         Computer computer;
         computer = new Computer (0,"HP", 1000);
         System.out.println("The price of this computer is --> " + computer.getPvp() );
-        
     }
-    
 }
