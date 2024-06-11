@@ -36,7 +36,7 @@ public class AcademyGradeRegister {
             switch(operation){
                 case 1:
                     //enterProfessor();
-                break;
+                    break;
             }
     
         
@@ -50,16 +50,20 @@ public class AcademyGradeRegister {
         System.out.println("ingrese su id: ");
         String Id = scanner.nextLine();
         
-        System.out.println("ingrese sus nombres: ");
-        String fistName = scanner.nextLine();
-        
-        System.out.println("ingrese sus apellidos: ");
-        String lastName = scanner.nextLine();
-        
-        System.out.println("ingrese su email: ");
+        System.out.println("ingrese su correo: ");
         String email = scanner.nextLine();
         
-        //Professor professors = new Professor();
+        System.out.println("ingrese sus usuario: ");
+        String user = scanner.nextLine();
+        
+        System.out.println("ingrese su asignatura: ");
+        String subject = scanner.nextLine();
+        
+        Professor professors = new Professor();
+        professors.setProfessorID(Id);
+        professors.setEmail(email);
+        professors.setProfessorUser(user);
+        professors.setDepartment(subject);
         
     }
 }

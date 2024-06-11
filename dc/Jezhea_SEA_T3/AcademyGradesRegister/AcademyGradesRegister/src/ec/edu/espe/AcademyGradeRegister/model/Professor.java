@@ -8,35 +8,26 @@ package ec.edu.espe.AcademyGradeRegister.model;
  *
  * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
-import java.util.ArrayList;
 
 public class Professor {
     private String professorID;
-    private String firstName;
-    private String lastName;
+    private String professorUser;
     private String email;
     private String department;
-    private ArrayList<String> coursesTaught;
-    private String officeNumber;
-    private String phoneNumber;
-    private String dateOfHire;
 
-    // Constructor
-    public Professor(String professorID, String firstName, String lastName, String email, 
-                     String department, ArrayList<String> coursesTaught, String officeNumber, 
-                     String phoneNumber, String dateOfHire) {
+/*
+    public Professor(String professorID, String professorUser, String email, String department) {
         this.professorID = professorID;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.professorUser = professorUser;
         this.email = email;
         this.department = department;
-        this.coursesTaught = coursesTaught;
-        this.officeNumber = officeNumber;
-        this.phoneNumber = phoneNumber;
-        this.dateOfHire = dateOfHire;
     }
 
-    // Getters and Setters
+    @Override
+    public String toString() {
+        return "Professor{" + "professorID=" + professorID + ", professorUser=" + professorUser + ", email=" + email + ", department=" + department + '}';
+    }
+*/
     public String getProfessorID() {
         return professorID;
     }
@@ -45,20 +36,12 @@ public class Professor {
         this.professorID = professorID;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getProfessorUser() {
+        return professorUser;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setProfessorUser(String professorUser) {
+        this.professorUser = professorUser;
     }
 
     public String getEmail() {
@@ -76,49 +59,7 @@ public class Professor {
     public void setDepartment(String department) {
         this.department = department;
     }
-
-    public ArrayList<String> getCoursesTaught() {
-        return coursesTaught;
-    }
-
-    public void setCoursesTaught(ArrayList<String> coursesTaught) {
-        this.coursesTaught = coursesTaught;
-    }
-
-    public String getOfficeNumber() {
-        return officeNumber;
-    }
-
-    public void setOfficeNumber(String officeNumber) {
-        this.officeNumber = officeNumber;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getDateOfHire() {
-        return dateOfHire;
-    }
-
-    public void setDateOfHire(String dateOfHire) {
-        this.dateOfHire = dateOfHire;
-    }
-
-    // Method to display professor's information
-    @Override
-    public String toString() {
-        return "Professor ID: " + professorID + "\n" +
-               "Name: " + firstName + " " + lastName + "\n" +
-               "Email: " + email + "\n" +
-               "Department: " + department + "\n" +
-               "Courses Taught: " + String.join(", ", coursesTaught) + "\n" +
-               "Office Number: " + officeNumber + "\n" +
-               "Phone Number: " + phoneNumber + "\n" +
-               "Date of Hire: " + dateOfHire;
-    }
+    
+    
+    
 }
