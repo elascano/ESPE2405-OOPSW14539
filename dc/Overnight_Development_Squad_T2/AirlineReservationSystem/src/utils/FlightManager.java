@@ -1,5 +1,3 @@
-
-
 package utils;
 
 import ec.edu.espe.airlinereservationsystem.model.Flight;
@@ -12,6 +10,7 @@ import java.util.List;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class FlightManager {
+
     private List<Flight> flights;
 
     public FlightManager() {
@@ -25,8 +24,13 @@ public class FlightManager {
         return flight;
     }
 
-    public Flight getFlight(int id) {
-        return flights.get(id - 1);
+    public Flight getFlight(int flightId) {
+        for (Flight flight : flights) {
+            if (flight.getFlightId() == flightId) {
+                return flight;
+            }
+        }
+        throw new IndexOutOfBoundsException("Flight not found");
     }
 
     public List<Flight> getAllFlights() {

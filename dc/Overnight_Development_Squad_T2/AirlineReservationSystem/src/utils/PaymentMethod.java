@@ -1,5 +1,3 @@
-
-
 package utils;
 
 import enums.PaymentMethods;
@@ -10,6 +8,7 @@ import java.util.Date;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class PaymentMethod {
+
     private int paymentId;
     private PaymentMethods method;
     private double amount;
@@ -21,7 +20,7 @@ public class PaymentMethod {
         this.amount = amount;
         this.date = date;
     }
-    
+
     /**
      * @return the paymentId
      */
