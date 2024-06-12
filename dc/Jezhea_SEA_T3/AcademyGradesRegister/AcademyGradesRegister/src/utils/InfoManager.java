@@ -14,10 +14,11 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 import com.google.gson.Gson;
 import ec.edu.espe.AcademyGradeRegister.model.Student;
 
-public class StudentInfoManager {
+public class InfoManager {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -61,11 +62,9 @@ public class StudentInfoManager {
 
         Student student = new Student(studentID, firstName, lastName, email, course, grades, gpa, dateOfBirth, address);
 
-        // Convertir el objeto Student a JSON
         Gson gson = new Gson();
         String json = gson.toJson(student);
 
-        // Guardar el JSON en un archivo
         try (FileWriter writer = new FileWriter("student_info.json")) {
             writer.write(json);
             System.out.println("Información del estudiante guardada exitosamente en student_info.json");
@@ -76,4 +75,3 @@ public class StudentInfoManager {
         scanner.close();
     }
 }
-

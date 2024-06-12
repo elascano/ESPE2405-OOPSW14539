@@ -1,10 +1,11 @@
 package ec.edu.espe.AcademyGradeRegister.model;
 
-import java.util.List;
+import java.util.Map;
 
 /**
- *
- * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
+ * Clase que representa a un administrador en el sistema.
+ * 
+ * @author Ricardo Lainez JEZHE asociación de ingenieros de software - DCCO ESPE
  */
 public class Administrator {
     private String adminID;
@@ -20,7 +21,7 @@ public class Administrator {
         this.email = email;
     }
 
-    // Getters and Setters
+    // Getters y Setters
     public String getAdminID() {
         return adminID;
     }
@@ -53,87 +54,11 @@ public class Administrator {
         this.email = email;
     }
 
-    // Method to generate report based on student's grades
-    public String generateReport(Student student) {
-        double averageGrade = student.calculateAverageGrade();
-        String status;
-        
-        if (averageGrade < 7) {
-            status = "Reprobado";
-        } else if (averageGrade == 7) {
-            status = "Supletorios";
-        } else {
-            status = "Aprobado";
-        }
-        
-        return "Student ID: " + student.getStudentID() + "\n" +
-               "Name: " + student.getFirstName() + " " + student.getLastName() + "\n" +
-               "Average Grade: " + averageGrade + "\n" +
-               "Status: " + status;
-    }
-    
-    // Method to display administrator's information
+    // Método para mostrar la información del administrador
     @Override
     public String toString() {
         return "Admin ID: " + adminID + "\n" +
                "Name: " + firstName + " " + lastName + "\n" +
                "Email: " + email;
-    }
-}
-
-class Student {
-    private String studentID;
-    private String firstName;
-    private String lastName;
-    private List<Double> grades;
-
-    // Constructor
-    public Student(String studentID, String firstName, String lastName, List<Double> grades) {
-        this.studentID = studentID;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.grades = grades;
-    }
-
-    // Getters and Setters
-    public String getStudentID() {
-        return studentID;
-    }
-
-    public void setStudentID(String studentID) {
-        this.studentID = studentID;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public List<Double> getGrades() {
-        return grades;
-    }
-
-    public void setGrades(List<Double> grades) {
-        this.grades = grades;
-    }
-
-    // Method to calculate average grade
-    public double calculateAverageGrade() {
-        double sum = 0;
-        for (double grade : grades) {
-            sum += grade;
-        }
-        return sum / grades.size();
     }
 }

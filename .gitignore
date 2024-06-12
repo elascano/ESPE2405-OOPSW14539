@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled class file
 *.class
 
@@ -34,3 +35,11 @@ hs_err_pid*
 /ws/santi/u1/Ws10Collections/Collections/nbproject/private/
 /ws/santi/u1/Ws10Collections/Collections/build/
 /hw/gomez/u1/hw08ObjectJson/ObjectExample/target/
+=======
+/ws/chiriboga/u1/ws13Libs/ComputerShop/dist/
+/hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/nbproject/private/
+/hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/build/
+/hw/chiriboga/u1/hw10SaveAnObjects/SaveAnObject/nbproject/private/
+/hw/chiriboga/u1/hw10SaveAnObjects/SaveAnObject/build/
+/hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/dist/
+>>>>>>> 88f47f1934b89576554eb789a0fa167a6988c61b
