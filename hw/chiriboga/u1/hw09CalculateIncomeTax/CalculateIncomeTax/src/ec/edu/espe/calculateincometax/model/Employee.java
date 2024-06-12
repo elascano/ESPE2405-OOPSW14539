@@ -13,8 +13,9 @@ public class Employee {
     private String birthDate;
     private String gender;
     private float salary;
-    private float discount;
+    private float incometax;
     private float netSalary;
+    private float sure;
    
     public Employee(int id, String name, String birthDate, String gender, float salary) {
         this.id = id;
@@ -22,14 +23,16 @@ public class Employee {
         this.birthDate = birthDate;
         this.gender = gender;
         this.salary = salary;
-        this.discount = salary * Tax.calculateIt(salary);
-        this.netSalary = salary - this.discount;
+        this.incometax = Tax.calculateIt(salary);
+        this.sure = (float) (salary * 11.15/100.0f);
+        this.netSalary = salary - this.incometax - this.sure;
+
         System.out.println("Data constructor: " + this.toString());
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", gender=" + gender + ", salary=" + salary + ", discount=" + discount + '}';
+        return "Employee{" + "id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", gender=" + gender + ", salary=" + salary + ", incometax=" + incometax + ", sure=" + sure + '}';
     }
 
     /**
@@ -103,17 +106,17 @@ public class Employee {
     }
 
     /**
-     * @return the discount
+     * @return the incometax
      */
-    public float getDiscount() {
-        return discount;
+    public float getIncometax() {
+        return incometax;
     }
 
     /**
-     * @param discount the discount to set
+     * @param incometax the incometax to set
      */
-    public void setDiscount(float discount) {
-        this.discount = salary * Tax.calculateIt(salary);
+    public void setIncometax(float incometax) {
+        this.incometax =  Tax.calculateIt(salary);
     }
 
     public float getNetSalary() {
@@ -121,7 +124,15 @@ public class Employee {
     }
 
     public void setNetSalary(float netSalary) {
-        this.netSalary = salary - this.discount;
+        this.netSalary = salary - this.incometax - this.sure;
+    }
+
+    public float getSure() {
+        return sure;
+    }
+
+    public void setSure(float sure) {
+        this.sure = sure;
     }
     
 }
