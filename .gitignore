@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled class file
 *.class
 
@@ -31,3 +32,18 @@ hs_err_pid*
 /ws/manangon/u1/ws11 FromClassesToCode/JavaApplication3/build/
 /ws/santi/u1/Ws11FromClassesToCode/FromClassesToCode/nbproject/private/
 /ws/santi/u1/Ws11FromClassesToCode/FromClassesToCode/build/
+/ws/santi/u1/Ws10Collections/Collections/nbproject/private/
+/ws/santi/u1/Ws10Collections/Collections/build/
+/hw/gomez/u1/hw08ObjectJson/ObjectExample/target/
+=======
+/ws/chiriboga/u1/ws13Libs/ComputerShop/dist/
+/hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/nbproject/private/
+/hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/build/
+/hw/chiriboga/u1/hw10SaveAnObjects/SaveAnObject/nbproject/private/
+/hw/chiriboga/u1/hw10SaveAnObjects/SaveAnObject/build/
+/hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/dist/
+>>>>>>> 88f47f1934b89576554eb789a0fa167a6988c61b
+/ws/ona/u1/ws13Lib/ComputerShop/nbproject/private/
+/ws/ona/u1/ws13Lib/Taxes/nbproject/private/
+/ws/anrrango/u1/ws11FromClassesToCode/FromClassesToCode/nbproject/private/
+/ws/anrrango/u1/ws11FromClassesToCode/FromClassesToCode/build/

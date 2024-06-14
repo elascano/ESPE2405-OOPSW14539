@@ -18,7 +18,6 @@ public class Subject {
     private List<Student> students;
     private List<Grade> grades;
 
-    // Constructor
     public Subject(String subjectID, String subjectName, Professor professor) {
         this.subjectID = subjectID;
         this.subjectName = subjectName;
@@ -27,7 +26,6 @@ public class Subject {
         this.grades = new ArrayList<>();
     }
 
-    // Getters and Setters
     public String getSubjectID() {
         return subjectID;
     }
@@ -60,22 +58,18 @@ public class Subject {
         return grades;
     }
 
-    // Method to add a student to the subject
     public void addStudent(Student student) {
         students.add(student);
     }
 
-    // Method to remove a student from the subject
     public void removeStudent(Student student) {
         students.remove(student);
     }
 
-    // Method to add a grade for a student
     public void addGrade(Grade grade) {
         grades.add(grade);
     }
 
-    // Method to calculate the average grade of the subject
     public double calculateAverageGrade() {
         double total = 0;
         for (Grade grade : grades) {
@@ -84,7 +78,6 @@ public class Subject {
         return grades.size() > 0 ? total / grades.size() : 0;
     }
 
-    // Method to find a student by ID
     public Student findStudentByID(String studentID) {
         for (Student student : students) {
             if (student.getStudentID().equals(studentID)) {
@@ -93,6 +86,4 @@ public class Subject {
         }
         return null;
     }
-
-
 }
