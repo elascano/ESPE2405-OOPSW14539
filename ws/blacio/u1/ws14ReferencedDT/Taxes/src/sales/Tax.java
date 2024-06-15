@@ -14,8 +14,10 @@ public class Tax {
         return total;
     }
     
-    public static float computeIce(){
-        return 0;
+    public static float computeIce(float icePercentage, float amount){
+        float total;
+        total = amount * icePercentage / 100;
+        return total;
     }
 }
 
