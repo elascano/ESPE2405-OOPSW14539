@@ -1,8 +1,72 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/ws/blacio/u1/ws10Collections/AirlineReservationSystem/nbproject/private/
+/dc/Overnight_Development_Squad_T2/AirlineReservationSystem/nbproject/private/
+
+/dc/Jezhea_SEA_T3/AcademyGradesRegister/AcademyGradesRegister/nbproject/private/
+/dc/Jezhea_SEA_T3/AcademyGradesRegister/AcademyGradesRegister/build/
+/dc/Overnight_Development_Squad_T2/AirlineReservationSystem/build/
+/ws/manangon/u1/ws11 FromClassesToCode/JavaApplication3/nbproject/private/
+/ws/manangon/u1/ws11 FromClassesToCode/JavaApplication3/build/
+/ws/santi/u1/Ws11FromClassesToCode/FromClassesToCode/nbproject/private/
+/ws/santi/u1/Ws11FromClassesToCode/FromClassesToCode/build/
+/ws/santi/u1/Ws10Collections/Collections/nbproject/private/
+/ws/santi/u1/Ws10Collections/Collections/build/
+/hw/gomez/u1/hw08ObjectJson/ObjectExample/target/
+=======
 /ws/chiriboga/u1/ws13Libs/ComputerShop/dist/
 /hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/nbproject/private/
 /hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/build/
 /hw/chiriboga/u1/hw10SaveAnObjects/SaveAnObject/nbproject/private/
 /hw/chiriboga/u1/hw10SaveAnObjects/SaveAnObject/build/
 /hw/chiriboga/u1/hw09CalculateIncomeTax/CalculateIncomeTax/dist/
+<<<<<<< HEAD
 /hw/santi/u1/HW08 SaveAndObject/SaveAndObject/nbproject/private/
 /hw/santi/u1/HW08 SaveAndObject/SaveAndObject/build/
+=======
+>>>>>>> 88f47f1934b89576554eb789a0fa167a6988c61b
+/ws/ona/u1/ws13Lib/ComputerShop/nbproject/private/
+/ws/ona/u1/ws13Lib/Taxes/nbproject/private/
+/ws/ona/u1/ws14RefrecedDT/RefrencedDT/nbproject/private/
+/ws/ona/u1/ws14RefrecedDT/RefrencedDT/build/
+/ws/ona/u1/ws14RefrecedDT/Car/nbproject/private/
+/hw/ona/u1/hw08Objet/Car/nbproject/private/
+/hw/ona/u1/hw08Objet/Car/build/
+/hw/padilla/u1/HW08SaveAndObject/SaveAndObject/build/
+/hw/padilla/u1/HW08SaveAndObject/SaveAndObject/nbproject/private/
+/hw/padilla/u1/HW08SaveAndObject/SaveobjectSmartTvPadilla/target/
+/hw/padilla/u1/HW08SaveAndObject/SaveSmartTVPadillaObject/target/
+/ws/pilaguano/u1/ws08CDJavaClasses/AntSimulator/nbproject/private/
+/ws/pilaguano/u1/ws08CDJavaClasses/ChickenFarmSimulator/nbproject/private/
+/ws/pilaguano/u1/ws10Collections/Collections/nbproject/private/
+/ws/pilaguano/u1/ws11FromClassesToCode/FromClasesToCode/nbproject/private/
+/ws/pilaguano/u1/ws13Libs/ComputerShop/nbproject/private/
+/ws/pilaguano/u1/ws13Libs/Taxes/nbproject/private/
+/ws/pilaguano/u1/ws14ReferencedDT/ReferencedDT/nbproject/private/
+=======
+>>>>>>> b60c804ae5c7c16704372bfb81a76a642cca3c46
+/hw/pilaguano/u1/hw09CalculateIncomeTax/CalculateIncomeTax/nbproject/private/
+>>>>>>> dba2a504e83f442a5a4329f531567b5d3d630c26
