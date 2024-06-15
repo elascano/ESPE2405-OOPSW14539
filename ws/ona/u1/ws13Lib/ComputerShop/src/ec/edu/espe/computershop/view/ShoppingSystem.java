@@ -5,6 +5,7 @@
 package ec.edu.espe.computershop.view;
 
 import ec.edu.espe.computershop.model.Computer;
+import ec.edu.espe.computershop.model.Person;
 
 /**
  *
@@ -12,8 +13,12 @@ import ec.edu.espe.computershop.model.Computer;
  */
 public class ShoppingSystem {
     public static void main(String[] args) {
-        Computer computer;
+        /*Computer computer;
         computer = new Computer(0, "HP", 1000);
         System.out.println("the prince of this computer is -->"+ computer.getPvp());
+        */
+        Person person;
+        person = new Person(0, "Edison", 50000);
+        System.out.println("enter monthly payment: " + person.getIsp());
     }
 }
