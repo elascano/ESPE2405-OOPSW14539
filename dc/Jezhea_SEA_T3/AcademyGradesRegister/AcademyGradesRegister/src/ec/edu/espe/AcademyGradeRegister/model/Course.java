@@ -4,13 +4,10 @@
  */
 package ec.edu.espe.AcademyGradeRegister.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
- */
 public class Course {
     private String courseName;
     private Subject subject;
@@ -22,11 +19,10 @@ public class Course {
         this.courseName = courseName;
         this.subject = subject;
         this.professor = professor;
-        this.students = students; //new?
-        this.grades = grades; //new?
+        this.students = students;
+        this.grades = grades;
     }
 
-    //getters and setters of attributes
     public String getCourseName() {
         return courseName;
     }
@@ -66,8 +62,7 @@ public class Course {
     public void setGrades(Map<Student, Double> grades) {
         this.grades = grades;
     }
-    
-    //methods
+
     public void addStudent(Student student) {
         students.add(student);
     }
@@ -76,14 +71,12 @@ public class Course {
         students.remove(student);
         grades.remove(student);
     }
-    
+
     public void assignGrade(Student student, double grade) {
         if (students.contains(student)) {
             grades.put(student, grade);
         } else {
-            System.out.println("el estudiante no esta en el curso.");
+            System.out.println("El estudiante no está en el curso.");
         }
     }
-    
-    
 }

@@ -9,25 +9,13 @@ package ec.edu.espe.AcademyGradeRegister.model;
  * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
 
+
 public class Professor {
     private String professorID;
     private String professorUser;
     private String email;
     private String department;
 
-/*
-    public Professor(String professorID, String professorUser, String email, String department) {
-        this.professorID = professorID;
-        this.professorUser = professorUser;
-        this.email = email;
-        this.department = department;
-    }
-
-    @Override
-    public String toString() {
-        return "Professor{" + "professorID=" + professorID + ", professorUser=" + professorUser + ", email=" + email + ", department=" + department + '}';
-    }
-*/
     public String getProfessorID() {
         return professorID;
     }
@@ -59,7 +47,4 @@ public class Professor {
     public void setDepartment(String department) {
         this.department = department;
     }
-    
-    
-    
 }

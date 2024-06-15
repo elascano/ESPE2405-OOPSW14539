@@ -4,14 +4,13 @@
  */
 package ec.edu.espe.AcademyGradeRegister.model;
 
-import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 /**
  *
  * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
  */
+
 public class Student {
     private String studentID;
     private String firstName;
@@ -23,20 +22,18 @@ public class Student {
     private String dateOfBirth;
     private String address;
 
-    //contructor
-    public Student(String studentID, String firstName, String lastName, 
-            String email, String course, Map<String, Double> grades1, 
-            double gpa1, String dateOfBirth, String address) {
+    public Student(String studentID, String firstName, String lastName, String email, String course, Map<String, Double> grades, double gpa, String dateOfBirth, String address) {
         this.studentID = studentID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.course = course;
+        this.grades = grades;
+        this.gpa = gpa;
         this.dateOfBirth = dateOfBirth;
         this.address = address;
     }
 
-    // Getters and Setters
     public String getStudentID() {
         return studentID;
     }
@@ -109,7 +106,6 @@ public class Student {
         this.address = address;
     }
 
-    // Method to calculate GPA
     public void calculateGpa() {
         double total = 0;
         for (double grade : grades.values()) {
@@ -118,7 +114,6 @@ public class Student {
         this.gpa = total / grades.size();
     }
 
-    // toString method for displaying student information
     @Override
     public String toString() {
         return "Student ID: " + studentID + "\n" +
@@ -130,4 +125,3 @@ public class Student {
                "Address: " + address;
     }
 }
-    
