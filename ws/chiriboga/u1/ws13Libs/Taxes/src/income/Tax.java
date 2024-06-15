@@ -28,8 +28,7 @@ public class Tax {
           return 35/100.0f;
         }else if (annualSalary  >= 107199.01){
           return 37/100.0f;
-        }else {
-          return 0.0f;
         }
+            return 0;
     }
 }

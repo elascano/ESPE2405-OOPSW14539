@@ -1,8 +1,7 @@
-
 package ec.edu.espe.saveanobject.view;
 
-import ec.edu.espe.saveanobject.model.Computer;
-import utils.SerializeUtil;
+import static ec.edu.espe.saveanobject.menu.Menu.showMenu;
+
 
 /**
  *
@@ -10,12 +9,6 @@ import utils.SerializeUtil;
  */
 public class ComputerSave {
     public static void main(String[] args) {
-        Computer computer = new Computer (2,"XPS 15", "DELL", 32, 16 );
-        SerializeUtil.create("computer.ser", computer);
-        Computer deserializedComputer = SerializeUtil.read("computer.ser");
-        
-        System.out.println("Objeto deserializado: " + deserializedComputer);
-        
+        showMenu();
     }
-    
 }
