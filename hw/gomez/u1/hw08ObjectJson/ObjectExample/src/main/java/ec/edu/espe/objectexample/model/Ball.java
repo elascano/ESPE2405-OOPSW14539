@@ -6,7 +6,7 @@
 package ec.edu.espe.objectexample.model;
 /**
  * Autor: Joffre
- * Fecha: 2024-06-11
+ * Fecha: 2024-06-15
  * Descripción:
  */
 public class Ball {
@@ -16,17 +16,17 @@ private String color;
 private String size;
 private String tradeMark;
 
+    @Override
+    public String toString() {
+        return "Ball{" + "id=" + id + ", type=" + type + ", color=" + color + ", size=" + size + ", tradeMark=" + tradeMark + '}';
+    }
+
     public Ball(int id, String type, String color, String size, String tradeMark) {
         this.id = id;
         this.type = type;
         this.color = color;
         this.size = size;
         this.tradeMark = tradeMark;
-    }
-
-    @Override
-    public String toString() {
-        return "Ball{" + "id=" + id + ", type=" + type + ", color=" + color + ", size=" + size + ", tradeMark=" + tradeMark + '}';
     }
 
     public int getId() {
@@ -70,3 +70,4 @@ private String tradeMark;
     }
 
 }
+

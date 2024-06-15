@@ -48,6 +48,12 @@ hs_err_pid*
 /hw/santi/u1/HW08 SaveAndObject/SaveAndObject/build/
 =======
 >>>>>>> 88f47f1934b89576554eb789a0fa167a6988c61b
+<<<<<<< HEAD
+/hw/gomez/u1/hw09Taxes/Tax/nbproject/private/
+/hw/gomez/u1/hw09Taxes/Tax/dist/
+/hw/gomez/u1/hw09Taxes/Tax/build/
+/hw/gomez/u1/hw09Taxes/IncomeTax/target/
+=======
 /ws/ona/u1/ws13Lib/ComputerShop/nbproject/private/
 /ws/ona/u1/ws13Lib/Taxes/nbproject/private/
 /ws/ona/u1/ws14RefrecedDT/RefrencedDT/nbproject/private/
@@ -70,4 +76,8 @@ hs_err_pid*
 >>>>>>> b60c804ae5c7c16704372bfb81a76a642cca3c46
 /hw/pilaguano/u1/hw09CalculateIncomeTax/CalculateIncomeTax/nbproject/private/
 >>>>>>> dba2a504e83f442a5a4329f531567b5d3d630c26
+<<<<<<< HEAD
 /hw/santi/u1/HW09IncomeTaxes/IncomeTaxes/nbproject/private/
+=======
+>>>>>>> f797e29fc7ab85e3417dab5a92e618be8b53d36f
+>>>>>>> df704a870afb6e1a1964544f50032f6ab1bfd3b8
