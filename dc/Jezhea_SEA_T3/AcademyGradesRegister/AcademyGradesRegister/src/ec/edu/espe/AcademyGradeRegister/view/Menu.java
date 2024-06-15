@@ -12,8 +12,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import static java.lang.System.console;
 import utils.InfoManager;
-
+import java.io.Console;
+import java.io.FileReader;
 public class Menu {
     private static Scanner scanner = new Scanner(System.in);
     private static boolean loggedIn = false;
@@ -112,32 +115,65 @@ public class Menu {
         System.out.print("Ingrese su opción: ");
     }
 
-    private static void login() {
+   private static void login() {
         System.out.print("Ingrese su nombre de usuario: ");
-        username = scanner.next();
-        // Supongamos que aquí consultas el cargo del usuario desde tu sistema
-        // Aquí lo simularemos
-        if (username.equals("maestro")) {
-            cargo = "maestro";
-        } else {
-            cargo = "otro";
+        String inputUsername = scanner.next();
+
+        // Array para almacenar los nombres de los archivos JSON de los diferentes cargos
+        String[] cargos = {"estudiante", "maestro", "familiar"};
+
+        // Variable para indicar si se encontró el usuario
+        boolean usuarioEncontrado = false;
+
+        // Iterar sobre cada archivo JSON para buscar el nombre de usuario
+        for (String cargo : cargos) {
+            String filename = cargo + ".json";
+            try (FileReader reader = new FileReader(filename)) {
+                Gson gson = new Gson();
+                JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
+                String savedUsername = jsonObject.get("username").getAsString();
+                if (savedUsername.equals(inputUsername)) {
+                    System.out.println("Inicio de sesión exitoso.");
+                    username = inputUsername;
+                    Menu.cargo = cargo;
+                    loggedIn = true;
+                    usuarioEncontrado = true;
+                    break; // Salir del bucle si se encuentra el usuario
+                }
+            } catch (IOException e) {
+                System.err.println("Error al leer el archivo JSON: " + e.getMessage());
+                loggedIn = false;
+            }
         }
-        loggedIn = true;
+
+        // Mostrar mensaje si el usuario no se encuentra en ninguno de los archivos JSON
+        if (!usuarioEncontrado) {
+            System.out.println("Nombre de usuario incorrecto.");
+            loggedIn = false;
+        }
     }
 
+    private static Console console = System.console();
+
     private static void createUser() {
+        if (console == null) {
+            System.err.println("No se puede obtener la consola, asegúrese de estar ejecutando en una consola interactiva.");
+            return;
+        }
+
         System.out.print("Ingrese el cargo del usuario (maestro/alumno/familiar): ");
-        cargo = scanner.next();
+        String cargo = console.readLine();
         System.out.print("Ingrese el nombre de usuario: ");
-        String newUser = scanner.next();
-        System.out.print("Ingrese la contraseña: ");
-        String newPassword = scanner.next();
+        String newUser = console.readLine();
+        char[] passwordArray = console.readPassword("Ingrese la contraseña: ");
+        String newPassword = new String(passwordArray);
 
         // Guardar el usuario, contraseña y cargo en un archivo JSON
         Gson gson = new Gson();
         User user = new User(newUser, newPassword, cargo);
         String json = gson.toJson(user);
-        try (FileWriter writer = new FileWriter("users.json")) {
+        String filename = cargo.toLowerCase() + ".json"; // Nombre del archivo según el cargo
+        try (FileWriter writer = new FileWriter(filename)) {
             writer.write(json);
             System.out.println("Usuario creado exitosamente.");
         } catch (IOException e) {
