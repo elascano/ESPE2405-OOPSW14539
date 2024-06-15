@@ -1,6 +1,6 @@
-package utils;
+package ec.edu.espe.sodasblacio.utils;
 
-import model.BlacioSoda;
+import ec.edu.espe.sodasblacio.model.BlacioSoda;
 
 import java.io.FileOutputStream;
 import java.io.FileInputStream;

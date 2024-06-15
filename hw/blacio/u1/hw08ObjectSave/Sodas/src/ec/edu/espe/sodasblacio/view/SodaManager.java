@@ -1,7 +1,7 @@
-package view;
+package ec.edu.espe.sodasblacio.view;
 
-import model.BlacioSoda;
-import utils.ByteUtil;
+import ec.edu.espe.sodasblacio.model.BlacioSoda;
+import ec.edu.espe.sodasblacio.utils.ByteUtil;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package model;
+package ec.edu.espe.sodasblacio.model;
 
 /**
  *
