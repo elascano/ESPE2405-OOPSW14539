@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ec.edu.espe.car.controller;
+package ec.edu.espe.car.view;
 
 import ec.edu.espe.car.model.Car;
 import java.util.ArrayList;
