@@ -25,15 +25,14 @@ public class Employee {
         this.salary = salary;
         this.incometax = Tax.calculateIt(salary);
         this.sure = (float) (salary * 11.15/100.0f);
-        this.netSalary = salary - this.incometax - this.sure;
-
-        System.out.println("Data constructor: " + this.toString());
+        this.netSalary = salary - this.incometax*salary - this.sure;
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", gender=" + gender + ", salary=" + salary + ", incometax=" + incometax + ", sure=" + sure + '}';
+        return "Employee{" + "id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", gender=" + gender + ", salary=" + salary + ", incometax=" + incometax + ", netSalary=" + netSalary + ", sure=" + sure + '}';
     }
+
 
     /**
      * @return the id
