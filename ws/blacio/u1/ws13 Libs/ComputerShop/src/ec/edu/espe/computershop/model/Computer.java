@@ -13,9 +13,14 @@ public class Computer {
       this.id = id;
       this.brand = brand;
       this.basePrice = basePrice;
-      this.pvp = Tax.computeIva(15.0F, basePrice);
+      this.pvp = calculatePvp(basePrice);
    }
-
+   
+   private float calculatePvp(float basePrice) {
+      float iva = Tax.computeIva(15.0F, basePrice);
+      float ice = Tax.computeIce(0.5F, basePrice);  
+      return basePrice + iva + ice;
+   }
     @Override
     public String toString() {
         return "Computer{" + "id=" + id + ", brand=" + brand + ", basePrice=" + basePrice + ", pvp=" + pvp + '}';
@@ -51,6 +56,6 @@ public class Computer {
    }
 
    public void setPvp() {
-      this.pvp = this.basePrice + Tax.computeIva(15.0F, this.basePrice);
+      this.pvp = calculatePvp(this.basePrice);
    }
 }
