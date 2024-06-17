@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
+ * @author Ricardo Lainez JEZHE Software Sssosiation Engineers - DCCO ESPE
  */
 import java.io.FileWriter;
 import java.io.IOException;
