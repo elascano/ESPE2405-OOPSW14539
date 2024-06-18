@@ -6,11 +6,11 @@ import ec.edu.espe.antsimulator.model.*;
 
 /**
  *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author David Pilaguano, DCCO-ESPE
  */
 public class AntColonySimulator {
     public static void main(String[] args) {
-        System.out.println("Julio's Ant Simulator");
+        System.out.println("David's Ant Simulator");
         Ant ants[] = new Ant[3];
         Cell cell = new Cell(1, 1);
         Colony colony;

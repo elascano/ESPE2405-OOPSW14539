@@ -3,26 +3,24 @@ package ec.edu.espe.antsimulator.model;
 
 /**
  *
- * @author Marco Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class Food {
     private int amount;
 
-    public Food(int amount) {
-        this.amount = amount;
+    public Food(int amount){
+        this.amount= amount*10;
     }
-
-    @Override
-    public String toString() {
-        return "Food{" + "amount=" + amount + '}';
-    }
-    
-
     /**
      * @return the amount
      */
     public int getAmount() {
         return amount;
+    }
+
+    @Override
+    public String toString() {
+        return "Food{" + "amount=" + amount + '}';
     }
 
     /**

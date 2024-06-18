@@ -6,7 +6,7 @@ package ec.edu.espe.farmsimulator.model;
 
 /**
  *
- * @author Adrian Padilla
+ * @author Marco Padilla, CodeCrafting Engineers, DCCO-ESPE
  */
 public class Poop {
     
