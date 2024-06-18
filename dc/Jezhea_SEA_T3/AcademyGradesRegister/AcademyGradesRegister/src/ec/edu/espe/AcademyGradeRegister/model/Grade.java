@@ -4,20 +4,14 @@
  */
 package ec.edu.espe.AcademyGradeRegister.model;
 
-/**
- *
- * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
- */
-class Grade {
-    private int Score;
+public class Grade {
+    private int score;
 
     public int getScore() {
-        return Score;
+        return score;
     }
 
-    public void setScore(int Score) {
-        this.Score = Score;
+    public void setScore(int score) {
+        this.score = score;
     }
-    
-    
 }

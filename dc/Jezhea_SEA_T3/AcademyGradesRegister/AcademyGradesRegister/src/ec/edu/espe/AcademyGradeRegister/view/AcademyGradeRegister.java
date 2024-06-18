@@ -4,35 +4,27 @@
  */
 package ec.edu.espe.AcademyGradeRegister.view;
 
+import ec.edu.espe.AcademyGradeRegister.model.Professor;
+import ec.edu.espe.AcademyGradeRegister.model.Student;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.Scanner;
 
+
 /**
  *
- * @author Ricardo Lainez JEZHE assosiation software engineers - DCCO ESPE
+ * @author Ricardo Lainez JEZHE Software Sssosiation Engineers - DCCO ESPE
  */
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+import com.google.gson.Gson;
+
 public class AcademyGradeRegister {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);  
-        
-        
-        
-        System.out.println("ACADEMY GRADE REGISTER");
-        int operation;
-        
-            System.out.println("ingresar como docente: ");
-            System.out.println("ingresar como estudiante: ");
-            System.out.println("ingresar como padre de familia: ");
-            System.out.println("ingresar como administrador: ");
-            operation = scanner.nextInt();
-            
-    
-        
-        
-        
-        
-        
+    public static void main(String[] args) {
+        Menu.main(args); // Llama al menú principal
     }
 }
-

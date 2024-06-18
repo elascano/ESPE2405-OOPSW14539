@@ -13,14 +13,6 @@
             "age": 16,
             "molting": true,
             "bornOnDate": "Mar 15, 2008, 12:00:00 AM"
-          },
-          {
-            "id": 13,
-            "name": "susy",
-            "color": "black",
-            "age": 12,
-            "molting": false,
-            "bornOnDate": "Apr 20, 2012, 12:00:00 AM"
           }
         ]
       }
@@ -40,6 +32,14 @@
             "age": 12,
             "molting": false,
             "bornOnDate": "Apr 20, 2012, 12:00:00 AM"
+          },
+          {
+            "id": 10,
+            "name": "Lucy",
+            "color": "Brown",
+            "age": 3,
+            "molting": true,
+            "bornOnDate": "Dec 3, 2020, 12:00:00 AM"
           }
         ]
       }

@@ -1,5 +1,5 @@
-
 package ec.edu.espe.airlinereservationsystem.model;
+
 import java.io.Serializable;
 import enums.BaggageType;
 
@@ -8,6 +8,7 @@ import enums.BaggageType;
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class Baggage {
+
     private BaggageType baggageType;
     private double weight;
 
@@ -15,7 +16,7 @@ public class Baggage {
         this.baggageType = baggageType;
         this.weight = weight;
     }
-    
+
     /**
      * @return the baggageType
      */
@@ -43,5 +44,5 @@ public class Baggage {
     public void setWeight(double weight) {
         this.weight = weight;
     }
-    
+
 }
