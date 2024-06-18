@@ -31,9 +31,6 @@ public class ReservationSystem {
     }
 
     public CustomerManager getCustomerManager() {
-        if (customerManager == null) {
-            this.customerManager = new CustomerManager();
-        }
         return customerManager;
     }
 

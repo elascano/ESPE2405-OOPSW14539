@@ -7,7 +7,7 @@ import enums.BaggageType;
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
-public class Baggage {
+public class Baggage implements Serializable {
 
     private BaggageType baggageType;
     private double weight;
