@@ -20,6 +20,7 @@ public class UserInterface {
     private final EmployeeManager employeeManager;
     private final PayrollGenerator payrollGenerator;
     private static final double BASIC_SALARY = 460.0; 
+
     
     public UserInterface(EmployeeManager employeeManager, PayrollGenerator payrollGenerator) {
         this.employeeManager = employeeManager;
