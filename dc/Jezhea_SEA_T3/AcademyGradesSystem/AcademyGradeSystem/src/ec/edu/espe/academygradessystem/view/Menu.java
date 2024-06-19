@@ -9,18 +9,28 @@ package ec.edu.espe.academygradessystem.view;
  * @author IAEN
  */
 import java.io.Console;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
+import java.util.ArrayList;
+
 
 public class Menu {
 
     private List<User> users;
-    private static final String USER_FILE = "users.dat";
+    private static final String USER_FILE = "users.json";
     private Scanner scanner;
+    private Gson gson;
 
     public Menu() {
         scanner = new Scanner(System.in);
+        gson = new Gson();
         users = loadUsers();
     }
 
@@ -90,12 +100,22 @@ public class Menu {
     }
 
     private List<User> loadUsers() {
-        // Implement the method to load users from the file
-        return new ArrayList<>();
+        try (FileReader reader = new FileReader(USER_FILE)) {
+            Type userListType = new TypeToken<List<User>>() {}.getType();
+            List<User> users = gson.fromJson(reader, userListType);
+            return users != null ? users : new ArrayList<>();
+        } catch (IOException e) {
+            System.out.println("Could not load users: " + e.getMessage());
+            return new ArrayList<>();
+        }
     }
 
     private void saveUsers() {
-        // Implement the method to save users to the file
+        try (FileWriter writer = new FileWriter(USER_FILE)) {
+            gson.toJson(users, writer);
+        } catch (IOException e) {
+            System.out.println("Could not save users: " + e.getMessage());
+        }
     }
 }
 
