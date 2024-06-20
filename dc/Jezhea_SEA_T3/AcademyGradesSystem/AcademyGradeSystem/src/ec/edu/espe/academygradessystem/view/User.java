@@ -13,12 +13,19 @@ public class User {
     private String password;
 
     public User(String username, String password) {
+        if (password == null || password.length() < 6) {
+            throw new IllegalArgumentException("La contraseña debe tener al menos 6 caracteres");
+        }
         this.username = username;
         this.password = password;
     }
 
     public String getUsername() {
         return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
