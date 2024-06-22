@@ -1,2 +1,2 @@
-# ESPE2405-OOPSW14539
-JEZHE - Software Engineers Association
+# ESPE-OPP14539-jezhe-SEA
+Team: JEZHE - Software Engineers Association. / Project: School grade recording system.
