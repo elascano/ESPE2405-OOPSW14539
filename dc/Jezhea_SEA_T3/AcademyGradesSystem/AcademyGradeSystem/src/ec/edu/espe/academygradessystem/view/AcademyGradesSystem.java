@@ -4,6 +4,11 @@
  */
 package ec.edu.espe.academygradessystem.view;
 
+/**
+ *
+ * @author JEZHE Software Sssosiation Engineers - DCCO ESPE
+ */
+
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -242,7 +247,10 @@ public class AcademyGradesSystem {
                 case 15:
                     admin.saveData(students, STUDENT_FILE);
                     admin.saveData(professors, PROFESSOR_FILE);
-                    exit = true;
+                    
+                     exit = true;
+               
+               
                     break;
 
                 default:
@@ -250,7 +258,7 @@ public class AcademyGradesSystem {
             }
         }
 
-        scanner.close();
+
     }
 
     private static void ensureFileExists(String fileName) {
