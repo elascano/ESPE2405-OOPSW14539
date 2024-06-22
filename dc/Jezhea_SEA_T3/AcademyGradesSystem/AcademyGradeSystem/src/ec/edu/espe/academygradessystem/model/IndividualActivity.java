@@ -6,7 +6,7 @@ package ec.edu.espe.academygradessystem.model;
 
 /**
  *
- * @author heiso
+ * @author JEZHE Software Sssosiation Engineers - DCCO ESPE
  */
 public class IndividualActivity {
     private double grade;

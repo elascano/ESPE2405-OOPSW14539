@@ -6,7 +6,7 @@ package ec.edu.espe.academygradessystem.view;
 
 /**
  *
- * @author IAEN
+ * @author JEZHE Software Sssosiation Engineers - DCCO ESPE
  */
 class User {
     private String username;
