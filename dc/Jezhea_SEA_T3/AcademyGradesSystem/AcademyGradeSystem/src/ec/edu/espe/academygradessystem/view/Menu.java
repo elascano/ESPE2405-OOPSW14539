@@ -4,13 +4,8 @@
  */
 package ec.edu.espe.academygradessystem.view;
 
-/**
- *
- * @author IAEN
- */
 import java.io.Console;
 import java.util.Scanner;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.FileReader;
@@ -19,7 +14,6 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.List;
 import java.util.ArrayList;
-
 
 public class Menu {
 
@@ -41,9 +35,18 @@ public class Menu {
             System.out.println("2. Login");
             System.out.println("3. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            
+            
 
+            int choice = scanner.nextInt();
+            scanner.nextLine(); // Consume the newline character
+
+            if (!scanner.hasNextInt()) {
+                System.out.println("Invalid input. Please enter a number.");
+                scanner.next(); // Clear the invalid input
+                continue;
+            }
+            
             switch (choice) {
                 case 1:
                     registerUser();
@@ -63,29 +66,28 @@ public class Menu {
     }
 
     private void registerUser() {
-    System.out.print("Enter username: ");
-    String username = scanner.nextLine();
-    Console console = System.console();
-    String password;
+        System.out.print("Enter username: ");
+        String username = scanner.nextLine();
+        Console console = System.console();
+        String password;
 
-    if (console == null) {
-        System.out.print("Enter password: ");
-        password = scanner.nextLine();
-    } else {
-        password = new String(console.readPassword("Enter password: "));
+        if (console == null) {
+            System.out.print("Enter password: ");
+            password = scanner.nextLine();
+        } else {
+            password = new String(console.readPassword("Enter password: "));
+        }
+
+        try {
+            User newUser = new User(username, password);
+            users.add(newUser);
+            saveUsers();
+            System.out.println("User registered successfully.");
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+            System.out.println("Registration failed. Please try again with a valid password.");
+        }
     }
-
-    try {
-        User newUser = new User(username, password);
-        users.add(newUser);
-        saveUsers();
-        System.out.println("User registered successfully.");
-    } catch (IllegalArgumentException e) {
-        System.out.println(e.getMessage());
-        System.out.println("Registration failed. Please try again with a valid password.");
-    }
-}
-
 
     private boolean loginUser() {
         System.out.print("Enter username: ");
@@ -127,4 +129,3 @@ public class Menu {
         }
     }
 }
-
