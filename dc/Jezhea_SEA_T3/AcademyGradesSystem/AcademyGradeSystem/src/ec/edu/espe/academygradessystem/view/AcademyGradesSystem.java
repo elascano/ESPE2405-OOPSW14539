@@ -253,7 +253,7 @@ public class AcademyGradesSystem {
             }
         }
 
-        scanner.close();
+
     }
 
     private static void ensureFileExists(String fileName) {

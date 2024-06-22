@@ -35,5 +35,25 @@
     "major": "engineering",
     "gpa": 0.0,
     "grades": []
+  },
+  {
+    "id": "2100935727",
+    "name": "Jerson",
+    "age": 20,
+    "major": "Engineering",
+    "gpa": 20.0,
+    "grades": [
+      20.0
+    ]
+  },
+  {
+    "id": "1902",
+    "name": "bibi",
+    "age": 15,
+    "major": "engineering",
+    "gpa": 20.0,
+    "grades": [
+      20.0
+    ]
   }
 ]
