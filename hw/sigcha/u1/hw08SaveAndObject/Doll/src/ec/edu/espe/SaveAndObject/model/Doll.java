@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Sigcha Kenned
+ * @author [Tu Nombre]
  */
 public class Doll implements Serializable {
 
