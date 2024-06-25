@@ -1,0 +1,36 @@
+{
+  "ChickenFarmen": {
+    "id": "123",
+    "name": "oscar",
+    "chickenFarmer": [
+      {
+        "ChickenCoop": {
+          "id": "12",
+          "chickens": [
+            {
+              "Chicken": {
+                "id": 12,
+                "name": "oscar",
+                "color": "brown",
+                "age": 20,
+                "molting": true,
+                "BornOnDate": "Thu Dec 11 2003 19:00:00 GMT-0500 (hora de Ecuador)"
+              }
+            },
+            {
+              "Chicken": {
+                "id": 13,
+                "name": "ulloa",
+                "color": "black",
+                "age": 10,
+                "molting": false,
+                "BornOnDate": "Sat Mar 01 2014 19:00:00 GMT-0500 (hora de Ecuador)"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+

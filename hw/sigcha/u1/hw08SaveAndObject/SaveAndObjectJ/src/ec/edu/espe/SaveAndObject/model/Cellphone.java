@@ -4,27 +4,27 @@ import java.io.Serializable;
 
 /**
  *
- * @author Kenned Sigcha, PPS
+ * @author Sigcha Kenned
  */
-public class Cellphone implements Serializable {
+public class Doll implements Serializable {
 
     private int id;
-    private String brand;
-    private String model;
+    private String name;
+    private String material;
     private double price;
-    private boolean is5G;
+    private boolean isCollectible;
 
     @Override
     public String toString() {
-        return "Cellphone{" + "id=" + id + ", brand=" + brand + ", model=" + model + ", price=" + price + ", is5G=" + is5G + '}';
+        return "Doll{" + "id=" + id + ", name=" + name + ", material=" + material + ", price=" + price + ", isCollectible=" + isCollectible + '}';
     }
 
-    public Cellphone(int id, String brand, String model, double price, boolean is5G) {
+    public Doll(int id, String name, String material, double price, boolean isCollectible) {
         this.id = id;
-        this.brand = brand;
-        this.model = model;
+        this.name = name;
+        this.material = material;
         this.price = price;
-        this.is5G = is5G;
+        this.isCollectible = isCollectible;
     }
 
     // Getters and Setters
@@ -36,20 +36,20 @@ public class Cellphone implements Serializable {
         this.id = id;
     }
 
-    public String getBrand() {
-        return brand;
+    public String getName() {
+        return name;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getModel() {
-        return model;
+    public String getMaterial() {
+        return material;
     }
 
-    public void setModel(String model) {
-        this.model = model;
+    public void setMaterial(String material) {
+        this.material = material;
     }
 
     public double getPrice() {
@@ -60,11 +60,11 @@ public class Cellphone implements Serializable {
         this.price = price;
     }
 
-    public boolean isIs5G() {
-        return is5G;
+    public boolean isIsCollectible() {
+        return isCollectible;
     }
 
-    public void setIs5G(boolean is5G) {
-        this.is5G = is5G;
+    public void setIsCollectible(boolean isCollectible) {
+        this.isCollectible = isCollectible;
     }
 }
