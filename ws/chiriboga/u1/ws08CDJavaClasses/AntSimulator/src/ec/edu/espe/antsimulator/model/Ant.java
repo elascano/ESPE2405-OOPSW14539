@@ -1,6 +1,8 @@
 
 package ec.edu.espe.antsimulator.model;
 
+import java.text.SimpleDateFormat;
+
 /**
  *
  * @author Kerlly Chiriboga, ODS
@@ -9,7 +11,9 @@ public class Ant {
     private Cell position;
     private int weight;
 
-    
+    public String toCSV() {
+        return getWeight() + "," + getPosition();
+    }  
     public void run(){
         System.out.println("Ant is running");
         

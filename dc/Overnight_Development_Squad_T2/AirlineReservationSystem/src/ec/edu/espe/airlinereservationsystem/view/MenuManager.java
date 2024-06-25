@@ -2,18 +2,18 @@ package ec.edu.espe.airlinereservationsystem.view;
 
 import utils.ReservationSystem;
 import enums.TicketClass;
+import enums.PaymentMethods;
 import ec.edu.espe.airlinereservationsystem.model.Customer;
 import ec.edu.espe.airlinereservationsystem.model.Flight;
 import ec.edu.espe.airlinereservationsystem.model.Ticket;
-import enums.PaymentMethods;
+import utils.CustomerDataManager;
+import utils.JsonUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
-import utils.CustomerDataManager;
-import utils.JsonUtils;
 
 /**
  *
@@ -46,8 +46,7 @@ public class MenuManager {
             System.out.println("10. FAQ");
             System.out.println("0. Exit");
             System.out.print("Enter your choice: ");
-            choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            choice = getIntInput();
 
             switch (choice) {
                 case 1:
@@ -128,18 +127,16 @@ public class MenuManager {
 
     private void bookTicket() {
         System.out.print("Enter customer ID: ");
-        int customerId = scanner.nextInt();
+        int customerId = getIntInput();
         System.out.print("Enter flight ID: ");
-        int flightId = scanner.nextInt();
+        int flightId = getIntInput();
         System.out.print("Enter ticket class (ECONOMY/BUSINESS): ");
-        scanner.nextLine();
         String ticketClassStr = scanner.nextLine();
-        TicketClass ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
         System.out.print("Enter number of people: ");
-        int numberOfPeople = scanner.nextInt();
+        int numberOfPeople = getIntInput();
 
         try {
-            ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
+            TicketClass ticketClass = TicketClass.valueOf(ticketClassStr.toUpperCase());
             Customer customer = reservationSystemInt.getCustomerManager().getCustomer(customerId);
             Flight flight = reservationSystemInt.getFlightManager().getFlight(flightId);
             Ticket ticket = reservationSystemInt.getTicketManager().bookTicket(customer, flight, ticketClass, numberOfPeople);
@@ -150,7 +147,6 @@ public class MenuManager {
 
             // Proceed to payment
             System.out.print("Enter payment method (CREDIT_CARD, DEBIT_CARD, PAYPAL): ");
-            scanner.nextLine();
             String paymentMethodStr = scanner.nextLine();
 
             PaymentMethods paymentMethod = PaymentMethods.valueOf(paymentMethodStr.toUpperCase());
@@ -160,26 +156,8 @@ public class MenuManager {
             List<Customer> customers = reservationSystemInt.getCustomerManager().getAllCustomers();
             JsonUtils.saveCustomersToFile(customers, CUSTOMER_DATA_FILE);
 
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid customer ID or flight ID. Please try again.");
-        } catch (IllegalArgumentException e) {
+        } catch (IndexOutOfBoundsException | IllegalArgumentException e) {
             System.out.println("Invalid input. Please try again.");
-        }
-    }
-
-    private void makePayment() {
-        System.out.print("Enter payment method (CREDIT_CARD, DEBIT_CARD, PAYPAL): ");
-        String paymentMethodStr = scanner.nextLine();
-        System.out.print("Enter amount: ");
-        double amount = scanner.nextDouble();
-        scanner.nextLine();
-
-        try {
-            PaymentMethods paymentMethod = PaymentMethods.valueOf(paymentMethodStr.toUpperCase());
-            reservationSystemInt.getPaymentManager().makePayment(paymentMethod, amount);
-            System.out.println("Payment made successfully!");
-        } catch (IllegalArgumentException e) {
-            System.out.println("Invalid payment method. Please try again.");
         }
     }
 
@@ -192,40 +170,49 @@ public class MenuManager {
 
     private void viewTicketHistory() {
         System.out.print("Enter customer ID: ");
-        int customerId = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        int customerId = getIntInput();
         try {
             Customer customer = reservationSystemInt.getCustomerManager().getCustomer(customerId);
-            List<Ticket> tickets = reservationSystemInt.getTicketManager().getTicketsByCustomer(customer);
+            if (customer != null) {
+                List<Ticket> tickets = reservationSystemInt.getTicketManager().getTicketsByCustomer(customer);
 
-            System.out.println("Ticket History for " + customer.getName() + ":");
-            for (Ticket ticket : tickets) {
-                Flight flight = ticket.getFlight(reservationSystemInt.getFlightManager());
-                System.out.println("- Ticket ID: " + ticket.getTicketId()
-                        + ", Flight ID: " + flight.getFlightId()
-                        + ", Origin: " + flight.getOrigin()
-                        + ", Destination: " + flight.getDestination()
-                        + ", Airline: " + flight.getAirline()
-                        + ", Departure Date: " + flight.getDepartureDate()
-                        + ", Arrival Date: " + flight.getArrivalDate()
-                        + ", Class: " + ticket.getTicketClass()
-                        + ", Status: " + ticket.getStatus());
+                if (!tickets.isEmpty()) {
+                    System.out.println("Ticket History for " + customer.getName() + ":");
+                    for (Ticket ticket : tickets) {
+                        Flight flight = reservationSystemInt.getFlightManager().getFlight(ticket.getFlightId());
+                        if (flight != null) {
+                            System.out.println("- Ticket ID: " + ticket.getTicketId()
+                                    + ", Flight ID: " + flight.getFlightId()
+                                    + ", Origin: " + flight.getOrigin()
+                                    + ", Destination: " + flight.getDestination()
+                                    + ", Airline: " + flight.getAirline()
+                                    + ", Departure Date: " + flight.getDepartureDate()
+                                    + ", Arrival Date: " + flight.getArrivalDate()
+                                    + ", Class: " + ticket.getTicketClass()
+                                    + ", Status: " + ticket.getStatus());
+                        } else {
+                            System.out.println("- Ticket ID: " + ticket.getTicketId()
+                                    + ", Flight information not available.");
+                        }
+                    }
+                } else {
+                    System.out.println("No tickets found for customer " + customer.getName());
+                }
+            } else {
+                System.out.println("Invalid customer ID. Please try again.");
             }
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("Invalid customer ID. Please try again.");
+            System.out.println("Error accessing ticket information. Please try again.");
         }
     }
 
     private void addBaggage() {
         System.out.print("Enter ticket ID: ");
-        int ticketId = scanner.nextInt();
-        scanner.nextLine();
+        int ticketId = getIntInput();
         System.out.print("Enter number of carry-on baggage: ");
-        int carryOn = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
+        int carryOn = getIntInput();
         System.out.print("Enter number of checked baggage: ");
-        int checked = scanner.nextInt();
-        scanner.nextLine();
+        int checked = getIntInput();
         try {
             Ticket ticket = reservationSystemInt.getTicketManager().getTicket(ticketId);
             reservationSystemInt.getTicketManager().addBaggage(ticket, carryOn, checked);
@@ -237,7 +224,7 @@ public class MenuManager {
 
     private void changeFlightDate() {
         System.out.print("Enter ticket ID: ");
-        int ticketId = scanner.nextInt();
+        int ticketId = getIntInput();
         scanner.nextLine();
         System.out.print("Enter new departure date (yyyy-MM-dd): ");
         String newDepDateStr = scanner.nextLine();
@@ -258,7 +245,7 @@ public class MenuManager {
 
     private void updateTicketStatus() {
         System.out.print("Enter ticket ID: ");
-        int ticketId = scanner.nextInt();
+        int ticketId = getIntInput();
         scanner.nextLine();
         System.out.print("Enter new status: ");
         String status = scanner.nextLine();
@@ -277,5 +264,15 @@ public class MenuManager {
 
     private void displayFAQ() {
         reservationSystemInt.getFaqManager().displayFAQ();
+    }
+
+    private int getIntInput() {
+        while (!scanner.hasNextInt()) {
+            System.out.print("Invalid input. Please enter a number: ");
+            scanner.next();
+        }
+        int input = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+        return input;
     }
 }

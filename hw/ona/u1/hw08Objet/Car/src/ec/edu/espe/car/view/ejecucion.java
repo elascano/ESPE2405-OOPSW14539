@@ -25,7 +25,7 @@ public class ejecucion {
             System.out.println("1. Ingresar un nuevo carro");
             System.out.println("2. Mostrar todos los carros");
             System.out.println("3. Salir");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el buffer
 
@@ -40,7 +40,7 @@ public class ejecucion {
                     System.out.println("Saliendo del programa.");
                     break;
                 default:
-                    System.out.println("Opción inválida. Intente nuevamente.");
+                    System.out.println("Opcion invalida. Intente nuevamente.");
             }
         } while (opcion != 3);
 
@@ -68,8 +68,8 @@ public class ejecucion {
         double price = scanner.nextDouble();
         scanner.nextLine(); // Limpiar el buffer
 
-        Car nuevoCaro = new Car(id, model, plate, color, price);
-        listaDeCaros.add(nuevoCaro);
+        Car newCar = new Car(id, model, plate, color, price);
+        listaDeCaros.add(newCar);
         System.out.println("Carro ingresado exitosamente!");
     }
 
@@ -77,7 +77,7 @@ public class ejecucion {
         if (listaDeCaros.isEmpty()) {
             System.out.println("No hay carros para mostrar.");
         } else {
-            System.out.println("Lista de carros:");
+            System.out.println("------ Lista de carros -----");
             for (Car caro : listaDeCaros) {
                 System.out.println(caro);
             }

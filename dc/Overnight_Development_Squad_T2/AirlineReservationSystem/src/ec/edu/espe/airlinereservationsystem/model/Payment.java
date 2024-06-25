@@ -8,7 +8,7 @@ import java.util.Date;
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
-public class Payment {
+public class Payment implements Serializable {
 
     private int paymentId;
     private PaymentMethods method;

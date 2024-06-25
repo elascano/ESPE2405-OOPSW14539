@@ -1,34 +1,108 @@
 package ec.edu.espe.farmsimulator.view;
 
+import com.google.gson.Gson;
 import ec.edu.espe.farmsimulator.model.Chicken;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+import ec.edu.espe.farmsimulator.controller.FileManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
- * @author Andrea Raura,Paradigm Pioneers Squad,DCCO-ESPE
+ * @author Andrea Raura, Paradigm Pioneers Squad, DCCO-ESPE
  */
 public class ChickenFarmSimulator {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         
-    System.out.println("Andrea's Chicken Farm Simulator");
-    Chicken chicken1 = new Chicken(1, "Anita", "brown", 2, true, new Date());
-    System.out.println("Chicken 1-->" + chicken1);
-    
-    int id=2;
-    String name="Fanny";
-    String color="white";
-    int age=1;
-    boolean molting=true;
-    Date bornOnDate=new Date();
-    
-    Chicken chicken2=new Chicken(id,name,color,age,molting,bornOnDate);
-    System.out.println("Chicken 2-->" + chicken2);
+        System.out.println("Andrea's Chicken Farm Simulator");
+
+        String folderPath = "output";
+        String csvFileName = "chickens";
+        String jsonFileName = "chickens";
+        
+        // Crear una lista para almacenar objetos Chicken
+        List<Chicken> chickens = new ArrayList<>();
+        
+        Chicken chicken1 = new Chicken(1, "Anita", "brown", 2, true, new Date());
+        chickens.add(chicken1);
+        System.out.println("Chicken 1 --> " + chicken1);
+        
+        int id = 2;
+        String name = "Fanny";
+        String color = "white";
+        int age = 1;
+        boolean molting = true;
+        Date bornOnDate = new Date();
+        
+        Chicken chicken2 = new Chicken(id, name, color, age, molting, bornOnDate);
+        chickens.add(chicken2);
+        System.out.println("Chicken 2 --> " + chicken2);
+        
+        Scanner entrance = new Scanner(System.in);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        dateFormat.setLenient(false);
+        
+        try {
+            System.out.println("Enter chicken3 ID: ");
+            id = entrance.nextInt();
+            entrance.nextLine();
+            
+            System.out.println("Enter chicken3 name: ");
+            name = entrance.nextLine();
+            
+            System.out.println("Enter chicken3 color: ");
+            color = entrance.nextLine();
+            
+            System.out.println("Enter chicken3 age: ");
+            age = entrance.nextInt();
+            entrance.nextLine();
+            
+            System.out.println("Enter if chicken3 is molting or not (true/false): ");
+            molting = entrance.nextBoolean();
+            entrance.nextLine();
+            
+            System.out.println("Enter chicken3 born date (yyyy-MM-dd): ");
+            String bornOnDateString = entrance.nextLine();
+            bornOnDate = dateFormat.parse(bornOnDateString); 
+            
+            Chicken chicken3 = new Chicken(id, name, color, age, molting, bornOnDate);
+            chickens.add(chicken3);
+            System.out.println("Chicken 3 --> " + chicken3);
+            
+            File folder = new File(folderPath);
+            if (!folder.exists()) {
+                folder.mkdir();
+            }
+        
+            try {
+                FileManager.save(chicken1.toString(1), folderPath, csvFileName, "csv");
+                FileManager.save(chicken2.toString(1), folderPath, csvFileName, "csv");
+                FileManager.save(chicken3.toString(1), folderPath, csvFileName, "csv");
+                System.out.println("Chickens saved to CSV file.");
+            } catch (IOException ex) {
+                Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            try (FileWriter writer = new FileWriter(folderPath + "/" + jsonFileName + ".json")) {
+                Gson gson = new Gson();
+                gson.toJson(chickens, writer);
+                System.out.println("Chickens saved to JSON file.");
+            } catch (IOException ex) {
+                Logger.getLogger(ChickenFarmSimulator.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } catch (ParseException ex) {
+            System.out.println("Invalid date format. Please use yyyy-MM-dd.");
+        } finally {
+            entrance.close();
+        }
     }
 }
-
-  
-    
-
-
-
-    

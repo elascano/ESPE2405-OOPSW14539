@@ -55,7 +55,6 @@ public class Customer {
     }
 
     public void addTicket(Ticket ticket) {
-        System.out.println("Adding ticket with ID: " + ticket.getTicketId() + " to customer ID: " + this.customerId);
         tickets.add(ticket);
     }
 

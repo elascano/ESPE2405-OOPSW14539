@@ -13,13 +13,15 @@ import java.util.Scanner;
 
 /**
  *
- * @author Erick Tufiño
+ * @author Code Masters
  */
 public class UserInterface {
     private static final Scanner SCANNER = new Scanner(System.in);
     private final EmployeeManager employeeManager;
     private final PayrollGenerator payrollGenerator;
+    private static final double BASIC_SALARY = 460.0; 
 
+    
     public UserInterface(EmployeeManager employeeManager, PayrollGenerator payrollGenerator) {
         this.employeeManager = employeeManager;
         this.payrollGenerator = payrollGenerator;
@@ -64,61 +66,52 @@ public class UserInterface {
     }
 
     private void addEmployee() {
-        System.out.print("Ingrese el nombre: ");
-    String name = SCANNER.nextLine();
-    
-    System.out.print("Ingrese el apellido: ");
-    String lastName = SCANNER.nextLine();
-    
-    System.out.print("Ingrese el número de identificación: ");
-    String idNumber = SCANNER.nextLine();
-    
-    System.out.print("Ingrese la fecha de contratación (dd/mm/yyyy): ");
-    Date hireDate = new Date(SCANNER.nextLine());
-    
-    System.out.print("Ingrese el salario básico: ");
-    double basicSalary = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("Ingrese las horas extras: ");
-    double overtimeHours = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("Ingrese los días ausentes: ");
-    double absentDays = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("Ingrese las bonificaciones: ");
-    double bonuses = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("Ingrese los préstamos del IESS: ");
-    double iessLoans = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("Ingrese los préstamos de la empresa: ");
-    double companyLoans = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("Ingrese las multas: ");
-    double fines = SCANNER.nextDouble();
-    SCANNER.nextLine(); // Consumir el salto de línea
-    
-    System.out.print("¿El empleado trae su propia comida? (true/false): ");
-    boolean bringOwnFood = SCANNER.nextBoolean();
-    SCANNER.nextLine(); // Consumir el salto de línea
+        try {
+           System.out.print("Ingrese el nombre: ");
+            String name = getUserInput("Nombre vacio");
 
-    
-    Employee employee = new Employee(name, lastName, idNumber, hireDate, basicSalary, overtimeHours, absentDays, bonuses, iessLoans, companyLoans, fines, bringOwnFood);
-        
-        // Añadir el empleado a la lista mediante employeeManager
-        employeeManager.addEmployee(employee);
-        
-        System.out.println("Empleado agregado correctamente.");
-        // Imprimir la lista de empleados para verificar
-        System.out.println("Lista de empleados después de agregar:");
-        for (Employee emp : employeeManager.getEmployees()) {
-            System.out.println(emp.getName() + " " + emp.getLastName());
+            System.out.print("Ingrese el apellido: ");
+            String lastName = getUserInput("Apellido vacio");
+
+            System.out.print("Ingrese el numero de identificacion: ");
+            String idNumber = getUserInput("Número de identificación vacio");
+
+            System.out.print("Ingrese la fecha de contratacion (dd/MM/yyyy): ");
+            String dateStr = SCANNER.nextLine();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+            Date hireDate = sdf.parse(dateStr);
+
+            System.out.print("Ingrese las horas extras: ");
+            double overtimeHours=getDoubleInput("Horas extras vacias");
+
+            System.out.print("Ingrese los dias ausentes: ");
+            double absentDays=getDoubleInput("Dias ausentes vacias");
+
+
+            System.out.print("Ingrese las bonificaciones: ");
+            double bonuses=getDoubleInput("Bonificaciones vacias");
+
+            System.out.print("Ingrese los prestamos del IESS: ");
+            double iessLoans =getDoubleInput("Prestamos al IESS vacias");
+
+            System.out.print("Ingrese los préstamos de la empresa: ");
+            double companyLoans=getDoubleInput("Prestamo de la empresa vacias");
+
+            System.out.print("Ingrese las multas: ");
+            double fines=getDoubleInput("Dias ausentes vacias");
+
+            System.out.print("¿El empleado trae su propia comida? (true/false): ");
+            boolean bringOwnFood = getBooleanInput("Entrada inválida");
+
+            Employee employee = new Employee(name, lastName, idNumber, hireDate, BASIC_SALARY, overtimeHours, absentDays, bonuses, iessLoans, companyLoans, fines, bringOwnFood);
+
+            employeeManager.addEmployee(employee);
+
+            System.out.println("Empleado agregado correctamente.");
+        } catch (ParseException e) {
+            System.out.println("Error en el formato de la fecha. Por favor, ingresela en el formato dd/MM/yyyy.");
+        } catch (Exception e) {
+            System.out.println("Error al ingresar los datos. Intentelo nuevamente.");
         }
     }
 
@@ -179,6 +172,37 @@ public class UserInterface {
             } else {
                 System.out.println("Número de empleado inválido.");
             }
+        }
+    }
+    private static String getUserInput(String errorMessage) {
+    try {
+        return SCANNER.nextLine().toLowerCase().trim();
+    } catch (Exception e){
+        System.out.print(errorMessage);
+        return "";
+    }
+}
+    private static double getDoubleInput(String errorMessage) {
+        try {
+            double value = SCANNER.nextDouble();
+            SCANNER.nextLine(); 
+            return value;
+        } catch (InputMismatchException e) {
+            System.out.print(errorMessage);
+            SCANNER.nextLine(); 
+            return 0.0;
+        }
+    }
+
+    private static boolean getBooleanInput(String errorMessage) {
+        try {
+            boolean value = SCANNER.nextBoolean();
+            SCANNER.nextLine(); 
+            return value;
+        } catch (InputMismatchException e) {
+            System.out.print(errorMessage);
+            SCANNER.nextLine();
+            return false;
         }
     }
 }
