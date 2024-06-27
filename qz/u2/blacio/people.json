@@ -8,14 +8,14 @@
       "subjects": [
         "OOP"
       ],
-      "proffesorId": null,
-      "professorId": 1
+      "proffesorId": null
     }
   ],
   "professors": [
     {
       "name": "Edison",
       "age": 52,
+      "id": 1,
       "subject": "OOP",
       "students": [
         "Julio"
