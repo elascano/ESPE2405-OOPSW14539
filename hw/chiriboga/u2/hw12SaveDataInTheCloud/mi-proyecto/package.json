@@ -1,0 +1,16 @@
+{
+  "name": "mi-proyecto",
+  "version": "1.0.0",
+  "main": "view/main.mjs",
+  "scripts": {
+    "start": "node view/main.mjs"
+  },
+  "keywords": [],
+  "author": "Kerlly Chiriboga",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.8.0",
+    "readline-sync": "^1.4.10"
+  }
+}
