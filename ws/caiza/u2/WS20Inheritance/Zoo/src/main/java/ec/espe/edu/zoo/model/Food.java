@@ -4,18 +4,12 @@
  */
 package ec.espe.edu.zoo.model;
 
-import java.util.Date;
-
 /**
  *
  * @author Miguel Caiza,Overnight Developers Squad,DCCO-ESPE
  */
-public abstract class Feline extends Mammal{
-
-    public Feline(int id, Date bornOnDate, Cage cage, char gender, int numberOfLegs) {
-        super(id, bornOnDate, cage, gender, numberOfLegs);
-    }
-
-    @Override
-    public abstract void feed(int food);
+public class Food {
+     int id;
+    String food;
+    float weight;   
 }

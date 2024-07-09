@@ -10,14 +10,16 @@ package ec.espe.edu.zoo.model;
  */
 public class Cage {
     private int id;
-    private String type;
-    private int capacity;
 
-    public Cage(int id, String type, int capacity) {
-        this.id = id;
-        this.type = type;
-        this.capacity = capacity;
+    @Override
+    public String toString() {
+        return "Cage{" + "id=" + id + '}';
     }
+
+    public Cage(int id) {
+        this.id = id;
+    }
+
     /**
      * @return the id
      */
@@ -30,34 +32,5 @@ public class Cage {
      */
     public void setId(int id) {
         this.id = id;
-    }
-
-    /**
-     * @return the type
-     */
-    public String getType() {
-        return type;
-    }
-
-    /**
-     * @param type the type to set
-     */
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    /**
-     * @return the capacity
-     */
-    public int getCapacity() {
-        return capacity;
-    }
-
-    /**
-     * @param capacity the capacity to set
-     */
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
-    }
-    
+    }   
 }
