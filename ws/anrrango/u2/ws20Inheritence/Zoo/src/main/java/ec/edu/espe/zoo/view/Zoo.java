@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package ec.edu.espe.zoo;
+package ec.edu.espe.zoo.view;
 
 /**
  *
