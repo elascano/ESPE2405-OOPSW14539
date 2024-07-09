@@ -35,5 +35,13 @@
     "major": "engineering",
     "gpa": 0.0,
     "grades": []
+  },
+  {
+    "id": "14",
+    "name": "Ricardo Lainez",
+    "age": 19,
+    "major": "engineering",
+    "gpa": 0.0,
+    "grades": []
   }
 ]
