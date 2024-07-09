@@ -8,6 +8,6 @@ package ec.edu.espe.zoo.model;
  *
  * @author Mario Anrrango, A-Byte Wizards, DCCO - ESPE
  */
-public class Condor {
+public class Condor extends Bird{
     
 }
