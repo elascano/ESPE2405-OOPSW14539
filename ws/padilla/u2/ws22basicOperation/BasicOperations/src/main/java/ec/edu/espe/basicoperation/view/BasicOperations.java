@@ -13,7 +13,7 @@ import ec.edu.espe.basicoperations.controller.PersonController;
  */
 public class BasicOperations {
     public static void main(String[] args) {
-        System.out.println("BASIC OERATIONS! \n Ricardo Lainez, OOP 14539");
+        System.out.println("BASIC OERATIONS! \n Marco Padilla, OOP 14539");
         System.out.println("--> Unit testing in action <--");
         
         float addend1;

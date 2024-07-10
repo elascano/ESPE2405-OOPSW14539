@@ -37,7 +37,7 @@ public class PersonControllerTest {
     @org.junit.jupiter.api.Test
     public void testComputeAgeInYears() {
         System.out.println("computeAgeInYears");
-        LocalDate birthDate = LocalDate.parse("2005-03-06");
+        LocalDate birthDate = LocalDate.parse("2005-03-10");
         PersonController instance = new PersonController();
         int expResult = 19;
         int result = instance.computeAgeInYears(birthDate);
