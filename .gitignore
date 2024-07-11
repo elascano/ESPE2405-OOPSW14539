@@ -165,6 +165,13 @@ replay_pid*
 >>>>>>> 2cb587b47e97cf9a0b88662f5d302f28afa3477c
 >>>>>>> a064af6ecab12755c8c8b8a5858b342fd47aa80f
 <<<<<<< HEAD
+/hw/santi/u2/HW11 DataBase/MongoDBExample/target/
+/ws/santi/u2/Hw21UnitTesting/BasicOperations/target/
+/ws/santi/u2/Hw21UnitTesting/BasicOperations/nbproject/
+/ws/santi/u2/Ws24GUI/Zoo/target/
+/hw/santi/u2/Hw14 Interface to Our Proyect/ComputerGUI/target/
+=======
+<<<<<<< HEAD
 /hw/lainez/u2/insertdatatomongo/target/
 /hw/lainez/u2/codetomongo/target/
 /ws/lainez/u2/hw20Inheritance/Zoo/target/
@@ -182,4 +189,20 @@ replay_pid*
 =======
 /ws/lainez/u2/hw21basicOperation/BasicOperations/nbproject/
 >>>>>>> 54311a79ccfbedeb78791dc04edccfbbd3596711
+<<<<<<< HEAD
 /hw/chiriboga/u2/hw16InterfaceProject/ProjectDesign/target/
+=======
+/ws/blacio/u2/ws21Unit/BasicOperations/target/
+/ws/blacio/u2/ws21Unit/BasicOperations/nbproject/
+<<<<<<< HEAD
+/ws/anrrango/u2/ws21UnitTest/BasicOperations/nbproject/private/
+/ws/anrrango/u2/ws21UnitTest/BasicOperations/build/
+=======
+/ws/blacio/u2/ws20Inheritance/Zoo/target/
+>>>>>>> 627b849dc097676691e1675677cbcda23eac2357
+/ws/anrrango/u2/ws24GUI/JavaApplication12/nbproject/private/
+/ws/anrrango/u2/ws24GUI/Zoo/nbproject/private/
+/ws/anrrango/u2/ws24GUI/JavaApplication12/build/
+/ws/anrrango/u2/ws24GUI/Zoo/target/
+>>>>>>> dbcebfbd53e8d52ba6dac10bac3e7ad6a7a8fd2d
+>>>>>>> 524a3983e13cf0df7d3e9d63abde18e665e92743

@@ -4,10 +4,17 @@
  */
 package ec.espe.edu.zoo.model;
 
+import java.util.Date;
+
 /**
  *
  * @author Miguel Caiza,Overnight Developers Squad,DCCO-ESPE
  */
-public class Bird {
-    
+public abstract class Bird extends Animal{
+
+    public Bird(int id, Date bornOnDate, Cage cage, char gender, int numberOfLegs) {
+        super(id, bornOnDate, cage, gender, numberOfLegs);
+    }
+    @Override
+    public abstract void feed(int food);
 }

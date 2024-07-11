@@ -4,10 +4,21 @@
  */
 package ec.espe.edu.zoo.model;
 
+import java.util.Date;
+
 /**
  *
  * @author Miguel Caiza,Overnight Developers Squad,DCCO-ESPE
  */
-public class Monkey {
-    
+public class Monkey extends Primate {
+
+    public Monkey(int id, Date bornOnDate, Cage cage, char gender, int numberOfLegs) {
+        super(id, bornOnDate, cage, gender, numberOfLegs);
+    }
+
+    @Override
+    public void feed(int food) {
+        System.out.println("feeding a monkey with" + food + "fruits");
+    }
+
 }
