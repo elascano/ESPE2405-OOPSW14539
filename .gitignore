@@ -165,6 +165,13 @@ replay_pid*
 >>>>>>> 2cb587b47e97cf9a0b88662f5d302f28afa3477c
 >>>>>>> a064af6ecab12755c8c8b8a5858b342fd47aa80f
 <<<<<<< HEAD
+/hw/santi/u2/HW11 DataBase/MongoDBExample/target/
+/ws/santi/u2/Hw21UnitTesting/BasicOperations/target/
+/ws/santi/u2/Hw21UnitTesting/BasicOperations/nbproject/
+/ws/santi/u2/Ws24GUI/Zoo/target/
+/hw/santi/u2/Hw14 Interface to Our Proyect/ComputerGUI/target/
+=======
+<<<<<<< HEAD
 /hw/lainez/u2/insertdatatomongo/target/
 /hw/lainez/u2/codetomongo/target/
 /ws/lainez/u2/hw20Inheritance/Zoo/target/
@@ -182,9 +189,32 @@ replay_pid*
 =======
 /ws/lainez/u2/hw21basicOperation/BasicOperations/nbproject/
 >>>>>>> 54311a79ccfbedeb78791dc04edccfbbd3596711
+<<<<<<< HEAD
+/hw/chiriboga/u2/hw16InterfaceProject/ProjectDesign/target/
+=======
 /ws/blacio/u2/ws21Unit/BasicOperations/target/
 /ws/blacio/u2/ws21Unit/BasicOperations/nbproject/
+<<<<<<< HEAD
+/ws/anrrango/u2/ws21UnitTest/BasicOperations/nbproject/private/
+/ws/anrrango/u2/ws21UnitTest/BasicOperations/build/
+=======
 /ws/blacio/u2/ws20Inheritance/Zoo/target/
+<<<<<<< HEAD
 /ws/lainez/u2/ws20Inheritance/Zoo/target/
 /hw/lainez/u2/hwfuntionalityJfToMongo/FuntionalityInOurProject/target/
 /ws/lainez/u2/ws25AcademyGradeSystemFrm/AcademyGradeSystemFrm/target/
+=======
+>>>>>>> 627b849dc097676691e1675677cbcda23eac2357
+/ws/anrrango/u2/ws24GUI/JavaApplication12/nbproject/private/
+/ws/anrrango/u2/ws24GUI/Zoo/nbproject/private/
+/ws/anrrango/u2/ws24GUI/JavaApplication12/build/
+/ws/anrrango/u2/ws24GUI/Zoo/target/
+>>>>>>> dbcebfbd53e8d52ba6dac10bac3e7ad6a7a8fd2d
+>>>>>>> 524a3983e13cf0df7d3e9d63abde18e665e92743
+/ws/saraguro/u2/WS22 BasicOperations/BasicOperations/nbproject/
+<<<<<<< HEAD
+/hw/blacio/u2/HW15 CloudData/InterfaceCloud/target/
+=======
+/hw/gomez/u2/hw14GraphicInterface/BaggageType1/target/
+>>>>>>> 5b0baee40d5dc11546077aab26b8b4282329f1b0
+>>>>>>> cff7b48e44aef20215b7c51955013924fb851dda

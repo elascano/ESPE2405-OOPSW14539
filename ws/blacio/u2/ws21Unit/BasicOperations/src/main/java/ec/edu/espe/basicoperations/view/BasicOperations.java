@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class BasicOperations {
 
     public static void main(String[] args) {
-        System.out.println("Basic Operations! \nJulio Blacio, OOP 14539");
+        System.out.println("Basic Operations! \nJoffre Gomez, OOP 14539");
         System.out.println("--> Unit Testing in Action <---");
 
         float addend1;

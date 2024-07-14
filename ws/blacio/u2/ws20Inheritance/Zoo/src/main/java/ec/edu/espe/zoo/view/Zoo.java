@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
  *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author Joffre Gomez, Overnight Developers Squad, DCCO-ESPE
  */
 public class Zoo {
 
