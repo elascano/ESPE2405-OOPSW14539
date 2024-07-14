@@ -35,6 +35,7 @@ public class FrmUniversoDelFomix extends javax.swing.JFrame {
         jMenuItem8 = new javax.swing.JMenuItem();
         mnuItemHelp = new javax.swing.JMenuItem();
         mnuItemLogOut = new javax.swing.JMenuItem();
+        mnuItemExit = new javax.swing.JMenuItem();
         mnuInventory = new javax.swing.JMenu();
         submnuManagementInventory = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -86,11 +87,29 @@ public class FrmUniversoDelFomix extends javax.swing.JFrame {
         });
         mnuUniversoDelFomix.add(mnuItemLogOut);
 
+        mnuItemExit.setText("Salir");
+        mnuItemExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemExitActionPerformed(evt);
+            }
+        });
+        mnuUniversoDelFomix.add(mnuItemExit);
+
         jMenuBar1.add(mnuUniversoDelFomix);
 
         mnuInventory.setText("Inventario");
+        mnuInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuInventoryActionPerformed(evt);
+            }
+        });
 
         submnuManagementInventory.setText("Administrar Inventario");
+        submnuManagementInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submnuManagementInventoryActionPerformed(evt);
+            }
+        });
 
         jMenuItem2.setText("Añadir Producto");
         submnuManagementInventory.add(jMenuItem2);
@@ -104,6 +123,11 @@ public class FrmUniversoDelFomix extends javax.swing.JFrame {
         mnuInventory.add(submnuManagementInventory);
 
         mnuItemInventory.setText("Inventario");
+        mnuItemInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuItemInventoryActionPerformed(evt);
+            }
+        });
         mnuInventory.add(mnuItemInventory);
 
         jMenuBar1.add(mnuInventory);
@@ -138,13 +162,13 @@ public class FrmUniversoDelFomix extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void mnuItemWelcomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemWelcomeActionPerformed
-       FrmUniversoDelFomix frmUniversoDelFomix = new FrmUniversoDelFomix();
+       FrmPrincipalScreen frmPrincipalScreen = new FrmPrincipalScreen();
        this.setVisible(false);
-       frmUniversoDelFomix.setVisible(true);
+       frmPrincipalScreen.setVisible(true);
     }//GEN-LAST:event_mnuItemWelcomeActionPerformed
 
     private void mnuItemLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemLogOutActionPerformed
@@ -152,6 +176,24 @@ public class FrmUniversoDelFomix extends javax.swing.JFrame {
         this.setVisible(false);
         frmLogin.setVisible(true);
     }//GEN-LAST:event_mnuItemLogOutActionPerformed
+
+    private void mnuItemInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemInventoryActionPerformed
+        FrmViewInventory frmViewInventory = new FrmViewInventory();
+        this.setVisible(false);
+        frmViewInventory.setVisible(true);
+    }//GEN-LAST:event_mnuItemInventoryActionPerformed
+
+    private void mnuInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuInventoryActionPerformed
+        
+    }//GEN-LAST:event_mnuInventoryActionPerformed
+
+    private void submnuManagementInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submnuManagementInventoryActionPerformed
+
+    }//GEN-LAST:event_submnuManagementInventoryActionPerformed
+
+    private void mnuItemExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuItemExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_mnuItemExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,6 +244,7 @@ public class FrmUniversoDelFomix extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenu mnuInventory;
     private javax.swing.JMenu mnuInvoice;
+    private javax.swing.JMenuItem mnuItemExit;
     private javax.swing.JMenuItem mnuItemHelp;
     private javax.swing.JMenuItem mnuItemInventory;
     private javax.swing.JMenuItem mnuItemLogOut;
