@@ -1,6 +1,5 @@
 package ec.edu.espe.mongodb.view;
 
-
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoException;
