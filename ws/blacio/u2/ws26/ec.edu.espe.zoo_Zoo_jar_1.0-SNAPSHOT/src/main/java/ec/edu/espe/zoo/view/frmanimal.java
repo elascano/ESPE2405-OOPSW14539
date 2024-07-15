@@ -1,12 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package ec.edu.espe.zoo.view;
+
+import ec.edu.ec.espe.zoo.utils.ToCloud;
+import ec.edu.espe.zoo.model.Animal;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author G400
+ * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class frmanimal extends javax.swing.JFrame {
 
@@ -39,18 +42,19 @@ public class frmanimal extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        txtid = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
         txtdescription = new javax.swing.JTextField();
         cmdgender = new javax.swing.JComboBox<>();
         cmdcage = new javax.swing.JComboBox<>();
-        txtNumberOfBones = new javax.swing.JTextField();
-        chVertebrate = new javax.swing.JCheckBox();
+        chkVertebrate = new javax.swing.JCheckBox();
         txtRecomendation = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         txaRecomendations = new javax.swing.JTextArea();
         txtFood = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         listFood = new javax.swing.JList<>();
+        sldNumberOfBones = new javax.swing.JSlider();
+        lblNumberOfBones = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         btnRegister = new javax.swing.JToggleButton();
         btnFeed = new javax.swing.JButton();
@@ -90,6 +94,7 @@ public class frmanimal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Animals");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -123,9 +128,9 @@ public class frmanimal extends javax.swing.JFrame {
 
         jLabel8.setText("Vertebrate:");
 
-        txtid.addActionListener(new java.awt.event.ActionListener() {
+        txtId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtidActionPerformed(evt);
+                txtIdActionPerformed(evt);
             }
         });
 
@@ -144,10 +149,10 @@ public class frmanimal extends javax.swing.JFrame {
 
         cmdcage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Felines", "Lions", "Monkeys", "Shark pool", "Bird cage", " " }));
 
-        chVertebrate.setText("Yes");
-        chVertebrate.addActionListener(new java.awt.event.ActionListener() {
+        chkVertebrate.setText("Yes");
+        chkVertebrate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chVertebrateActionPerformed(evt);
+                chkVertebrateActionPerformed(evt);
             }
         });
 
@@ -166,6 +171,15 @@ public class frmanimal extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(listFood);
 
+        sldNumberOfBones.setValue(0);
+        sldNumberOfBones.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                sldNumberOfBonesStateChanged(evt);
+            }
+        });
+
+        lblNumberOfBones.setText("0");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -183,56 +197,62 @@ public class frmanimal extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(chVertebrate)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(chkVertebrate)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(326, 326, 326)
                                 .addComponent(txtFood))
                             .addComponent(txtdescription, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(txtNumberOfBones, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(cmdcage, javax.swing.GroupLayout.Alignment.LEADING, 0, 1, Short.MAX_VALUE)
                                 .addComponent(cmdgender, javax.swing.GroupLayout.Alignment.LEADING, 0, 89, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(sldNumberOfBones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(39, 39, 39)
+                            .addComponent(lblNumberOfBones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtFood))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(txtdescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel4)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel2)
+                                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtFood))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3)
+                                    .addComponent(txtdescription, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(cmdgender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(cmdcage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(cmdgender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(cmdcage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtNumberOfBones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel7))
+                    .addComponent(sldNumberOfBones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNumberOfBones))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(chVertebrate))
+                    .addComponent(chkVertebrate))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -294,31 +314,59 @@ public class frmanimal extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtidActionPerformed
+    private void txtIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtidActionPerformed
+    }//GEN-LAST:event_txtIdActionPerformed
 
     private void txtdescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtdescriptionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtdescriptionActionPerformed
 
-    private void chVertebrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chVertebrateActionPerformed
+    private void chkVertebrateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkVertebrateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chVertebrateActionPerformed
+    }//GEN-LAST:event_chkVertebrateActionPerformed
 
     private void btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegisterActionPerformed
-        // TODO add your handling code here:
+        try {
+            Animal animal;
+            int id = Integer.parseInt(txtId.getText());
+            String description = txtdescription.getText();
+            Date date = new Date();
+            String gender = cmdgender.getSelectedItem().toString();
+            String cage = cmdcage.getSelectedItem().toString();;
+            int numberOfBones = sldNumberOfBones.getValue();;
+            boolean isVertebrate = chkVertebrate.isSelected();;
+            List<String> foods = listFood.getSelectedValuesList();
+
+
+            animal = new Animal(id, description, date, gender, cage, numberOfBones, isVertebrate, (ArrayList<String>) foods);
+
+            ToCloud.uploadAnimalData(animal);
+
+            JOptionPane.showMessageDialog(this, "Animal data registered successfully!");
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error registering animal data: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+        //JOptionPane.showMessageDialog(this, animal.getId() + animal.getDescription() + animal.getGender() + animal.getNumberOfBones());
+        //JOptionPane.showMessageDialog(this, animal.getCage(), "Animal info", JOptionPane.CANCEL_OPTION);
+        //JOptionPane.showConfirmDialog(this, "are you sure that you want to save animal --> " + animal.getDescription());
+
     }//GEN-LAST:event_btnRegisterActionPerformed
 
     private void cmdgenderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdgenderActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cmdgenderActionPerformed
+
+    private void sldNumberOfBonesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sldNumberOfBonesStateChanged
+        lblNumberOfBones.setText(String.valueOf(sldNumberOfBones.getValue()));
+    }//GEN-LAST:event_sldNumberOfBonesStateChanged
 
     /**
      * @param args the command line arguments
@@ -358,7 +406,7 @@ public class frmanimal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnFeed;
     private javax.swing.JToggleButton btnRegister;
-    private javax.swing.JCheckBox chVertebrate;
+    private javax.swing.JCheckBox chkVertebrate;
     private javax.swing.JComboBox<String> cmdcage;
     private javax.swing.JComboBox<String> cmdgender;
     private javax.swing.JLabel jLabel1;
@@ -377,12 +425,13 @@ public class frmanimal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel lblNumberOfBones;
     private javax.swing.JList<String> listFood;
+    private javax.swing.JSlider sldNumberOfBones;
     private javax.swing.JTextArea txaRecomendations;
     private javax.swing.JLabel txtFood;
-    private javax.swing.JTextField txtNumberOfBones;
+    private javax.swing.JTextField txtId;
     private javax.swing.JLabel txtRecomendation;
     private javax.swing.JTextField txtdescription;
-    private javax.swing.JTextField txtid;
     // End of variables declaration//GEN-END:variables
 }

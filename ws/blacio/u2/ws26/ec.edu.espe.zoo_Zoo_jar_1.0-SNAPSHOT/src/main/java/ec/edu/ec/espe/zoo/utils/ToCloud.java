@@ -1,4 +1,4 @@
-package ec.edu.espe.interfacecloud.view;
+package ec.edu.ec.espe.zoo.utils;
 
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
@@ -9,16 +9,15 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import ec.edu.espe.interfacecloud.model.Car;
-
+import ec.edu.espe.zoo.model.Animal;
 import org.bson.Document;
 
-import java.util.Scanner;
-import java.time.Year;
+import java.util.List;
 
 public class ToCloud {
 
     private static MongoClient createMongoClient() {
+        // Update with your MongoDB connection string
         String connectionString = "mongodb+srv://SrJCBM:OOP14539ODS@firstdb.gtv30gi.mongodb.net/?appName=FirstDB";
 
         ServerApi serverApi = ServerApi.builder()
@@ -33,48 +32,34 @@ public class ToCloud {
         return MongoClients.create(settings);
     }
 
-    private static void saveCarToDatabase(Car car, MongoDatabase database) {
-        MongoCollection<Document> collection = database.getCollection("cars");
+    public static void uploadAnimalData(Animal animal) {
+        try (MongoClient mongoClient = createMongoClient()) {
+            MongoDatabase database = mongoClient.getDatabase("ZooDatabase");
 
-        Document carDocument = new Document("make", car.getMake())
-                .append("model", car.getModel())
-                .append("year", car.getYear())
-                .append("age", car.getAge())
-                .append("depreciation", car.getDepreciation());
+            saveAnimalToDatabase(animal, database);
 
-        try {
-            collection.insertOne(carDocument);
-            System.out.println("Car saved successfully!");
-        } catch (MongoException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args) {
-        try (MongoClient mongoClient = createMongoClient()) {
-            MongoDatabase database = mongoClient.getDatabase("CarAgency");
+    private static void saveAnimalToDatabase(Animal animal, MongoDatabase database) {
+        MongoCollection<Document> collection = database.getCollection("animals");
 
-            Scanner scanner = new Scanner(System.in);
+        Document animalDocument = new Document("id", animal.getId())
+                .append("description", animal.getDescription())
+                .append("bornOnDate", animal.getDate())
+                .append("gender", animal.getGender())
+                .append("cage", animal.getCage())
+                .append("vertebrate", animal.isIsVertebrate())
+                .append("numberOfBones", animal.getNumberOfBones())
+                .append("food", animal.getFoods());
 
-            System.out.print("Enter car make: ");
-            String make = scanner.nextLine();
-
-            System.out.print("Enter car model: ");
-            String model = scanner.nextLine();
-
-            System.out.print("Enter car year: ");
-            int year = scanner.nextInt();
-
-            Car car = new Car(make, model, year);
-            System.out.println("Make: " + car.getMake());
-            System.out.println("Model: " + car.getModel());
-            System.out.println("Year: " + car.getYear());
-            System.out.println("Age: " + car.getAge());
-            System.out.println("Depreciation: $" + car.getDepreciation());
-
-            saveCarToDatabase(car, database);
-
-            scanner.close();
+        try {
+            collection.insertOne(animalDocument);
+            System.out.println("Animal data saved successfully!");
+        } catch (MongoException e) {
+            e.printStackTrace();
         }
     }
 }
