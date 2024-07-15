@@ -342,7 +342,7 @@ public class frmanimal extends javax.swing.JFrame {
         boolean inVertebrate;
         List<String> foods = new ArrayList<>();
         
-        id = Integer.parseInt(txtid.getText());
+        id = Integer.parseInt(txtid.getText()); 
         description = txtdescription.getText();
         date = new Date();
         gender = cmdgender.getSelectedItem().toString();
