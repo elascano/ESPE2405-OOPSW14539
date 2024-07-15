@@ -17,6 +17,7 @@ public class FmLogin extends javax.swing.JFrame {
      */
     public FmLogin() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -161,7 +162,7 @@ public class FmLogin extends javax.swing.JFrame {
 
     private void bntLogginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntLogginActionPerformed
         String user = "MiguelAngel";
-        String password = "miguel0425";
+        String password = "miguel1234";
         String pass = new String(pwPassword.getPassword());
        if(txtUserName.getText().equals(user)&& pass.equals(password)){  
         FmAirlineReservationSystem fmAirlineReservationSystem = new FmAirlineReservationSystem();

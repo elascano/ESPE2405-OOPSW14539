@@ -11,6 +11,7 @@ public class FmAirlineReservationSystemSplash extends javax.swing.JFrame {
      */
     public FmAirlineReservationSystemSplash() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
