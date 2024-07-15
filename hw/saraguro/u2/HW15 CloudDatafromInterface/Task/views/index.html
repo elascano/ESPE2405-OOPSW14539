@@ -1,0 +1,48 @@
+<!-- views/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <form id="taskForm" action="/task" method="POST">
+        <label for="taskName">Task Name:</label>
+        <input type="text" id="taskName" name="taskName" required><br><br>
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required><br><br>
+
+        <label for="duration">Duration (days):</label>
+        <input type="number" id="duration" name="duration" min="1" required><br><br>
+
+        <label for="teacherName">Teacher Name:</label>
+        <input type="text" id="teacherName" name="teacherName" required><br><br>
+
+        <label for="shift">Shift:</label>
+        <select id="shift" name="shift" required>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+        </select><br><br>
+
+        <label for="endDate">End Date:</label>
+        <input type="text" id="endDate" name="endDate" readonly><br><br>
+
+        <label for="subject">Subject:</label>
+        <select id="subject" name="subject" required>
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+        </select><br><br>
+
+        <button type="submit">Save Task</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
