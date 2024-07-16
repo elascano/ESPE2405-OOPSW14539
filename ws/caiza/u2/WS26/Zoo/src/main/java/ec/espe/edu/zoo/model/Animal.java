@@ -1,9 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.espe.edu.zoo.model;
-
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -14,21 +9,21 @@ import java.util.Date;
 public class Animal {
     private int id;
     private String description;
-    private Date bornOnDate;
+    private Date date;
     private String gender;
     private String cage;
     private int numberOfBones;
-    private boolean invertebrate;
+    private boolean isVertebrate;
     private ArrayList<String> foods;
 
-    public Animal(int id, String description, Date bornOnDate, String gender, String cage, int numberOfBones, boolean invertebrate, ArrayList<String> foods) {
+    public Animal(int id, String description, Date date, String gender, String cage, int numberOfBones, boolean isVertebrate, ArrayList<String> foods) {
         this.id = id;
         this.description = description;
-        this.bornOnDate = bornOnDate;
+        this.date = date;
         this.gender = gender;
         this.cage = cage;
         this.numberOfBones = numberOfBones;
-        this.invertebrate = invertebrate;
+        this.isVertebrate = isVertebrate;
         this.foods = foods;
     }
 
@@ -61,17 +56,17 @@ public class Animal {
     }
 
     /**
-     * @return the bornOnDate
+     * @return the date
      */
-    public Date getBornOnDate() {
-        return bornOnDate;
+    public Date getDate() {
+        return date;
     }
 
     /**
-     * @param bornOnDate the bornOnDate to set
+     * @param date the date to set
      */
-    public void setBornOnDate(Date bornOnDate) {
-        this.bornOnDate = bornOnDate;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
     /**
@@ -117,17 +112,17 @@ public class Animal {
     }
 
     /**
-     * @return the invertebrate
+     * @return the isVertebrate
      */
-    public boolean isInvertebrate() {
-        return invertebrate;
+    public boolean isIsVertebrate() {
+        return isVertebrate;
     }
 
     /**
-     * @param invertebrate the invertebrate to set
+     * @param isVertebrate the isVertebrate to set
      */
-    public void setInvertebrate(boolean invertebrate) {
-        this.invertebrate = invertebrate;
+    public void setIsVertebrate(boolean isVertebrate) {
+        this.isVertebrate = isVertebrate;
     }
 
     /**

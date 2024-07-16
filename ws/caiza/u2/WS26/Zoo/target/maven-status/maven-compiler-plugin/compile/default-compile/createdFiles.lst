@@ -1,6 +1,7 @@
 ec\edu\espe\zoo\view\frmanimal$6.class
 ec\espe\edu\zoo\model\Animal.class
 ec\edu\espe\zoo\view\frmanimal$8.class
+ec\edu\espe\zoo\utils\MongoDBField.class
 ec\espe\edu\zoo\controller\AnimalController.class
 ec\edu\espe\zoo\view\frmanimal$2.class
 ec\edu\espe\zoo\view\frmanimal$1.class

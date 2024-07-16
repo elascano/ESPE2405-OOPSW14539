@@ -93,7 +93,7 @@
               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="20" max="32767" attributes="0"/>
+              <EmptySpace pref="12" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -150,34 +150,27 @@
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="chVertebrate" min="-2" max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="301" max="-2" attributes="0"/>
                       <Group type="102" attributes="0">
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="chVertebrate" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane1" min="-2" pref="301" max="-2" attributes="0"/>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="txtid" min="-2" pref="83" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="326" max="-2" attributes="0"/>
-                                          <Component id="txtFood" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="txtdescription" alignment="0" min="-2" pref="207" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Component id="cmdcage" alignment="0" pref="0" max="32767" attributes="0"/>
-                                          <Component id="cmdgender" alignment="0" pref="89" max="32767" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="txtid" min="-2" pref="83" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="326" max="-2" attributes="0"/>
+                                  <Component id="txtFood" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="txtdescription" alignment="0" min="-2" pref="207" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="cmdcage" alignment="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="cmdgender" alignment="0" pref="89" max="32767" attributes="0"/>
                               </Group>
                           </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                          <Component id="sldNumberOfBones" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="sldNumberOfBones" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -378,6 +371,8 @@
         </Container>
         <Component class="javax.swing.JSlider" name="sldNumberOfBones">
           <Properties>
+            <Property name="maximum" type="int" value="292"/>
+            <Property name="paintTicks" type="boolean" value="true"/>
             <Property name="value" type="int" value="0"/>
           </Properties>
           <Events>
