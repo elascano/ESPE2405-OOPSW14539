@@ -17,7 +17,6 @@ import java.util.List;
 public class ToCloud {
 
     private static MongoClient createMongoClient() {
-        // Update with your MongoDB connection string
         String connectionString = "mongodb+srv://SrJCBM:OOP14539ODS@firstdb.gtv30gi.mongodb.net/?appName=FirstDB";
 
         ServerApi serverApi = ServerApi.builder()

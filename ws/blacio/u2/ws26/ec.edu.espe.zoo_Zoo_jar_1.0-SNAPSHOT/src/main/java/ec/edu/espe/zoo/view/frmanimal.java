@@ -1,6 +1,7 @@
 package ec.edu.espe.zoo.view;
 
 import ec.edu.ec.espe.zoo.utils.ToCloud;
+import ec.edu.espe.zoo.controller.AnimalController;
 import ec.edu.espe.zoo.model.Animal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -165,7 +166,7 @@ public class frmanimal extends javax.swing.JFrame {
         txtFood.setText("Food");
 
         listFood.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Fish", "meat", "mouse", "rabbit", "grain", "fuit" };
+            String[] strings = { "Fish", "meat", "mouse", "rabbit", "grain", "fruit" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
@@ -344,19 +345,24 @@ public class frmanimal extends javax.swing.JFrame {
             boolean isVertebrate = chkVertebrate.isSelected();;
             List<String> foods = listFood.getSelectedValuesList();
 
-
             animal = new Animal(id, description, date, gender, cage, numberOfBones, isVertebrate, (ArrayList<String>) foods);
 
-            ToCloud.uploadAnimalData(animal);
+            JOptionPane.showMessageDialog(this, animal.getId() + animal.getDescription() + animal.getGender() + animal.getNumberOfBones());
 
-            JOptionPane.showMessageDialog(this, "Animal data registered successfully!");
+            JOptionPane.showMessageDialog(this, animal.getCage(), "Animal info", JOptionPane.CANCEL_OPTION);
+
+            int confirmation = JOptionPane.showConfirmDialog(this, "Are you sure that you want to save animal --> " + animal.getDescription());
+            if (confirmation == JOptionPane.YES_OPTION) {
+                AnimalController.create(animal);
+                JOptionPane.showMessageDialog(this, "Animal data registered successfully!");
+            } else {
+                JOptionPane.showMessageDialog(this, "Animal data was not saved.");
+            }
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error registering animal data: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
-        //JOptionPane.showMessageDialog(this, animal.getId() + animal.getDescription() + animal.getGender() + animal.getNumberOfBones());
-        //JOptionPane.showMessageDialog(this, animal.getCage(), "Animal info", JOptionPane.CANCEL_OPTION);
-        //JOptionPane.showConfirmDialog(this, "are you sure that you want to save animal --> " + animal.getDescription());
+
 
     }//GEN-LAST:event_btnRegisterActionPerformed
 
