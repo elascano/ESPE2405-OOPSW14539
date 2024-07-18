@@ -15,6 +15,7 @@ public class FmBuy extends javax.swing.JFrame {
      */
     public FmBuy() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
