@@ -27,24 +27,24 @@ public class FrmLogIn extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        pwdLogIn = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
+        lblUser = new javax.swing.JLabel();
+        pwdLogin = new javax.swing.JPasswordField();
+        lblPassword = new javax.swing.JLabel();
         txtUserName = new javax.swing.JTextField();
-        bttmLogIn = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Usuario:");
+        lblUser.setText("Usuario:");
 
-        pwdLogIn.setText("jPasswordField1");
-        pwdLogIn.addActionListener(new java.awt.event.ActionListener() {
+        pwdLogin.setText("jPasswordField1");
+        pwdLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pwdLogInActionPerformed(evt);
+                pwdLoginActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Password:");
+        lblPassword.setText("Password:");
 
         txtUserName.setText("Ricardo");
 
@@ -55,12 +55,12 @@ public class FrmLogIn extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(94, 94, 94)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel1))
+                    .addComponent(lblPassword)
+                    .addComponent(lblUser))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(pwdLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pwdLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(133, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -68,19 +68,19 @@ public class FrmLogIn extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(lblUser)
                     .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pwdLogIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                    .addComponent(pwdLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPassword))
                 .addContainerGap(118, Short.MAX_VALUE))
         );
 
-        bttmLogIn.setText("log in");
-        bttmLogIn.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setText("log in");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttmLogInActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
 
@@ -94,7 +94,7 @@ public class FrmLogIn extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bttmLogIn)
+                .addComponent(btnLogin)
                 .addGap(155, 155, 155))
         );
         layout.setVerticalGroup(
@@ -103,23 +103,23 @@ public class FrmLogIn extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bttmLogIn)
+                .addComponent(btnLogin)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bttmLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttmLogInActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         FrmAcademyGradeRegister frmAcademyGradeRegister = new FrmAcademyGradeRegister();
         this.setVisible(false);
         frmAcademyGradeRegister.setVisible(true);
         // TODO add your handling code here:
-    }//GEN-LAST:event_bttmLogInActionPerformed
+    }//GEN-LAST:event_btnLoginActionPerformed
 
-    private void pwdLogInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdLogInActionPerformed
+    private void pwdLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdLoginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pwdLogInActionPerformed
+    }//GEN-LAST:event_pwdLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,11 +157,11 @@ public class FrmLogIn extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton bttmLogIn;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField pwdLogIn;
+    private javax.swing.JLabel lblPassword;
+    private javax.swing.JLabel lblUser;
+    private javax.swing.JPasswordField pwdLogin;
     private javax.swing.JTextField txtUserName;
     // End of variables declaration//GEN-END:variables
 }

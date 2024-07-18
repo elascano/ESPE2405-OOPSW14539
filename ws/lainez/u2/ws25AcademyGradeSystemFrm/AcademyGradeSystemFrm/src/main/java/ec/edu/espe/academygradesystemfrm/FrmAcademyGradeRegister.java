@@ -36,8 +36,18 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         itmUpdateStudent = new javax.swing.JMenuItem();
         itmDeleteStudent = new javax.swing.JMenuItem();
         mnuProfessor = new javax.swing.JMenu();
+        itmCreateProfessor = new javax.swing.JMenuItem();
+        itmReadProfessor = new javax.swing.JMenuItem();
+        itmUpdateProfessor = new javax.swing.JMenuItem();
+        itmDeleteProfessor = new javax.swing.JMenuItem();
         mnuGrade = new javax.swing.JMenu();
+        itmAddGradeToStudent = new javax.swing.JMenuItem();
+        itmReadStudentGrade = new javax.swing.JMenuItem();
+        itmUpdateStudentGrade = new javax.swing.JMenuItem();
+        itmDeleteStudentGrade = new javax.swing.JMenuItem();
         mnuReport = new javax.swing.JMenu();
+        itmGenerateStudentReport = new javax.swing.JMenuItem();
+        itmEvaluateStudent = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -68,6 +78,11 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuStudent.add(itmCreateStudent);
 
         itmReadStudent.setText("ReadStudent");
+        itmReadStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReadStudentActionPerformed(evt);
+            }
+        });
         mnuStudent.add(itmReadStudent);
 
         itmUpdateStudent.setText("UpdateStudent");
@@ -79,12 +94,45 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         jMenuBar1.add(mnuStudent);
 
         mnuProfessor.setText("Professor");
+
+        itmCreateProfessor.setText("CreateProfessor");
+        mnuProfessor.add(itmCreateProfessor);
+
+        itmReadProfessor.setText("ReadProfessor");
+        mnuProfessor.add(itmReadProfessor);
+
+        itmUpdateProfessor.setText("UpdateProfessor");
+        mnuProfessor.add(itmUpdateProfessor);
+
+        itmDeleteProfessor.setText("DeleteProfessor");
+        mnuProfessor.add(itmDeleteProfessor);
+
         jMenuBar1.add(mnuProfessor);
 
         mnuGrade.setText("Grade");
+
+        itmAddGradeToStudent.setText("AddGradeToStudent");
+        mnuGrade.add(itmAddGradeToStudent);
+
+        itmReadStudentGrade.setText("ReadStudentGrade");
+        mnuGrade.add(itmReadStudentGrade);
+
+        itmUpdateStudentGrade.setText("UpdateStudentGrade");
+        mnuGrade.add(itmUpdateStudentGrade);
+
+        itmDeleteStudentGrade.setText("DeleteStudentGrade");
+        mnuGrade.add(itmDeleteStudentGrade);
+
         jMenuBar1.add(mnuGrade);
 
         mnuReport.setText("Report");
+
+        itmGenerateStudentReport.setText("GenerateStudentReport");
+        mnuReport.add(itmGenerateStudentReport);
+
+        itmEvaluateStudent.setText("EvaluateStudent");
+        mnuReport.add(itmEvaluateStudent);
+
         jMenuBar1.add(mnuReport);
 
         jMenu1.setText("Ayuda");
@@ -117,6 +165,13 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         System.exit(0);
         // TODO add your handling code here:
     }//GEN-LAST:event_itmExitActionPerformed
+
+    private void itmReadStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmReadStudentActionPerformed
+        FrmReadStudent frmReadStudent = new FrmReadStudent();
+        this.setVisible(false);
+        frmReadStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmReadStudentActionPerformed
 
     /**
      * @param args the command line arguments
@@ -154,12 +209,22 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itmAddGradeToStudent;
+    private javax.swing.JMenuItem itmCreateProfessor;
     private javax.swing.JMenuItem itmCreateStudent;
+    private javax.swing.JMenuItem itmDeleteProfessor;
     private javax.swing.JMenuItem itmDeleteStudent;
+    private javax.swing.JMenuItem itmDeleteStudentGrade;
+    private javax.swing.JMenuItem itmEvaluateStudent;
     private javax.swing.JMenuItem itmExit;
+    private javax.swing.JMenuItem itmGenerateStudentReport;
     private javax.swing.JMenuItem itmLogout;
+    private javax.swing.JMenuItem itmReadProfessor;
     private javax.swing.JMenuItem itmReadStudent;
+    private javax.swing.JMenuItem itmReadStudentGrade;
+    private javax.swing.JMenuItem itmUpdateProfessor;
     private javax.swing.JMenuItem itmUpdateStudent;
+    private javax.swing.JMenuItem itmUpdateStudentGrade;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu mnuAcademyGradeRegister;

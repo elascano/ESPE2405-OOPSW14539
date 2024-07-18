@@ -41,6 +41,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="ReadStudent"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="itmReadStudentActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="itmUpdateStudent">
               <Properties>
@@ -58,16 +61,72 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Professor"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmCreateProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="CreateProfessor"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmReadProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ReadProfessor"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmUpdateProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="UpdateProfessor"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmDeleteProfessor">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DeleteProfessor"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnuGrade">
           <Properties>
             <Property name="text" type="java.lang.String" value="Grade"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmAddGradeToStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="AddGradeToStudent"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmReadStudentGrade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="ReadStudentGrade"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmUpdateStudentGrade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="UpdateStudentGrade"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmDeleteStudentGrade">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="DeleteStudentGrade"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="mnuReport">
           <Properties>
             <Property name="text" type="java.lang.String" value="Report"/>
           </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="itmGenerateStudentReport">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="GenerateStudentReport"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="itmEvaluateStudent">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="EvaluateStudent"/>
+              </Properties>
+            </MenuItem>
+          </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu1">
           <Properties>

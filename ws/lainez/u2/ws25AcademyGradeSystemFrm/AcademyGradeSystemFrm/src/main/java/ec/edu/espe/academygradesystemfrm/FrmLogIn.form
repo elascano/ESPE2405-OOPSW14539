@@ -30,7 +30,7 @@
           </Group>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="bttmLogIn" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -41,7 +41,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="bttmLogIn" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLogin" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="25" max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -56,13 +56,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPassword" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblUser" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="txtUserName" min="-2" max="-2" attributes="0"/>
-                      <Component id="pwdLogIn" min="-2" max="-2" attributes="0"/>
+                      <Component id="pwdLogin" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="133" max="32767" attributes="0"/>
               </Group>
@@ -73,13 +73,13 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblUser" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtUserName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="pwdLogIn" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="pwdLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="118" max="32767" attributes="0"/>
               </Group>
@@ -87,20 +87,20 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lblUser">
           <Properties>
             <Property name="text" type="java.lang.String" value="Usuario:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="pwdLogIn">
+        <Component class="javax.swing.JPasswordField" name="pwdLogin">
           <Properties>
             <Property name="text" type="java.lang.String" value="jPasswordField1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdLogInActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pwdLoginActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblPassword">
           <Properties>
             <Property name="text" type="java.lang.String" value="Password:"/>
           </Properties>
@@ -112,12 +112,12 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="bttmLogIn">
+    <Component class="javax.swing.JButton" name="btnLogin">
       <Properties>
         <Property name="text" type="java.lang.String" value="log in"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttmLogInActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

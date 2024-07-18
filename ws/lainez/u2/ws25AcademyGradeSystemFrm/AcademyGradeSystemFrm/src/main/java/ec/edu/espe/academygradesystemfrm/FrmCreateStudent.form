@@ -61,15 +61,15 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblAge" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblDegree" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblFullName" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblId" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="txtId" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtNameAndSurname" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtFullName" min="-2" max="-2" attributes="0"/>
                       <Component id="txtDegree" min="-2" max="-2" attributes="0"/>
                       <Component id="txtAge" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -84,22 +84,22 @@
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblId" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtId" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtNameAndSurname" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblFullName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtFullName" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblDegree" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtDegree" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblAge" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtAge" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
@@ -108,22 +108,22 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lblId">
           <Properties>
             <Property name="text" type="java.lang.String" value="ingrese ID:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lblFullName">
           <Properties>
             <Property name="text" type="java.lang.String" value="ingrese nombres y apellidos:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lblDegree">
           <Properties>
             <Property name="text" type="java.lang.String" value="ingrese grado:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lblAge">
           <Properties>
             <Property name="text" type="java.lang.String" value="ingrese edad:"/>
           </Properties>
@@ -135,7 +135,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtId">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtNameAndSurname">
+        <Component class="javax.swing.JTextField" name="txtFullName">
         </Component>
         <Component class="javax.swing.JTextField" name="txtDegree">
         </Component>
@@ -150,7 +150,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="98" max="32767" attributes="0"/>
-                  <Component id="bttmAceept" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAcademyGradeRegister" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -158,19 +158,19 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <Component id="bttmAceept" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnAcademyGradeRegister" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="bttmAceept">
+        <Component class="javax.swing.JButton" name="btnAcademyGradeRegister">
           <Properties>
             <Property name="text" type="java.lang.String" value="academy Grade Register"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bttmAceeptActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAcademyGradeRegisterActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

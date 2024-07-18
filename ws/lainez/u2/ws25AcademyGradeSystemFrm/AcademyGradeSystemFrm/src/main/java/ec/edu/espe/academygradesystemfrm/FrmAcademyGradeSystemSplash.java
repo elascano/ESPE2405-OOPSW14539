@@ -32,7 +32,7 @@ public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -78,10 +78,10 @@ public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
                 .addContainerGap(106, Short.MAX_VALUE))
         );
 
-        jButton1.setText("iniciar sesion");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnLogin.setText("iniciar sesion");
+        btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnLoginActionPerformed(evt);
             }
         });
 
@@ -91,14 +91,14 @@ public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(143, 143, 143)
-                .addComponent(jButton1)
+                .addComponent(btnLogin)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 18, Short.MAX_VALUE)
-                .addComponent(jButton1))
+                .addComponent(btnLogin))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -125,12 +125,12 @@ public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         FrmLogIn frmLogin = new FrmLogIn();
         this.setVisible(false);
         frmLogin.setVisible(true);
 // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -168,7 +168,7 @@ public class FrmAcademyGradeSystemSplash extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
