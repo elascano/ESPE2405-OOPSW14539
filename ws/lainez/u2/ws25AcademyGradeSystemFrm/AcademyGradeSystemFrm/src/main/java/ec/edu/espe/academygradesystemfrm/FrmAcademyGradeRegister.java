@@ -86,9 +86,19 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuStudent.add(itmReadStudent);
 
         itmUpdateStudent.setText("UpdateStudent");
+        itmUpdateStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmUpdateStudentActionPerformed(evt);
+            }
+        });
         mnuStudent.add(itmUpdateStudent);
 
         itmDeleteStudent.setText("DeleteStudent");
+        itmDeleteStudent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmDeleteStudentActionPerformed(evt);
+            }
+        });
         mnuStudent.add(itmDeleteStudent);
 
         jMenuBar1.add(mnuStudent);
@@ -172,6 +182,20 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmReadStudent.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_itmReadStudentActionPerformed
+
+    private void itmUpdateStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmUpdateStudentActionPerformed
+        FrmUpdateStudent frmUpdateStudent = new FrmUpdateStudent();
+        this.setVisible(false);
+        frmUpdateStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmUpdateStudentActionPerformed
+
+    private void itmDeleteStudentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmDeleteStudentActionPerformed
+        FrmDeleteStudent frmDeleteStudent = new FrmDeleteStudent();
+        this.setVisible(false);
+        frmDeleteStudent.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmDeleteStudentActionPerformed
 
     /**
      * @param args the command line arguments

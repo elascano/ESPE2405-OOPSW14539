@@ -124,6 +124,11 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
         );
 
         btnAcademyGradeRegister.setText("Academy Grade Register");
+        btnAcademyGradeRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcademyGradeRegisterActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -168,6 +173,13 @@ public class FrmUpdateStudent extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAcademyGradeRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcademyGradeRegisterActionPerformed
+        FrmAcademyGradeRegister frmAcademyGradeRegiser = new FrmAcademyGradeRegister();
+        this.setVisible(false);
+        frmAcademyGradeRegiser.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAcademyGradeRegisterActionPerformed
 
     /**
      * @param args the command line arguments

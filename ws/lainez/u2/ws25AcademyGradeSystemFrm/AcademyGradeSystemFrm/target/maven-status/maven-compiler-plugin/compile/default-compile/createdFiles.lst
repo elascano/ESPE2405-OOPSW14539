@@ -1,6 +1,7 @@
 ec\edu\espe\academygradesystemfrm\FrmLogIn.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateStudentGrade.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateStudentGrade$1.class
+ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$5.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$3.class
 ec\edu\espe\academygradesystemfrm\FrmLogIn$3.class
 ec\edu\espe\academygradesystemfrm\FrmReadStudent$1.class
@@ -13,6 +14,7 @@ ec\edu\espe\academygradesystemfrm\FrmDeleteStudent.class
 ec\edu\espe\academygradesystemfrm\FrmCreateProfessor$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteStudentGrade$1.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeSystemSplash$1.class
+ec\edu\espe\academygradesystemfrm\FrmUpdateStudent$2.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$4.class
 ec\edu\espe\academygradesystemfrm\FrmReadProfessor$1.class
@@ -20,6 +22,7 @@ ec\edu\espe\academygradesystemfrm\FrmAddGradeToStudent$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteProfessor$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteProfessor.class
 ec\edu\espe\academygradesystemfrm\FrmGenerateStudentReport$1.class
+ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$6.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateStudent.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeSystemSplash.class
 ec\edu\espe\academygradesystemfrm\FrmCreateStudent$1.class
@@ -35,6 +38,7 @@ ec\edu\espe\academygradesystemfrm\FrmDeleteStudentGrade.class
 ec\edu\espe\academygradesystemfrm\FrmEvaluateStudent$1.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateStudent$1.class
 ec\edu\espe\academygradesystemfrm\FrmCreateStudent$2.class
+ec\edu\espe\academygradesystemfrm\FrmDeleteStudent$2.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateProfessor$1.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateProfessor.class
 ec\edu\espe\academygradesystemfrm\FrmReadStudent.class
