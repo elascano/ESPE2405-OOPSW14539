@@ -49,6 +49,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         itmGenerateStudentReport = new javax.swing.JMenuItem();
         itmEvaluateStudent = new javax.swing.JMenuItem();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,9 +107,19 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         mnuProfessor.setText("Professor");
 
         itmCreateProfessor.setText("CreateProfessor");
+        itmCreateProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmCreateProfessorActionPerformed(evt);
+            }
+        });
         mnuProfessor.add(itmCreateProfessor);
 
         itmReadProfessor.setText("ReadProfessor");
+        itmReadProfessor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itmReadProfessorActionPerformed(evt);
+            }
+        });
         mnuProfessor.add(itmReadProfessor);
 
         itmUpdateProfessor.setText("UpdateProfessor");
@@ -146,6 +157,15 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         jMenuBar1.add(mnuReport);
 
         jMenu1.setText("Ayuda");
+
+        jMenuItem1.setText("acerca");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
@@ -196,6 +216,27 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
         frmDeleteStudent.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_itmDeleteStudentActionPerformed
+
+    private void itmCreateProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmCreateProfessorActionPerformed
+        FrmCreateProfessor frmCreateProfessor = new FrmCreateProfessor();
+        this.setVisible(false);
+        frmCreateProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmCreateProfessorActionPerformed
+
+    private void itmReadProfessorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itmReadProfessorActionPerformed
+        FrmReadProfessor frmReadProfessor = new FrmReadProfessor();
+        this.setVisible(false);
+        frmReadProfessor.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itmReadProfessorActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        FrmAbout frmAbout = new FrmAbout();
+        this.setVisible(false);
+        frmAbout.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -251,6 +292,7 @@ public class FrmAcademyGradeRegister extends javax.swing.JFrame {
     private javax.swing.JMenuItem itmUpdateStudentGrade;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu mnuAcademyGradeRegister;
     private javax.swing.JMenu mnuGrade;
     private javax.swing.JMenu mnuProfessor;
