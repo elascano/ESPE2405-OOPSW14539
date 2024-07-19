@@ -1,0 +1,25 @@
+{
+  "students": [
+    {
+      "name": "Julio",
+      "age": 18,
+      "id": 1,
+      "course": "14539",
+      "subjects": [
+        "OOP"
+      ],
+      "proffesorId": null
+    }
+  ],
+  "professors": [
+    {
+      "name": "Edison",
+      "age": 52,
+      "id": 1,
+      "subject": "OOP",
+      "students": [
+        "Julio"
+      ]
+    }
+  ]
+}

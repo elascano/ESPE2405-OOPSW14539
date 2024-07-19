@@ -7,7 +7,10 @@ package ec.edu.espe.rolepaymentsystem.view;
 import ec.edu.espe.rolepaymentsystem.controller.EmployeeManager;
 import ec.edu.espe.rolepaymentsystem.controller.PayrollGenerator;
 import ec.edu.espe.rolepaymentsystem.model.Employee;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 

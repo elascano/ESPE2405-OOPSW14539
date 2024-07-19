@@ -26,5 +26,19 @@
     "companyLoans": 0.0,
     "fines": 0.0,
     "bringOwnFood": true
+  },
+  {
+    "name": "david",
+    "lastName": "lainez",
+    "idNumber": "0919247024",
+    "hireDate": "Jan 15, 2024, 12:00:00 AM",
+    "basicSalary": 460.0,
+    "overtimeHours": 10.0,
+    "absentDays": 0.0,
+    "bonuses": 100.0,
+    "iessLoans": 3.0,
+    "companyLoans": 3.0,
+    "fines": 0.0,
+    "bringOwnFood": true
   }
 ]

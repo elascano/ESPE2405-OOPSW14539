@@ -1,0 +1,39 @@
+{
+    "cars": [
+        {
+            "id": 3022312,
+            "model": "Toyota Corolla",
+            "brand": "Toyota",
+            "year": 2008,
+            "price_day": 20.0,
+            "available": true
+        }
+    ],
+    "customers": [
+        {
+            "id": 2100935929,
+            "name": "Jerson",
+            "license_number": "A2312"
+        }
+    ],
+    "rents": [
+        {
+            "car": {
+                "id": 3022312,
+                "model": "Toyota Corolla",
+                "brand": "Toyota",
+                "year": 2008,
+                "price_day": 20.0,
+                "available": true
+            },
+            "customer": {
+                "id": 2100935929,
+                "name": "Jerson",
+                "license_number": "A2312"
+            },
+            "start_date": "2024-06-29",
+            "end_date": "2025-06-29",
+            "total_price": 7300.0
+        }
+    ]
+}

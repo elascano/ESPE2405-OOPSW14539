@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2024-06-28",
+    "students": [
+      {
+        "id": "L0015",
+        "name": "Andrea Raura"
+      },
+      {
+        "id": "L0017",
+        "name": "Leidy Saraguro"
+      },
+      {
+        "id": "L0019",
+        "name": "David Perez"
+      },
+      {
+        "id": "L0021",
+        "name": "Alex Andrade"
+      }
+    ]
+  }
+]

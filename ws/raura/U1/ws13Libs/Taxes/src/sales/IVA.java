@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sales;
 
 /**
@@ -9,10 +5,6 @@ package sales;
  * @author Andrea Raura,Paradigm Pioneers Squad, DCCO-ESPE
  */
 public class IVA {
-    
-    
-    
-    
     
     private static final double IVA_RATE = 0.15;
     
@@ -37,4 +29,4 @@ public class IVA {
     }
 }
     
-}
+
