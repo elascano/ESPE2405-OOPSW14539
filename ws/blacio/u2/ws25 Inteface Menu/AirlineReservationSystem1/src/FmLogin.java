@@ -61,6 +61,11 @@ public class FmLogin extends javax.swing.JFrame {
                 UsernameFieldMousePressed(evt);
             }
         });
+        UsernameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsernameFieldActionPerformed(evt);
+            }
+        });
         jPanel1.add(UsernameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 457, -1));
         jPanel1.add(UsernameSeparator, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 457, 10));
 
@@ -102,6 +107,11 @@ public class FmLogin extends javax.swing.JFrame {
         passTxt.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 passTxtMousePressed(evt);
+            }
+        });
+        passTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passTxtActionPerformed(evt);
             }
         });
         jPanel1.add(passTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, 460, -1));
@@ -236,6 +246,14 @@ public class FmLogin extends javax.swing.JFrame {
            JOptionPane.showMessageDialog(this,"Usuario o contraseña incorrectos por favor intentelo de nuevo");
        }   
     }//GEN-LAST:event_logginButtonActionPerformed
+
+    private void UsernameFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsernameFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsernameFieldActionPerformed
+
+    private void passTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passTxtActionPerformed
 
     /**
      * @param args the command line arguments
