@@ -14,7 +14,7 @@ import org.bson.Document;
 
 /**
  *
- * @author G400
+ * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
 public class FinalSpeedCalculator extends javax.swing.JFrame {
 
