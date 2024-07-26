@@ -345,9 +345,9 @@ public class frmanimal extends javax.swing.JFrame {
             String description = txtdescription.getText();
             Date date = new Date();
             String gender = cmdgender.getSelectedItem().toString();
-            String cage = cmdcage.getSelectedItem().toString();;
-            int numberOfBones = sldNumberOfBones.getValue();;
-            boolean isVertebrate = chkVertebrate.isSelected();;
+            String cage = cmdcage.getSelectedItem().toString();
+            int numberOfBones = sldNumberOfBones.getValue();
+            boolean isVertebrate = chkVertebrate.isSelected();
             List<String> foods = listFood.getSelectedValuesList();
 
             animal = new Animal(id, description, date, gender, cage, numberOfBones, isVertebrate, (ArrayList<String>) foods);
