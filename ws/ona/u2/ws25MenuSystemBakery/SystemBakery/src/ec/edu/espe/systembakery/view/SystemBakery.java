@@ -1,20 +1,36 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package ec.edu.espe.systembakery.view;
 
-/**
- *
- * @author Leydi Oña
- */
+import ec.edu.espe.systembakery.*;
+
 public class SystemBakery {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Create and display the splash screen
+        FrmSystemBakerySplash splash = new FrmSystemBakerySplash();
+        splash.setVisible(true);
+
+        // Create the login form
+        FrmLogin login = new FrmLogin();
+
+        // Simulate progress and update the splash screen
+        try {
+            for (int i = 0; i <= 100; i++) {
+                Thread.sleep(40);  // Simulate time-consuming task
+                final int percent = i;
+                javax.swing.SwingUtilities.invokeLater(() -> {
+                    splash.setBarValue(percent);
+                    splash.getProgress().setText(percent + " %");
+                });
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Hide the splash screen and show the login form
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            splash.setVisible(false);
+            login.setVisible(true);
+            splash.dispose();
+        });
     }
-    
 }

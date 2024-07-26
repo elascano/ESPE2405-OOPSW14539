@@ -11,12 +11,12 @@
         <maven.compiler.target>21</maven.compiler.target>
         <exec.mainClass>ec.edu.espe.interfacecloud.view.ToCloud</exec.mainClass>
     </properties>
-        <dependencies>
-    <dependency>
-        <groupId>org.mongodb</groupId>
-        <artifactId>mongodb-driver-sync</artifactId>
-        <version>5.1.1</version>
-    </dependency>
+    <dependencies>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-sync</artifactId>
+            <version>5.1.1</version>
+        </dependency>
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongodb-driver</artifactId>
