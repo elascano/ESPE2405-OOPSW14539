@@ -59,7 +59,7 @@ public class Zoo {
         Condor condor = new Condor("Andes", 0, date, cage, 'm', 2);
         animals.add(condor);
 
-        System.out.println("---------->     ANIMALS IN MY ZOO     <----------------");
+        System.out.println("---------->     ANIMALS IN MY ZOO ZAITH MANANGON    <----------------");
         System.out.println(animals);
 
         for (Animal ani : animals) {
