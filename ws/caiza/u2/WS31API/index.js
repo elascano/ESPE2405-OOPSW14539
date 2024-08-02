@@ -1,4 +1,4 @@
-const port = 3005;
+const port = 3006;
 const express = require('express');
 const { default: mongoose } = require('mongoose');
 const app = express();
