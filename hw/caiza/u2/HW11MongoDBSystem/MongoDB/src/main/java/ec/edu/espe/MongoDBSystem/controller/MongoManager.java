@@ -1,10 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package ec.edu.espe.MongoDBSystem.controller;
+import com.mongodb.ConnectionString;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoClientURI;
+import com.mongodb.MongoException;
+import com.mongodb.ServerApi;
+import com.mongodb.ServerApiVersion;
+import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import ec.edu.espe.MongoDBSystem.model.Students;
@@ -15,30 +17,28 @@ import org.bson.types.ObjectId;
  * @author Miguel Caiza,Overnight Developers Squad,DCCO-ESPE
  */
 public class MongoManager {
-    MongoClient mongoClient;
-    MongoDatabase database;
-    MongoCollection<Document> collection;
+    public static void main(String[] args) {
+        String connectionString = "mongodb+srv://MiguelAngel:miguel1234@cluster0.hovruoz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-    public MongoManager(String uri, String dbName, String collectionName) {
-        MongoClientURI clientURI = new MongoClientURI(uri);
-        mongoClient = new MongoClient(clientURI);
-        database = mongoClient.getDatabase(dbName);
-        collection = database.getCollection(collectionName);
-    }
+        ServerApi serverApi = ServerApi.builder()
+                .version(ServerApiVersion.V1)
+                .build();
 
-    public void insertStudent(Students student) {
-        Document document = new Document("_id", new ObjectId())
-                .append("id", student.getId())
-                .append("name", student.getName())
-                .append("bornOnDate", student.getBornOnDate())
-                .append("average", student.getAverage())
-                .append("male", student.isMale())
-                .append("siblings", student.getSiblings());
-        
-        collection.insertOne(document);
-    }
+        MongoClientSettings settings = MongoClientSettings.builder()
+                .applyConnectionString(new ConnectionString(connectionString))
+                .serverApi(serverApi)
+                .build();
 
-    public void close() {
-        mongoClient.close();
+        // Create a new client and connect to the server
+        try (com.mongodb.client.MongoClient mongoClient = MongoClients.create(settings)) {
+            try {
+                // Send a ping to confirm a successful connection
+                MongoDatabase database = mongoClient.getDatabase("admin");
+                database.runCommand(new Document("ping", 1));
+                System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
+            } catch (MongoException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
