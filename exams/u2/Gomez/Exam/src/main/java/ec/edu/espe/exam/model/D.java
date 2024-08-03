@@ -5,17 +5,36 @@
 package ec.edu.espe.exam.model;
 
 import java.awt.List;
+import java.util.ArrayList;
 
 /**
  *
  * @author Joffre
  */
-public class D {
-     private List<E> eList; // 0..4
-    private List<F> fList; // 0..*
+public class D extends A{ //0.5
 
-    public D() {
-        eList = new ArrayList<>();
-        fList = new ArrayList<>();
+    public D(E[] es, ArrayList<F> efes, ArrayList<A> as) {  //0.2
+        super(as);
+        this.es = es;
+        this.efes = efes;
     }
+     private E[] es;
+     private ArrayList<F> efes; //0.5
+
+    public E[] getEs() {
+        return es;
+    }
+
+    public void setEs(E[] es) {//0.2
+        this.es = es;
+    }
+
+    public ArrayList<F> getEfes() {
+        return efes;
+    }
+
+    public void setEfes(ArrayList<F> efes) {
+        this.efes = efes;
+    }
+
 }
