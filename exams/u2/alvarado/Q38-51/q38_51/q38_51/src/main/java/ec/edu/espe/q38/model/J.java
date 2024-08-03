@@ -4,7 +4,10 @@
  */
 package ec.edu.espe.q38.model;
 
-
+/**
+ *
+ * @author Frank Alvarado
+ */
 public class J { // 1.0
     
 }

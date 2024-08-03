@@ -6,11 +6,11 @@
 package ec.edu.espe.q38_51;
 
 import ec.edu.espe.q38.model.*;
-import static ec.edu.espe.q38.model.G.useJ;
+
 
 /**
  *
- * @author Cristian Acalo, Scriptal, DCCO-ESPE
+ * @author Frank Alvarado
  */
 public class Q38_51 {
 
