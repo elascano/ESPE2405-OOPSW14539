@@ -43,6 +43,8 @@ public class FrmKeyboard extends javax.swing.JFrame {
         txtAmount = new javax.swing.JTextField();
         btnCalculatePrice = new javax.swing.JButton();
         btnCalculateWeight = new javax.swing.JButton();
+        lblId = new javax.swing.JLabel();
+        txtId = new javax.swing.JTextField();
         lblTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,25 +54,25 @@ public class FrmKeyboard extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblAddKyb.setText("Adding A Keyboard");
-        jPanel1.add(lblAddKyb, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
+        jPanel1.add(lblAddKyb, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
 
         jLabel1.setText("Name:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 40, 30));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 40, 30));
 
         jLabel2.setText("Price:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
         jLabel3.setText("Weight(lb):");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
-        jPanel1.add(txtnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 80, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        jPanel1.add(txtnameField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 100, 80, -1));
 
         txtpriceField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtpriceFieldActionPerformed(evt);
             }
         });
-        jPanel1.add(txtpriceField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 80, -1));
-        jPanel1.add(txtweightField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 80, -1));
+        jPanel1.add(txtpriceField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 140, 80, -1));
+        jPanel1.add(txtweightField, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 80, -1));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -89,20 +91,20 @@ public class FrmKeyboard extends javax.swing.JFrame {
         jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
 
         lblTotalAmount.setText("Total Price:");
-        jPanel1.add(lblTotalAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        jPanel1.add(lblTotalAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
 
         lblTotalPrice.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(lblTotalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 70, 20));
+        jPanel1.add(lblTotalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 70, 20));
 
         jLabel4.setText("Aproximated Weight:");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, -1, -1));
 
         lblApxWght.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(lblApxWght, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 60, 20));
+        jPanel1.add(lblApxWght, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 260, 60, 20));
 
         lblAmount.setText("Amount:");
-        jPanel1.add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
-        jPanel1.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 80, -1));
+        jPanel1.add(lblAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
+        jPanel1.add(txtAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 80, -1));
 
         btnCalculatePrice.setText("Calculate Total Price");
         btnCalculatePrice.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +112,7 @@ public class FrmKeyboard extends javax.swing.JFrame {
                 btnCalculatePriceActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCalculatePrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
+        jPanel1.add(btnCalculatePrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, -1, -1));
 
         btnCalculateWeight.setText("Calculate Aproximated Weight");
         btnCalculateWeight.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +120,11 @@ public class FrmKeyboard extends javax.swing.JFrame {
                 btnCalculateWeightActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCalculateWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, -1, -1));
+        jPanel1.add(btnCalculateWeight, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
+
+        lblId.setText("Id:");
+        jPanel1.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 40, -1));
+        jPanel1.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 80, -1));
 
         lblTitle.setText("Keyboards");
 
@@ -184,6 +190,7 @@ public class FrmKeyboard extends javax.swing.JFrame {
     }//GEN-LAST:event_btnClearActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        int id = Integer.parseInt(txtId.getText());
         String name = txtnameField.getText();
         try {
             double price = Double.parseDouble(txtpriceField.getText());
@@ -193,7 +200,7 @@ public class FrmKeyboard extends javax.swing.JFrame {
             double totalPrice = price * amount;
             double approximatedWeight = weight * amount;
 
-            ToCloud.uploadKeyboardData(name, price, weight, amount, totalPrice, approximatedWeight);
+            ToCloud.uploadKeyboardData(id, name, price, weight, amount, totalPrice, approximatedWeight);
 
             JOptionPane.showMessageDialog(this, "Keyboard data saved successfully!");
 
@@ -252,10 +259,12 @@ public class FrmKeyboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblAddKyb;
     private javax.swing.JLabel lblAmount;
     private javax.swing.JLabel lblApxWght;
+    private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JLabel lblTotalAmount;
     private javax.swing.JLabel lblTotalPrice;
     private javax.swing.JTextField txtAmount;
+    private javax.swing.JTextField txtId;
     private javax.swing.JTextField txtnameField;
     private javax.swing.JTextField txtpriceField;
     private javax.swing.JTextField txtweightField;
