@@ -32,21 +32,22 @@ public class ToCloud {
         return MongoClients.create(settings);
     }
 
-    public static void uploadKeyboardData(String name, double price, double weight, int amount, double totalPrice, double approximatedWeight) {
+    public static void uploadKeyboardData(int id, String name, double price, double weight, int amount, double totalPrice, double approximatedWeight) {
         try (MongoClient mongoClient = createMongoClient()) {
             MongoDatabase database = mongoClient.getDatabase("KeyboardDatabase");
 
-            saveKeyboardToDatabase(name, price, weight, amount, totalPrice, approximatedWeight, database);
+            saveKeyboardToDatabase(id, name, price, weight, amount, totalPrice, approximatedWeight, database);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static void saveKeyboardToDatabase(String name, double price, double weight, int amount, double totalPrice, double approximatedWeight, MongoDatabase database) {
+    private static void saveKeyboardToDatabase(int id, String name, double price, double weight, int amount, double totalPrice, double approximatedWeight, MongoDatabase database) {
         MongoCollection<Document> collection = database.getCollection("keyboards");
 
-        Document keyboardDocument = new Document("name", name)
+        Document keyboardDocument = new Document("id", id)
+                .append("name", name)
                 .append("price", price)
                 .append("weight", weight)
                 .append("amount", amount)
