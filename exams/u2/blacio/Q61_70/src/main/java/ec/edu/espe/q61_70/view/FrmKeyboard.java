@@ -45,6 +45,7 @@ public class FrmKeyboard extends javax.swing.JFrame {
         btnCalculateWeight = new javax.swing.JButton();
         lblId = new javax.swing.JLabel();
         txtId = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         lblTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -88,7 +89,7 @@ public class FrmKeyboard extends javax.swing.JFrame {
                 btnClearActionPerformed(evt);
             }
         });
-        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
+        jPanel1.add(btnClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, -1, -1));
 
         lblTotalAmount.setText("Total Price:");
         jPanel1.add(lblTotalAmount, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, -1, -1));
@@ -125,6 +126,14 @@ public class FrmKeyboard extends javax.swing.JFrame {
         lblId.setText("Id:");
         jPanel1.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 40, -1));
         jPanel1.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 80, -1));
+
+        jButton1.setText("Find");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 310, -1, -1));
 
         lblTitle.setText("Keyboards");
 
@@ -211,6 +220,12 @@ public class FrmKeyboard extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnAddActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        FrmFind frmfind = new FrmFind();
+        this.setVisible(false);
+        frmfind.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -251,6 +266,7 @@ public class FrmKeyboard extends javax.swing.JFrame {
     private javax.swing.JButton btnCalculatePrice;
     private javax.swing.JButton btnCalculateWeight;
     private javax.swing.JButton btnClear;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
