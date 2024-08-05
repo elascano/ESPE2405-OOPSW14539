@@ -5,25 +5,29 @@
 package ec.edu.espe.exam.model;
 
 import java.awt.List;
+import java.util.ArrayList;
 
 /**
  *
  * @author Joffre
  */
-public class A {
-    private List<A> aList; // 0..1
-    private List<B> bList;
-    private List<C> cList;
-    private List<D> dList;
+public class A {  //0.5
 
-    public A() {
-        aList = new ArrayList<>();
-        bList = new ArrayList<>();
-        cList = new ArrayList<>();
-        dList = new ArrayList<>();
+    public A(ArrayList<A> as) {
+        this.as = as;
     }
 
-    Object getBList() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    @Override
+    public String toString() {
+        return "A{" + "as=" + as + '}';
     }
-   
+private ArrayList <A> as; //0.5
+
+    public ArrayList <A> getAs() {
+        return as;
+    }
+
+    public void setAs(ArrayList <A> as) {
+        this.as = as;
+    }
+}

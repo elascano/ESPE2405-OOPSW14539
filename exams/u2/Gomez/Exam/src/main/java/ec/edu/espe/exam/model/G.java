@@ -8,6 +8,6 @@ package ec.edu.espe.exam.model;
  *
  * @author Joffre
  */
-public class G {
+public class G implements H{  //1
     
 }

@@ -8,10 +8,6 @@ package ec.edu.espe.exam.model;
  *
  * @author Joffre
  */
-public class J {
-        private G g; // 0..*
-
-    public J(G g) {
-        this.g = g;
-    }
+public class J { //1
+     
 }

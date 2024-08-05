@@ -8,15 +8,12 @@ import java.util.List;
  *
  * @author Leidy Saraguro, Paradigm Pioneers Squad, DCCO-ESPE
  */
-public class F {
-    private List<D> relationD;
+public class F { 
 
-    public F() {
-        this.relationD = new ArrayList<>();
+    
+    @Override
+    public String toString() {
+        return "F{" + '}';
     }
 
-    public void agregarRelacionD(D d) {
-        relationD.add(d);
-    }
-   
 }
