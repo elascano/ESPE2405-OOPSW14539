@@ -1,0 +1,30 @@
+[
+  {
+    "id": "H50",
+    "name": "Liliana Solorzano",
+    "cellPhone": "0998810586",
+    "abono": 0,
+    "clothes": [
+      {
+        "id": "N3",
+        "price": 12
+      },
+      {
+        "id": "N4",
+        "price": 7
+      },
+      {
+        "id": "L3",
+        "price": 5
+      },
+      {
+        "id": "O3",
+        "price": 5
+      },
+      {
+        "id": "E3",
+        "price": 1
+      }
+    ]
+  }
+]

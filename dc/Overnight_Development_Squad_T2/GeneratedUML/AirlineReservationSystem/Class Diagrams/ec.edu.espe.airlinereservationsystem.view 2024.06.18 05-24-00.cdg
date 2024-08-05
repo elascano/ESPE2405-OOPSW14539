@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ec.edu.espe.airlinereservationsystem.view">
+  <ClassDiagramComponents>
+    <Class name="AirlineReservationSimulator" package="ec.edu.espe.airlinereservationsystem.view" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MenuManager" package="ec.edu.espe.airlinereservationsystem.view" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="reservationSystemInt" type="ReservationSystem" visibility="private" isFinal="true"/>
+        <Field name="scanner" type="Scanner" visibility="private" isFinal="true"/>
+        <Field name="CUSTOMER_DATA_FILE" type="String" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ReservationSystem" name="reservationSystemInt"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="displayMenu" returnType="void" visibility="public"/>
+        <Method name="createCustomer" returnType="void" visibility="private"/>
+        <Method name="createFlight" returnType="void" visibility="private"/>
+        <Method name="bookTicket" returnType="void" visibility="private"/>
+        <Method name="addOffer" returnType="void" visibility="private"/>
+        <Method name="viewTicketHistory" returnType="void" visibility="private"/>
+        <Method name="addBaggage" returnType="void" visibility="private"/>
+        <Method name="changeFlightDate" returnType="void" visibility="private"/>
+        <Method name="updateTicketStatus" returnType="void" visibility="private"/>
+        <Method name="viewOffers" returnType="void" visibility="private"/>
+        <Method name="displayFAQ" returnType="void" visibility="private"/>
+        <Method name="getIntInput" returnType="int" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

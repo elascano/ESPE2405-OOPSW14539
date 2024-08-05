@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Payment System</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 800px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    #employeeForm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .column {
+        width: 48%;
+    }
+
+    .column label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .column input, .column select, .date-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .date-input {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .date-input input, .date-input select {
+        width: 30%;
+    }
+
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    }
+
+    button:first-child {
+        background-color: #4CAF50;
+    }
+
+    button:last-child {
+        background-color: #f44336;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>DATOS PERSONALES:</h2>
+        <form id="employeeForm">
+            <div class="column">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" value="Yostin" >
+                
+                <label for="lastName">Apellido:</label>
+                <input type="text" id="lastName" value="Sisalema">
+                
+                <label for="idNumber">Número de Identificación:</label>
+                <input type="text" id="idNumber" value="1753961968" >
+                
+                <label for="hireDate">Fecha de Contratación:</label>
+                <div class="date-input">
+                    <input type="number" id="hireDay" value="1" min="1" max="31">
+                    <select id="hireMonth">
+                        <option value="enero" selected>Enero</option>
+                        <option value="febrero">Febrero</option>
+                        <option value="marzo">Marzo</option>
+                        <option value="abril">Abril</option>
+                        <option value="mayo">Mayo</option>
+                        <option value="junio">Junio</option>
+                        <option value="julio">Julio</option>
+                        <option value="agosto">Agosto</option>
+                        <option value="septiembre">Septiembre</option>
+                        <option value="octubre">Octubre</option>
+                        <option value="noviembre">Noviembre</option>
+                        <option value="diciembre">Diciembre</option>
+                    </select>
+                    <input type="number" id="hireYear" value="2010" min="1900" max="2100">
+                </div>
+            </div>
+            <div class="column">
+                <label for="overtimeHours">Horas Extras:</label>
+                <input type="number" id="overtimeHours" value="2" min="0">
+                <br>
+                <label for="bonuses">Bonificaciones:</label>
+                <input type="number" id="bonuses" value="150" min="0">
+                <br>
+                <label for="iessLoans">Préstamos IESS:</label>
+                <input type="number" id="iessLoans" value="450" min="0">
+                <br>
+                <label for="companyLoans">Préstamos Empresa:</label>
+                <input type="number" id="companyLoans" value="120" min="0">
+                <br>
+                <label for="absentDays">Días Ausentes:</label>
+                <input type="number" id="absentDays" value="0" min="0">
+                <br>
+                <label for="fines">Multas:</label>
+                <input type="number" id="fines" value="1" min="0">
+                <br>
+                <label for="bringOwnFood">¿Trae su propia comida?</label>
+                <select id="bringOwnFood">
+                    <option value="si" selected>Si</option>
+                    <option value="no">No</option>
+                </select>
+                <br>
+                <label for="basicSalary">Salario Básico:</label>
+                <input type="number" id="basicSalary" value="500" min="0">
+                <br>
+                <button type="button" id="saveButton">Guardar</button>
+                <button type="button" id="cancelButton">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="./Main.js"></script>
+</body>
+</html>
+
