@@ -1,2 +1,0 @@
-1,Abigail,Black,6,true,Fri Nov 02 00:00:00 COT 2007
-2,Ariel,Brown,4,false,Tue Mar 12 00:00:00 COT 2002

@@ -1,3 +1,0 @@
-123,kikiriki,yellow,2,false,Tue Mar 15 00:00:00 ECT 2022
-1234,chiki,purple,2,true,Thu Dec 01 00:00:00 ECT 2022
-567,hanna,red,6,false,Thu Dec 13 00:00:00 ECT 2018

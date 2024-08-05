@@ -1,3 +1,0 @@
-0,marcos,green,3,true,Wed Dec 01 00:00:00 ECT 2021
-3,oscar,yellow,2,false,Tue Dec 13 00:00:00 ECT 2020
-2,maruja,brown,5,true,Thu Dec 15 00:00:00 ECT 2022

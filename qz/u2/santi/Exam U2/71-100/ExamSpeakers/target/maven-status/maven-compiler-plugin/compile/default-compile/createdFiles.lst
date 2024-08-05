@@ -1,8 +1,0 @@
-ec\edu\espe\examspeakers\view\CreateSpeakerView.class
-ec\edu\espe\examspeakers\controller\SpeakerDAOMongoDB.class
-ec\edu\espe\examspeakers\model\Speaker.class
-ec\edu\espe\examspeakers\controller\SpeakerDAO.class
-ec\edu\espe\examspeakers\view\ListSpeakersView.class
-ec\edu\espe\examspeakers\controller\SpeakerController.class
-ec\edu\espe\examspeakers\view\MainMenuView.class
-ec\edu\espe\examspeakers\view\Main.class
