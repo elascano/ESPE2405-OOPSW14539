@@ -9,10 +9,14 @@ import com.mongodb.MongoClientSettings;
 import com.mongodb.MongoException;
 import com.mongodb.ServerApi;
 import com.mongodb.ServerApiVersion;
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+import ec.edu.espe.q61_70.model.Keyboard;
+import java.util.ArrayList;
+import java.util.List;
 import org.bson.Document;
 
 public class ToCloud {
@@ -32,21 +36,22 @@ public class ToCloud {
         return MongoClients.create(settings);
     }
 
-    public static void uploadKeyboardData(String name, double price, double weight, int amount, double totalPrice, double approximatedWeight) {
+    public static void uploadKeyboardData(int id, String name, double price, double weight, int amount, double totalPrice, double approximatedWeight) {
         try (MongoClient mongoClient = createMongoClient()) {
             MongoDatabase database = mongoClient.getDatabase("KeyboardDatabase");
 
-            saveKeyboardToDatabase(name, price, weight, amount, totalPrice, approximatedWeight, database);
+            saveKeyboardToDatabase(id, name, price, weight, amount, totalPrice, approximatedWeight, database);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    private static void saveKeyboardToDatabase(String name, double price, double weight, int amount, double totalPrice, double approximatedWeight, MongoDatabase database) {
+    private static void saveKeyboardToDatabase(int id, String name, double price, double weight, int amount, double totalPrice, double approximatedWeight, MongoDatabase database) {
         MongoCollection<Document> collection = database.getCollection("keyboards");
 
-        Document keyboardDocument = new Document("name", name)
+        Document keyboardDocument = new Document("id", id)
+                .append("name", name)
                 .append("price", price)
                 .append("weight", weight)
                 .append("amount", amount)
@@ -60,4 +65,78 @@ public class ToCloud {
             e.printStackTrace();
         }
     }
+
+<<<<<<< HEAD
+    public static Document findKeyboardById(int id) {
+=======
+    public static Keyboard findKeyboardById(int id) {
+        Keyboard keyboard = null;
+>>>>>>> f4ce6e915c655b36596e57fea2b2b1492be00aa3
+        try (MongoClient mongoClient = createMongoClient()) {
+            MongoDatabase database = mongoClient.getDatabase("KeyboardDatabase");
+            MongoCollection<Document> collection = database.getCollection("keyboards");
+
+            Document query = new Document("id", id);
+<<<<<<< HEAD
+            return collection.find(query).first();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+=======
+            FindIterable<Document> result = collection.find(query);
+
+            Document document = result.first();
+            if (document != null) {
+                int dbId = document.getInteger("id");
+                String name = document.getString("name");
+                float price = document.getDouble("price").floatValue();
+                float weight = document.getDouble("weight").floatValue();
+                int amount = document.getInteger("amount");
+
+                keyboard = new Keyboard(dbId, name, price, weight, amount);
+            }
+        } catch (MongoException e) {
+            e.printStackTrace();
+        }
+        return keyboard;
+    }
+
+    public static void deleteKeyboardById(int id) {
+        try (MongoClient mongoClient = createMongoClient()) {
+            MongoDatabase database = mongoClient.getDatabase("KeyboardDatabase");
+            MongoCollection<Document> collection = database.getCollection("keyboards");
+
+            Document query = new Document("id", id);
+            collection.deleteOne(query);
+            System.out.println("Keyboard deleted successfully!");
+        } catch (MongoException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static List<Keyboard> getAllKeyboards() {
+        List<Keyboard> keyboards = new ArrayList<>();
+        try (MongoClient mongoClient = createMongoClient()) {
+            MongoDatabase database = mongoClient.getDatabase("KeyboardDatabase");
+            MongoCollection<Document> collection = database.getCollection("keyboards");
+
+            FindIterable<Document> result = collection.find();
+            for (Document document : result) {
+                Keyboard keyboard = new Keyboard(
+                        document.getInteger("id"),
+                        document.getString("name"),
+                        document.getDouble("price").floatValue(),
+                        document.getDouble("weight").floatValue(),
+                        document.getInteger("amount")
+                );
+                keyboards.add(keyboard);
+            }
+        } catch (MongoException e) {
+            e.printStackTrace();
+        }
+        return keyboards;
+    }
+>>>>>>> f4ce6e915c655b36596e57fea2b2b1492be00aa3
 }

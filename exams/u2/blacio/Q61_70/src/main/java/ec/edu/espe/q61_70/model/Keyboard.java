@@ -10,12 +10,18 @@ public class Keyboard {
     private String name;
     private float price;
     private float weight;
+    private int amount;
+    private double totalPrice;
+    private double approximatedWeight;
 
-    public Keyboard(int id, String name, float price, float weight) {
+    public Keyboard(int id, String name, float price, float weight, int amount) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.weight = weight;
+        this.amount = amount;
+        this.totalPrice = price * amount; 
+        this.approximatedWeight = weight * amount;
     }
 
     /**
@@ -74,13 +80,51 @@ public class Keyboard {
         this.weight = weight;
     }
 
-    public float computeValue() {
-        return this.price * this.weight;
-    }
-
     @Override
     public String toString() {
-        return "Keyboard [id=" + id + ", name=" + name + ", price=" + price + ", weight=" + weight + "]";
+        return "Keyboard [id=" + getId() + ", name=" + getName() + ", price=" + getPrice() + ", weight=" + getWeight() + "]";
+    }
+
+    /**
+     * @return the amount
+     */
+    public int getAmount() {
+        return amount;
+    }
+
+    /**
+     * @param amount the amount to set
+     */
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    /**
+     * @return the totalPrice
+     */
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    /**
+     * @param totalPrice the totalPrice to set
+     */
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    /**
+     * @return the approximatedWeight
+     */
+    public double getApproximatedWeight() {
+        return approximatedWeight;
+    }
+
+    /**
+     * @param approximatedWeight the approximatedWeight to set
+     */
+    public void setApproximatedWeight(double approximatedWeight) {
+        this.approximatedWeight = approximatedWeight;
     }
 
 }

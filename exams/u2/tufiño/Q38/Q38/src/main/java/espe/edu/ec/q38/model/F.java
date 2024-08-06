@@ -8,6 +8,6 @@ package espe.edu.ec.q38.model;
  *
  * @author G400
  */
-public class F {
+public class F { //1.0
     
 }
