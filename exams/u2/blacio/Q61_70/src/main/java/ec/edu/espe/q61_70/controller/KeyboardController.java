@@ -6,49 +6,49 @@ package ec.edu.espe.q61_70.controller;
  */
 import ec.edu.espe.q61_70.model.Keyboard;
 import ec.edu.espe.q61_70.view.KeyboardView;
-import java.util.ArrayList;
 import java.util.List;
 
 public class KeyboardController {
 
-    private List<Keyboard> keyboards;
     private KeyboardView view;
-    private int idCounter = 1;
+    private int idCounter = 1; // This can be managed by the database in a real-world scenario
 
     public KeyboardController(KeyboardView view) {
-        this.keyboards = new ArrayList<>();
         this.view = view;
     }
 
     public void addKeyboard(String name, float price, float weight) {
-        Keyboard keyboard = new Keyboard(idCounter++, name, price, weight);
-        keyboards.add(keyboard);
+        // Generate a unique ID for the new keyboard
+        int id = idCounter++;
+        // Save keyboard to the database
+        ToCloud.uploadKeyboardData(id, name, price, weight, 1, price, weight);
     }
 
     public void removeKeyboard(int id) {
-        keyboards.removeIf(keyboard -> keyboard.getId() == id);
+        // Remove the keyboard from the database
+        ToCloud.deleteKeyboardById(id);
     }
 
     public void updateKeyboard(Keyboard updatedKeyboard) {
-        for (Keyboard keyboard : keyboards) {
-            if (keyboard.getId() == updatedKeyboard.getId()) {
-                keyboard.setName(updatedKeyboard.getName());
-                keyboard.setPrice(updatedKeyboard.getPrice());
-                keyboard.setWeight(updatedKeyboard.getWeight());
-            }
-        }
+        // Update the keyboard in the database
+        ToCloud.uploadKeyboardData(
+                updatedKeyboard.getId(),
+                updatedKeyboard.getName(),
+                updatedKeyboard.getPrice(),
+                updatedKeyboard.getWeight(),
+                updatedKeyboard.getAmount(),
+                updatedKeyboard.getTotalPrice(),
+                updatedKeyboard.getApproximatedWeight()
+        );
     }
 
     public Keyboard getKeyboard(int id) {
-        for (Keyboard keyboard : keyboards) {
-            if (keyboard.getId() == id) {
-                return keyboard;
-            }
-        }
-        return null; // Or throw an exception if preferred
+        return ToCloud.findKeyboardById(id);
     }
 
     public void listKeyboards() {
+
+        List<Keyboard> keyboards = ToCloud.getAllKeyboards();
         view.displayKeyboardList(keyboards);
     }
 
