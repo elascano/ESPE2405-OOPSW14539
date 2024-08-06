@@ -20,4 +20,8 @@ public class KeyboardView {
         }
     }
 
+    public Keyboard getKeyboardInput() {
+
+        return new Keyboard(1, "Dummy Keyboard", 100.0f, 1.0f);
+    }
 }
