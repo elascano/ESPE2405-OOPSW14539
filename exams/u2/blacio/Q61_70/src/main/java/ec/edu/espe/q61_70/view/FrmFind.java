@@ -4,6 +4,15 @@
  */
 package ec.edu.espe.q61_70.view;
 
+import ec.edu.espe.q61_70.controller.ToCloud;
+<<<<<<< HEAD
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
+=======
+import ec.edu.espe.q61_70.model.Keyboard;
+>>>>>>> f4ce6e915c655b36596e57fea2b2b1492be00aa3
+
 /**
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
@@ -32,11 +41,12 @@ public class FrmFind extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblKeyboards = new javax.swing.JTable();
         btnFind = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblFind.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFind.setText("Find Computer");
+        lblFind.setText("Find Keyboard");
 
         jLabel1.setText("id:");
 
@@ -54,6 +64,16 @@ public class FrmFind extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblKeyboards);
 
         btnFind.setText("Find");
+        btnFind.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFindActionPerformed(evt);
+            }
+        });
+<<<<<<< HEAD
+=======
+
+        btnBack.setText("Back");
+>>>>>>> f4ce6e915c655b36596e57fea2b2b1492be00aa3
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,8 +93,10 @@ public class FrmFind extends javax.swing.JFrame {
                         .addGap(245, 245, 245)
                         .addComponent(lblFind, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(btnFind)))
+                        .addGap(224, 224, 224)
+                        .addComponent(btnFind)
+                        .addGap(110, 110, 110)
+                        .addComponent(btnBack)))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -88,13 +110,68 @@ public class FrmFind extends javax.swing.JFrame {
                     .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                .addComponent(btnFind)
-                .addGap(50, 50, 50))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFind)
+                    .addComponent(btnBack))
+                .addGap(53, 53, 53))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
+<<<<<<< HEAD
+        String inputId = JOptionPane.showInputDialog(this, "Enter Keyboard ID:");
+        if (inputId != null && !inputId.trim().isEmpty()) {
+            int id = Integer.parseInt(inputId.trim());
+
+            Document keyboard = ToCloud.findKeyboardById(id);
+            if (keyboard != null) {
+                DefaultTableModel model = (DefaultTableModel) tblKeyboards.getModel();
+                model.setRowCount(0); // Clear existing rows
+
+                Object[] rowData = new Object[]{
+                    keyboard.getInteger("id"),
+                    keyboard.getString("name"),
+                    keyboard.getDouble("price"),
+                    keyboard.getDouble("weight"),
+                    keyboard.getInteger("amount"),
+                    keyboard.getDouble("totalPrice"),
+                    keyboard.getDouble("approximatedWeight")
+                };
+                model.addRow(rowData);
+            } else {
+                JOptionPane.showMessageDialog(this, "No keyboard found with the provided ID.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a valid ID.");
+=======
+        String idText = txtID.getText();
+        try {
+            int id = Integer.parseInt(idText);
+            Keyboard keyboard = ToCloud.findKeyboardById(id);
+
+            if (keyboard != null) {
+                javax.swing.table.DefaultTableModel model = (javax.swing.table.DefaultTableModel) tblKeyboards.getModel();
+                model.setRowCount(0);
+
+                model.addRow(new Object[]{
+                    keyboard.getId(),
+                    keyboard.getName(),
+                    keyboard.getPrice(),
+                    keyboard.getWeight(),
+                    keyboard.getTotalPrice(),
+                    keyboard.getApproximatedWeight()
+                });
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this, "No keyboard found with the given ID.");
+            }
+        } catch (NumberFormatException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Please enter a valid numeric ID.", "Invalid Input", javax.swing.JOptionPane.ERROR_MESSAGE);
+>>>>>>> f4ce6e915c655b36596e57fea2b2b1492be00aa3
+        }
+    }//GEN-LAST:event_btnFindActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +209,7 @@ public class FrmFind extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnFind;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
