@@ -4,6 +4,11 @@
  */
 package ec.edu.espe.q61_70.view;
 
+import ec.edu.espe.q61_70.controller.ToCloud;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import org.bson.Document;
+
 /**
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
@@ -36,7 +41,7 @@ public class FrmFind extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lblFind.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblFind.setText("Find Computer");
+        lblFind.setText("Find Keyboard");
 
         jLabel1.setText("id:");
 
@@ -54,6 +59,11 @@ public class FrmFind extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tblKeyboards);
 
         btnFind.setText("Find");
+        btnFind.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFindActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,6 +105,34 @@ public class FrmFind extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnFindActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFindActionPerformed
+        String inputId = JOptionPane.showInputDialog(this, "Enter Keyboard ID:");
+        if (inputId != null && !inputId.trim().isEmpty()) {
+            int id = Integer.parseInt(inputId.trim());
+
+            Document keyboard = ToCloud.findKeyboardById(id);
+            if (keyboard != null) {
+                DefaultTableModel model = (DefaultTableModel) tblKeyboards.getModel();
+                model.setRowCount(0); // Clear existing rows
+
+                Object[] rowData = new Object[]{
+                    keyboard.getInteger("id"),
+                    keyboard.getString("name"),
+                    keyboard.getDouble("price"),
+                    keyboard.getDouble("weight"),
+                    keyboard.getInteger("amount"),
+                    keyboard.getDouble("totalPrice"),
+                    keyboard.getDouble("approximatedWeight")
+                };
+                model.addRow(rowData);
+            } else {
+                JOptionPane.showMessageDialog(this, "No keyboard found with the provided ID.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Please enter a valid ID.");
+        }
+    }//GEN-LAST:event_btnFindActionPerformed
 
     /**
      * @param args the command line arguments

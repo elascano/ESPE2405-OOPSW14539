@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Store Management</h1>
+    <form id="storeForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        
+        <label for="revenue">Revenue:</label>
+        <input type="number" id="revenue" name="revenue" required>
+        
+        <label for="numberOfEmployees">Number of Employees:</label>
+        <input type="number" id="numberOfEmployees" name="numberOfEmployees" required>
+        
+        <label for="storeType">Store Type:</label>
+        <input type="text" id="storeType" name="storeType" required>
+        
+        <button type="submit">Add Store</button>
+    </form>
+    <div id="message"></div>
+    <script src="script.js"></script>
+</body>
+</html>

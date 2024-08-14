@@ -61,4 +61,16 @@ public class ToCloud {
             e.printStackTrace();
         }
     }
+        public static Document findKeyboardById(int id) {
+        try (MongoClient mongoClient = createMongoClient()) {
+            MongoDatabase database = mongoClient.getDatabase("KeyboardDatabase");
+            MongoCollection<Document> collection = database.getCollection("keyboards");
+
+            Document query = new Document("id", id);
+            return collection.find(query).first();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
