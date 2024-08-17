@@ -1,4 +1,4 @@
-package ec.edu.espe.mazegenerator.model;
+package ec.edu.espe.mazegenerator.controller;
 
 /**
  *
