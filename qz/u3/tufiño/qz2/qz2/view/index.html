@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD FRIENDS</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 800px;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    #friendForm {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .column {
+        width: 48%;
+    }
+
+    .column label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .column input, .column select, .date-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .date-input {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .date-input input, .date-input select {
+        width: 30%;
+    }
+
+    .button-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .button-container button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    }
+
+    button:first-child {
+        background-color: #4CAF50;
+    }
+
+    button:last-child {
+        background-color: #f44336;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>DATOS DEL AMIGO:</h2>
+        <form id="friendForm">
+            <div class="column">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" value="Juan">
+
+                <label for="lastName">Apellido:</label>
+                <input type="text" id="lastName" value="Pérez">
+
+                <label for="birthDate">Fecha de Nacimiento:</label>
+                <div class="date-input">
+                    <input type="number" id="birthDay" value="1" min="1" max="31">
+                    <select id="birthMonth">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                    <input type="number" id="birthYear" value="1995" min="1900" max="2100">
+                </div>
+            </div>
+            <div class="column">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" value="juan@example.com">
+
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" value="1234567890">
+
+                <button type="button" id="saveButton">Guardar</button>
+                <button type="button" id="cancelButton">Cancelar</button>
+            </div>
+        </form>
+    </div>
+    <script src="Main.js"></script>
+</body>
+</html>

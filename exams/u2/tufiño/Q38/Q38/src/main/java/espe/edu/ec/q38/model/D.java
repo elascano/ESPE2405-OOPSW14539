@@ -4,15 +4,17 @@
  */
 package espe.edu.ec.q38.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author G400
  */
-public class D {
+public class D extends A{// 0.5
 
-    private F f;
+    private ArrayList<F> f; //0.25
 
-    public void setF(F f) {
-        this.f = f;
-    }
+   
+    
+    
 }
