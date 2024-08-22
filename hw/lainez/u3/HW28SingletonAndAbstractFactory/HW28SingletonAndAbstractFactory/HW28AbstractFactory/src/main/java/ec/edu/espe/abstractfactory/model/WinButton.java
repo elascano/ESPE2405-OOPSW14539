@@ -6,7 +6,7 @@ package ec.edu.espe.abstractfactory.model;
 
 /**
  *
- * @author Eduardo Segarra, TheJavaBandits, DCCO-ESPE
+ * @author Lainez Ricardo JEZHE ESPE
  */
 public class WinButton extends Button{
 

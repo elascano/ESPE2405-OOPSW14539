@@ -7,7 +7,7 @@ import ec.edu.espe.abstractfactory.model.GUIFactory;
 
 /**
  *
- * @author Eduardo Segarra, TheJavaBandits, DCCO-ESPE
+ * @author Lainez Ricardo JEZHE ESPE
  */
 public class Client {
 
