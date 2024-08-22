@@ -37,4 +37,5 @@ public class StudentView {
         JScrollPane scrollPane = new JScrollPane(table);
         JOptionPane.showMessageDialog(null, scrollPane, "Student List", JOptionPane.INFORMATION_MESSAGE);
     }
+    
 }
