@@ -1,0 +1,4 @@
+ec\edu\espe\templatemethod\view\TemplateMethodView.class
+ec\edu\espe\templatemethod\controller\TemplateMethodController.class
+ec\edu\espe\templatemethod\model\DataProcessor.class
+ec\edu\espe\templatemethod\model\ConcreteDataProcessor.class
