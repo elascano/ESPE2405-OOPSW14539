@@ -9,13 +9,26 @@ import java.util.Map;
  */
 public class FormModel {
 
-    private Map<String, String> fields = new HashMap<>();
+    private Map<String, String> fields;
+
+    public FormModel() {
+        fields = new HashMap<>();
+    }
 
     public void addField(String fieldName, String fieldValue) {
         fields.put(fieldName, fieldValue);
     }
 
-    public Map<String, String> getFields() {
+    public String getField(String fieldName) {
+        return fields.get(fieldName);
+    }
+
+    public Map<String, String> getAllFields() {
         return fields;
     }
+
+    public void updateField(String fieldName, String fieldValue) {
+        fields.put(fieldName, fieldValue);
+    }
+
 }
