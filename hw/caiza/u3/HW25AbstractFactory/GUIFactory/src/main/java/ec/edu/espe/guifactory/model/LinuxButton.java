@@ -6,6 +6,10 @@ package ec.edu.espe.guifactory.model;
  */
 public class LinuxButton extends Button{
 
+    public LinuxButton(String caption) {
+        super(caption);
+    }
+
     @Override
     public void paint() {
         System.out.println("Creating a Linux-style button with caption: " + caption);

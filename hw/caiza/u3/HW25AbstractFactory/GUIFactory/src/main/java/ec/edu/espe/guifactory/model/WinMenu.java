@@ -6,6 +6,10 @@ package ec.edu.espe.guifactory.model;
  */
 public class WinMenu extends Menu{
 
+    public WinMenu(String caption) {
+        super(caption);
+    }
+
     @Override
     public void paint() {
         System.out.println("Creating a Windows-style menu with caption: " + caption);

@@ -15,14 +15,14 @@ public class ApplicationController {
         factory = GUIFactory.getFactory();
     }
 
-    public void run() { // Asegúrate de que el tipo de retorno sea void
+    public void run() {
         Button button = factory.createButton();
         Menu menu = factory.createMenu();
 
-        button.caption = "Play";
-        menu.caption = "File";
+        button.caption = "Play"; // Set caption
+        menu.caption = "File";   // Set caption
 
-        button.paint(); // Simula el proceso de creación del botón.
-        menu.paint();   // Simula el proceso de creación del menú.
-    }  
+        button.paint();
+        menu.paint();
+    } 
 }
