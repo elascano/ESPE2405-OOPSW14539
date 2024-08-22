@@ -6,7 +6,7 @@ package ec.edu.espe.event.hw29compositepattern;
 
 /**
  *
- * @author Eduardo Segarra, TheJavaBandits, DCCO-ESPE
+ * @author Lainez Ricardo JEZHE ESPE
  */
 abstract class Employee {
     public static String name = "Not assigned yet";
