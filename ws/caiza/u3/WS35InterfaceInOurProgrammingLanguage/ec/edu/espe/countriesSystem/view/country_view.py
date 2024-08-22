@@ -1,5 +1,8 @@
 import tkinter as tk
-from tkinter import ttk, messagebox
+from tkinter import messagebox
+from ec.edu.espe.countriesSystem.view.list_frame import ListFrame
+from ec.edu.espe.countriesSystem.view.delete_frame import DeleteFrame
+from ec.edu.espe.countriesSystem.view.search_frame import SearchFrame
 
 class CountryView:
     def __init__(self, root):
@@ -38,80 +41,27 @@ class CountryView:
         tk.Button(button_frame, text="Search Country", command=self.show_search_frame).pack(pady=5, fill=tk.X)
         tk.Button(button_frame, text="Refresh List", command=self.refresh_list).pack(pady=5, fill=tk.X)
 
-        # Panel for message
+        # Message Panel
         self.message_panel = tk.Label(root, text="", fg="green")
         self.message_panel.pack(pady=10)
 
-        # Create the list frame
-        self.list_frame = tk.Toplevel(root)
-        self.list_frame.title("Country List")
-        self.list_frame.geometry("800x600")
-        self.list_frame.protocol("WM_DELETE_WINDOW", self.hide_list_frame)
-        self.list_frame.withdraw()  # Hide the frame initially
+        # Density Result Panel
+        self.density_panel = tk.Label(root, text="", fg="blue")
+        self.density_panel.pack(pady=10)
 
-        # Treeview for displaying countries
-        self.tree = ttk.Treeview(self.list_frame, columns=("Country", "Capital", "Area", "Population", "Density"), show='headings')
-        self.tree.heading("Country", text="Country")
-        self.tree.heading("Capital", text="Capital")
-        self.tree.heading("Area", text="Area (km²)")
-        self.tree.heading("Population", text="Population (millions)")
-        self.tree.heading("Density", text="Density (people/km²)")
-        self.tree.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
-
-        # Button to return to main frame
-        return_button = tk.Button(self.list_frame, text="Back to Main", command=self.hide_list_frame)
-        return_button.pack(pady=10)
-
-        # Create the delete frame
-        self.delete_frame = tk.Toplevel(root)
-        self.delete_frame.title("Delete Country")
-        self.delete_frame.geometry("300x150")
-        self.delete_frame.protocol("WM_DELETE_WINDOW", self.hide_delete_frame)
-        self.delete_frame.withdraw()  # Hide the frame initially
-
-        # Content of the delete frame
-        tk.Label(self.delete_frame, text="Country to delete:").pack(pady=10)
-        self.delete_entry = tk.Entry(self.delete_frame)
-        self.delete_entry.pack(pady=5)
-        tk.Button(self.delete_frame, text="Delete", command=self.confirm_delete_country).pack(pady=5)
-        self.delete_message_panel = tk.Label(self.delete_frame, text="", fg="green")
-        self.delete_message_panel.pack(pady=10)
-
-        # Button to return to main frame from delete frame
-        delete_back_button = tk.Button(self.delete_frame, text="Back to Main", command=self.hide_delete_frame)
-        delete_back_button.pack(pady=10)
-
-        # Create the search frame
-        self.search_frame = tk.Toplevel(root)
-        self.search_frame.title("Search Country")
-        self.search_frame.geometry("600x400")  # Larger frame for better visibility
-        self.search_frame.protocol("WM_DELETE_WINDOW", self.hide_search_frame)
-        self.search_frame.withdraw()  # Hide the frame initially
-
-        # Content of the search frame
-        search_panel = tk.Frame(self.search_frame)
-        search_panel.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
-
-        tk.Label(search_panel, text="Country to search:").pack(pady=10)
-        self.search_entry = tk.Entry(search_panel)
-        self.search_entry.pack(pady=5)
-        tk.Button(search_panel, text="Search", command=self.search_country).pack(pady=5)
-
-        self.search_result = tk.Label(search_panel, text="", fg="blue", justify=tk.LEFT)
-        self.search_result.pack(pady=10)
-
-        # Button to return to main frame from search frame
-        search_back_button = tk.Button(search_panel, text="Back to Main", command=self.hide_search_frame)
-        search_back_button.pack(pady=10)
+        # Initialize frames
+        self.list_frame = ListFrame(root, self.hide_list_frame)
+        self.delete_frame = DeleteFrame(root, self.hide_delete_frame, self.confirm_delete_country)
+        self.search_frame = SearchFrame(root, self.hide_search_frame, self.search_country)
 
     def calculate_density(self):
         try:
             area = float(self.area_entry.get())
             population = float(self.population_entry.get())
             density = population / area if area > 0 else 0
-            self.update_density(density)
+            self.density_panel.config(text=f"Density: {density:.2f} people/km²")
         except ValueError:
-            self.update_density("Invalid input")
+            self.show_message("Invalid input")
 
     def confirm_add_country(self):
         country_data = {
@@ -122,10 +72,10 @@ class CountryView:
         }
         if all(value is not None for value in country_data.values()):
             confirm = messagebox.askyesno("Confirm", f"Do you want to add this country?\n\n"
-                f"Country: {country_data['pais']}\n"
-                f"Capital: {country_data['capital']}\n"
-                f"Area: {country_data['area']} km²\n"
-                f"Population: {country_data['poblacion']} million\n")
+                                                     f"Country: {country_data['pais']}\n"
+                                                     f"Capital: {country_data['capital']}\n"
+                                                     f"Area: {country_data['area']} km²\n"
+                                                     f"Population: {country_data['poblacion']} million\n")
             if confirm:
                 self.callback_add_country(country_data)
 
@@ -168,43 +118,40 @@ class CountryView:
             self.callback_add_country(country_data)
 
     def show_countries(self):
-        self.list_frame.deiconify()  # Show the list frame
+        self.list_frame.show()
         self.callback_show_countries()
 
     def show_delete_frame(self):
-        self.input_frame.pack_forget()  # Hide the main input frame
-        self.delete_frame.deiconify()  # Show the delete frame
+        self.input_frame.pack_forget()
+        self.delete_frame.show()
 
-    def confirm_delete_country(self):
-        country_name = self.delete_entry.get()
+    def confirm_delete_country(self, country_name):
         if country_name:
             confirm = messagebox.askyesno("Confirm", f"Do you want to delete the country '{country_name}'?")
             if confirm:
                 self.callback_delete_country(country_name)
-                self.delete_message_panel.config(text=f"Country '{country_name}' deleted successfully!")
-                self.delete_entry.delete(0, tk.END)
+                self.delete_frame.show_message(f"Country '{country_name}' deleted successfully!")
         else:
             messagebox.showerror("Input Error", "Please enter the name of the country to delete.")
 
     def show_search_frame(self):
-        self.input_frame.pack_forget()  # Hide the main input frame
-        self.search_frame.deiconify()  # Show the search frame
+        self.input_frame.pack_forget()
+        self.search_frame.show()
 
-    def search_country(self):
-        country_name = self.search_entry.get()
+    def search_country(self, country_name):
         if country_name:
             country = self.callback_search_country(country_name)
             if country:
                 area = country['area']
                 population = country['poblacion']
                 density = population / area if area > 0 else 0
-                self.search_result.config(text=f"Country: {country['pais']}\n"
-                                               f"Capital: {country['capital']}\n"
-                                               f"Area: {area} km²\n"
-                                               f"Population: {population} million\n"
-                                               f"Density: {density:.2f} people/km²")
+                self.search_frame.show_result(f"Country: {country['pais']}\n"
+                                              f"Capital: {country['capital']}\n"
+                                              f"Area: {area} km²\n"
+                                              f"Population: {population} million\n"
+                                              f"Density: {density:.2f} people/km²")
             else:
-                self.search_result.config(text="Country not found.")
+                self.search_frame.show_result("Country not found.")
         else:
             messagebox.showerror("Input Error", "Please enter the name of the country to search.")
 
@@ -212,45 +159,22 @@ class CountryView:
         self.callback_refresh_list()
 
     def update_listbox(self, countries):
-        for row in self.tree.get_children():
-            self.tree.delete(row)
-        
-        for country in countries:
-            area = country['area']
-            population = country['poblacion']
-            density = population / area if area > 0 else 0
-            self.tree.insert("", tk.END, values=(
-                country['pais'],
-                country['capital'],
-                f"{area} km²",
-                f"{population} million",
-                f"{density:.2f}"
-            ))
-
-    def update_density(self, density):
-        if isinstance(density, str):
-            self.density_label.config(text=f"Density: {density}")
-        else:
-            self.density_label.config(text=f"Density: {density:.2f} people/km²")
+        self.list_frame.update_list(countries)
 
     def show_message(self, message):
-        messagebox.showinfo("Info", message)
+        self.message_panel.config(text=message)
 
     def hide_list_frame(self):
-        self.list_frame.withdraw()  # Hide the list frame
-        self.input_frame.pack(pady=10)  # Show the main input frame again
-        self.search_result.config(text="")  # Clear the search result
+        self.list_frame.hide()
+        self.input_frame.pack(pady=10)
 
     def hide_delete_frame(self):
-        self.delete_frame.withdraw()  # Hide the delete frame
-        self.input_frame.pack(pady=10)  # Show the main input frame again
-        self.delete_message_panel.config(text="")  # Clear the delete message
+        self.delete_frame.hide()
+        self.input_frame.pack(pady=10)
 
     def hide_search_frame(self):
-        self.search_frame.withdraw()  # Hide the search frame
-        self.input_frame.pack(pady=10)  # Show the main input frame again
-        self.search_entry.delete(0, tk.END)  # Clear the search entry
-        self.search_result.config(text="")  # Clear the search result
+        self.search_frame.hide()
+        self.input_frame.pack(pady=10)
 
     def set_add_country_callback(self, callback):
         self.callback_add_country = callback
