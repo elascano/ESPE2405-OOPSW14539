@@ -6,7 +6,7 @@ package ec.edu.espe.event.hw29compositepattern;
 
 /**
  *
- * @author Eduardo Segarra, TheJavaBandits, DCCO-ESPE
+ * @author Lainez Ricardo JEZHE ESPE
  */
 public class Manager extends Supervisior{
     public Manager(String aName){
