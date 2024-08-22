@@ -8,7 +8,7 @@ import ec.edu.espe.singleton.model.InterfaceCreator;
 
 /**
  *
- * @author Eduardo Segarra, TheJavaBandits, DCCO-ESPE
+ * @author Lainez Ricardo JEZHE ESPE
  */
 public class Client {
 
