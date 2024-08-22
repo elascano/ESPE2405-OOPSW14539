@@ -8,7 +8,7 @@ import java.util.Vector;
 
 /**
  *
- * @author Eduardo Segarra, TheJavaBandits, DCCO-ESPE
+ * @author Lainez Ricardo JEZHE ESPE
  */
 abstract class Supervisior extends Employee{
     protected Vector directReports = new Vector();
