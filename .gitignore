@@ -23,9 +23,6 @@
 hs_err_pid*
 replay_pid*
 /ws/padilla/u2/ws26/Zoo/target/
-<<<<<<< HEAD
-=======
->>>>>>> 075c1081d3538a08176777474a183a1a6b24474d
 >>>>>>> 9e8a528b77f9ce8047bf123a8daa8d6ed98c6e8d
 =======
 /ws/padilla/u2/ws26/Zoo/target/
@@ -38,12 +35,7 @@ replay_pid*
 /dc/Overnight_Development_Squad_T2/GeneratedUML/FinalSpeed/nbproject/
 /qz/u2/blacio/QZ3 FinalSpeed/FinalSpeed/target/
 >>>>>>> dc509c3b7e3c6fb9dcc9bf7474e1218216b2e71a
-<<<<<<< HEAD
-/qz/u2/santi/Exam U2/71-100/Exam/target/
-/hw/santi/u1/HW09IncomeTaxes/ExamSpeakers/target/
-=======
 /ws/ona/u2/ws30UnitTesting/Quiz_25_7_24/target/
->>>>>>> 37b5e657d0a63abedb100b1af673bb7b42c5b9fc
 /exams/u2/chiriboga/OOPEXAM2EXERCISE14539/OOPEXAM2EXERCISE14539/ExecutableCode/OOP14539Exam2Exercise/target/
 <<<<<<< HEAD
 /hw/santi/u3/Hw20/CreateMaze/target/
@@ -62,8 +54,4 @@ replay_pid*
 >>>>>>> b847a4e496974ebf1b46b85dfbe15c5d8226975d
 /hw/blacio/u3/HW27_28 TemplateAndCompsite/HW27_Template/target/
 /hw/lainez/u3/HW29TemplateAndCompsite/HW29TemplateAndCompsite/HW29CompositePattern/target/
-/hw/lainez/u3/HW26TemplateAndCompsite/HW29TemplateAndCompsite/HW29CompositePattern/target/
-/hw/lainez/u3/HW26TemplateAndCompsite/HW29TemplateAndCompsite/HW29TemplateMethod/target/
-/hw/lainez/u3/HW25SingletonAndAbstractFactory/HW28SingletonAndAbstractFactory/HW28AbstractFactory/target/
-/hw/lainez/u3/HW25SingletonAndAbstractFactory/HW28SingletonAndAbstractFactory/HW28Singleton/target/
-/hw/lainez/u3/hw27StrategyPattern/StrategyPatttern/target/
+/hw/blacio/u3/HW25_26 Singleton_AbstractFactory/HW25 Singleton/HW25_Singleton/target/
