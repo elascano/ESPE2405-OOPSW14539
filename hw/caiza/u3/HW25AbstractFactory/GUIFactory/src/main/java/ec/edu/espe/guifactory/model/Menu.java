@@ -6,5 +6,9 @@ package ec.edu.espe.guifactory.model;
  */
 public abstract class Menu {
     public String caption;
+    
+    public Menu(String caption) {
+    this.caption = caption;
+    }
     public abstract void paint(); //Action to "paint" the Menu
 }

@@ -8,13 +8,14 @@ import java.awt.Menu;
  * @author Miguel Caiza,Overnight Developers Squad,DCCO-ESPE
  */
 public class LinuxFactory extends GUIFactory {
+    
     @Override
     public Button createButton() {
-        return new LinuxButton();
+        return new LinuxButton("Play");
     }
 
     @Override
     public Menu createMenu() {
-        return new LinuxMenu();
+        return new LinuxMenu("File");
     }  
 }

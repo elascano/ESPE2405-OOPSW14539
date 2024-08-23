@@ -6,6 +6,10 @@ package ec.edu.espe.guifactory.model;
  */
 public class WinButton extends Button{
 
+    public WinButton(String caption) {
+        super(caption);
+    }
+
     @Override
     public void paint() {
         System.out.println("Creating a Windows-style button with caption: " + caption);
