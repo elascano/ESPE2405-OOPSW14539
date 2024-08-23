@@ -1,5 +1,8 @@
-ec\edu\espe\composite\view\GraphicView.class
-ec\edu\espe\composite\model\Component.class
-ec\edu\espe\composite\model\Composite.class
-ec\edu\espe\composite\controller\GraphicController.class
-ec\edu\espe\composite\model\Leaf.class
+ec\edu\espe\composite\view\Setup.class
+ec\edu\espe\composite\model\President.class
+ec\edu\espe\composite\model\Manager.class
+ec\edu\espe\composite\controller\Client.class
+ec\edu\espe\composite\model\Clerk.class
+ec\edu\espe\composite\model\Supervisor.class
+ec\edu\espe\composite\model\Employee.class
+ec\edu\espe\composite\model\Teller.class
