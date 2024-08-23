@@ -1,11 +1,11 @@
-package ec.edu.espe.hw25_singleton.model;
+package ec.edu.espe.hw25_abstactfactory.model;
 
 /**
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
-public class LinuxMenu extends Menu {
-    
+public class LinuxButton extends Button {
+
     public void paint() {
         System.out.println("I'm a LinuxButton:" + caption);
     }

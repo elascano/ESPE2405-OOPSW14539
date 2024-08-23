@@ -1,4 +1,4 @@
-package ec.edu.espe.hw25_singleton.model;
+package ec.edu.espe.hw25_abstactfactory.model;
 
 /**
  *

@@ -1,7 +1,7 @@
-package ec.edu.espe.hw25_singleton.view;
+package ec.edu.espe.hw25_abstractfactory.view;
 
-import ec.edu.espe.hw25_singleton.model.Button;
-import ec.edu.espe.hw25_singleton.model.Menu;
+import ec.edu.espe.hw25_abstactfactory.model.Button;
+import ec.edu.espe.hw25_abstactfactory.model.Menu;
 
 /**
  *
