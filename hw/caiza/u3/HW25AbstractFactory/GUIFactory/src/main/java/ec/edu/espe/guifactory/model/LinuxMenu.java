@@ -6,8 +6,10 @@ package ec.edu.espe.guifactory.model;
  */
 public class LinuxMenu extends Menu{
 
-    public LinuxMenu() {
+    public LinuxMenu(String caption) {
+        super(caption);
     }
+    
      @Override
     public void paint() {
         System.out.println("Creating a Linux-style menu with caption: " + caption);
