@@ -6,7 +6,7 @@ package ec.edu.espe.hw27_template.model;
  */
 public abstract class CaffeineBeverage {
 
-    void prepareRecipe() {
+    public void prepareRecipe() {
         boilWater();
         brew();
         pourInCup();

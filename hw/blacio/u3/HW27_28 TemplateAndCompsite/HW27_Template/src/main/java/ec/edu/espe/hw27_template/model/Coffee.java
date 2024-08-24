@@ -8,14 +8,14 @@ import java.io.InputStreamReader;
  *
  * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
  */
-public class Tea extends CaffeineBeverage {
+public class Coffee extends CaffeineBeverage {
 
     void brew() {
-        System.out.println("Sleep the tea");
+        System.out.println("Dripping coffee through milk");
     }
 
     void addCondiments() {
-        System.out.println("Adding the lemon");
+        System.out.println("Adding sugar and milk");
     }
 
     public boolean wantsCondiments() {
@@ -29,7 +29,7 @@ public class Tea extends CaffeineBeverage {
 
     private String getUserInput() {
         String answer = null;
-        System.out.println("Would you like lemon with your tea (y/n)?");
+        System.out.println("Would you like milk and sugar your coffee (y/n)?");
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         try {
             answer = in.readLine();

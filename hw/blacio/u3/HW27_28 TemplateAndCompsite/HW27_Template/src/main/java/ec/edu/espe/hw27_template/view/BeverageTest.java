@@ -1,5 +1,6 @@
 package ec.edu.espe.hw27_template.view;
 
+import ec.edu.espe.hw27_template.model.Coffee;
 import ec.edu.espe.hw27_template.model.Tea;
 
 /**
