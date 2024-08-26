@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author heiso
  */
 public class Tiger extends Feline {
 

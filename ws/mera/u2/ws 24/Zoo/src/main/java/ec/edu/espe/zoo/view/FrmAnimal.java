@@ -6,7 +6,7 @@ package ec.edu.espe.zoo.view;
 
 /**
  *
- * @author Mario Anrrango, A-Byte Wizards, DCCO - ESPE
+ * @author heiso
  */
 public class FrmAnimal extends javax.swing.JFrame {
 

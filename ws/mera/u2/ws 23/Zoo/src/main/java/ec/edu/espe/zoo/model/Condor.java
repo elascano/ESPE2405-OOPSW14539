@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author heiso
  */
 public class Condor extends Bird {
 

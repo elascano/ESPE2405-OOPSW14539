@@ -2,7 +2,7 @@ package ec.edu.espe.zoo.model;
 
 /**
  *
- * @author Julio Blacio, Overnight Developers Squad, DCCO-ESPE
+ * @author heiso
  */
 public class Food {
     int id;
