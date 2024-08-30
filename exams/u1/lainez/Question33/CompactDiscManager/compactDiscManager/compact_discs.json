@@ -1,0 +1,23 @@
+[
+  {
+    "id": "23",
+    "title": "michael jackson",
+    "artist": "michael jacskson",
+    "genre": "pop",
+    "releaseDate": "1998"
+  },
+  {
+    "id": "4",
+    "title": "Thriller",
+    "artist": "Jackson",
+    "genre": "Pop",
+    "releaseDate": "29-11-1982"
+  },
+  {
+    "id": "5",
+    "title": "Bad",
+    "artist": "Michael Jackson",
+    "genre": "Pop",
+    "releaseDate": "31-08-1987"
+  }
+]

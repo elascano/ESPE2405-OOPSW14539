@@ -1,6 +1,0 @@
-ec\edu\espe\strategypattern\controller\InsertSort.class
-ec\edu\espe\strategypattern\view\SortApp.class
-ec\edu\espe\strategypattern\controller\SortingStrategy.class
-ec\edu\espe\strategypattern\model\SortingContext.class
-ec\edu\espe\strategypattern\controller\BubbleSort.class
-ec\edu\espe\strategypattern\controller\QuickSort.class
