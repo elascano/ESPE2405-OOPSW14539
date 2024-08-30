@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery System Mockup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bakery System Mockup</h1>
+        <div class="button-container">
+            <button id="addProductBtn">Añadir Producto</button>
+            <button id="createBillBtn">Crear Factura</button>
+        </div>
+        <div id="addProductForm" class="form-container">
+            <h2>Añadir Producto</h2>
+            <label for="productId">ID:</label>
+            <input type="text" id="productId" placeholder="Ingrese ID">
+            <label for="productName">Nombre:</label>
+            <input type="text" id="productName" placeholder="Ingrese Nombre">
+            <label for="productPrice">Precio:</label>
+            <input type="text" id="productPrice" placeholder="Ingrese Precio">
+            <label for="productAmount">Cantidad:</label>
+            <input type="text" id="productAmount" placeholder="Ingrese Cantidad">
+            <button id="saveProductBtn">Guardar</button>
+        </div>
+        <div id="createBillForm" class="form-container">
+            <h2>Crear Factura</h2>
+            <label for="billNumber">Número de Factura:</label>
+            <input type="text" id="billNumber" placeholder="Ingrese Número de Factura">
+            <label for="consumerName">Nombre del Consumidor:</label>
+            <input type="text" id="consumerName" placeholder="Ingrese Nombre del Consumidor">
+            <button id="createBillBtn">Crear</button>
+            <h3>Factura en JSON</h3>
+            <textarea id="billJsonOutput" readonly></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

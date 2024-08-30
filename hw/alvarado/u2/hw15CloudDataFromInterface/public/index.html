@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Form</title>
+</head>
+<body>
+    <h1>Customer Form</h1>
+    <form id="customerForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required><br><br>
+
+        <button type="button" onclick="saveData()">Save</button>
+    </form>
+
+    <script>
+        function saveData() {
+            const formData = new FormData(document.getElementById('customerForm'));
+            const data = Object.fromEntries(formData.entries());
+
+            console.log('Data to send:', data); // Debugging
+
+            fetch('/saveCustomer', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Data saved successfully');
+                document.getElementById('customerForm').reset();
+            })
+            .catch(error => {
+                console.error('Error saving data:', error);
+            });
+        }
+    </script>
+</body>
+</html>

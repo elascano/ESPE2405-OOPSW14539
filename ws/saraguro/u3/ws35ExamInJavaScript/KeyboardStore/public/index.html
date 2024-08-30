@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Store</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Keyboard Store</h1>
+    
+    <h2>Add Keyboard</h2>
+    <form id="keyboardForm">
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required><br><br>
+
+        <label for="type">Type of Keyboard:</label>
+        <input type="text" id="type" name="type" required><br><br>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
+
+        <button type="button" onclick="addKeyboard()">Add Keyboard</button>
+    </form>
+    
+    <h2>Keyboards List</h2>
+    <button type="button" onclick="getKeyboards()">Read Keyboards</button>
+    
+    <table id="keyboardsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Price</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        function addKeyboard() {
+            const formData = {
+                id: document.getElementById('id').value,
+                type: document.getElementById('type').value,
+                amount: parseFloat(document.getElementById('amount').value),
+                price: parseFloat(document.getElementById('price').value)
+            };
+
+            fetch('/addKeyboard', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.status);
+                document.getElementById('keyboardForm').reset();
+                getKeyboards(); // Refresh the table
+            })
+            .catch(error => console.error('Error:', error));
+        }
+
+        function getKeyboards() {
+            fetch('/getKeyboards')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.querySelector('#keyboardsTable tbody');
+                    tableBody.innerHTML = ''; // Clear existing rows
+                    data.forEach(keyboard => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${keyboard.id}</td>
+                            <td>${keyboard.type}</td>
+                            <td>${keyboard.amount}</td>
+                            <td>${keyboard.price.toFixed(2)}</td>
+                            <td>${keyboard.totalPrice.toFixed(2)}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

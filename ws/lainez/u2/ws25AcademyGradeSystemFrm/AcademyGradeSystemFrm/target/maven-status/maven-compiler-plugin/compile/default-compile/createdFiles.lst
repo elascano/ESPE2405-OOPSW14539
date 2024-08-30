@@ -9,6 +9,7 @@ ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$7.class
 ec\edu\espe\academygradesystemfrm\FrmCreateProfessor$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteStudentGrade$1.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister.class
+ec\edu\espe\academygradesystemfrm\FrmCreateStudent$3.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$4.class
 ec\edu\espe\academygradesystemfrm\FrmAddGradeToStudent$1.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$6.class
@@ -33,6 +34,7 @@ ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$5.class
 ec\edu\espe\academygradesystemfrm\FrmLogIn$3.class
 ec\edu\espe\academygradesystemfrm\FrmCreateProfessor$3.class
 ec\edu\espe\academygradesystemfrm\FrmCreateProfessor.class
+ec\edu\espe\academygradesystemfrm\model\CreateStudent.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteStudent$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteStudent.class
@@ -44,6 +46,7 @@ ec\edu\espe\academygradesystemfrm\FrmDeleteProfessor$1.class
 ec\edu\espe\academygradesystemfrm\FrmDeleteProfessor.class
 ec\edu\espe\academygradesystemfrm\FrmGenerateStudentReport$1.class
 ec\edu\espe\academygradesystemfrm\FrmUpdateStudent.class
+ec\edu\espe\academygradesystemfrm\utils\StudentToMongo.class
 ec\edu\espe\academygradesystemfrm\FrmCreateStudent$1.class
 ec\edu\espe\academygradesystemfrm\FrmAbout$2.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$2.class

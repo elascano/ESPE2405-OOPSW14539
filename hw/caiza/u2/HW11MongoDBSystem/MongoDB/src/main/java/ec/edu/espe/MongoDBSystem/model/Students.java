@@ -19,18 +19,17 @@ public class Students {
 
     @Override
     public String toString() {
-        return "students{" + "id=" + id + ", name=" + name + ", bornOnDate=" + bornOnDate + ", average=" + average + ", male=" + male + ", siblings=" + siblings + '}';
+        return "Students{" +
+                "id=" +id + '\'' +
+                ", name=" + name + '\'' +
+                ", bornOnDate=" + bornOnDate + '\'' + 
+                ", average=" + average + '\'' +
+                ", male=" + male + '\'' + 
+                ", siblings="+ siblings + 
+                '}';
     }
 
-    public Students(String id, String name, Date bornOnDate, double average, boolean male, int siblings) {
-        this.id = id;
-        this.name = name;
-        this.bornOnDate = bornOnDate;
-        this.average = average;
-        this.male = male;
-        this.siblings = siblings;
-    }
-
+    
     /**
      * @return the id
      */

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add House</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 80%;
+      max-width: 800px;
+    }
+    h2 {
+      text-align: center;
+    }
+    #houseForm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .column {
+      width: 48%;
+    }
+    .column label {
+      display: block;
+      margin-top: 10px;
+    }
+    .column input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .button-container button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+    button:first-child {
+      background-color: #4CAF50;
+    }
+    button:last-child {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Agregar Casa</h2>
+    <form id="houseForm">
+      <div class="column">
+        <label for="address">Dirección:</label>
+        <input type="text" id="address">
+        
+        <label for="city">Ciudad:</label>
+        <input type="text" id="city">
+      </div>
+      <div class="column">
+        <label for="size">Tamaño (m²):</label>
+        <input type="number" id="size">
+        
+        <label for="bedrooms">Habitaciones:</label>
+        <input type="number" id="bedrooms">
+      </div>
+      <div class="button-container">
+        <button type="button" id="saveButton">Guardar</button>
+      </div>
+    </form>
+  </div>
+  <script src="./Main.js"></script>
+</body>
+</html>
