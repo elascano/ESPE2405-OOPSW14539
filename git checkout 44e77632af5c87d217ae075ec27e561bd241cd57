@@ -1,0 +1,276 @@
+[33mcommit b23e074acfc5d029c4e1a5c71d93434a3ba47603[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: hsmera <hsmera@espe.edu.ec>
+Date:   Fri Aug 30 17:42:49 2024 -0500
+
+    aving local changes before reverting
+
+[33mcommit 99bb2779486e82d2d85232a8bc582984a3669b1e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 3755e81e0 44e77632a
+Author: hsmera <hsmera@espe.edu.ec>
+Date:   Fri Aug 30 12:32:34 2024 -0500
+
+    Git Pull
+
+[33mcommit 3755e81e0d7e2b42b686135112e67411202b297f[m
+Merge: 62f1632e7 2839c1f6c
+Author: hsmera <hsmera@espe.edu.ec>
+Date:   Fri Aug 30 12:28:38 2024 -0500
+
+    Upadte
+
+[33mcommit 44e77632af5c87d217ae075ec27e561bd241cd57[m
+Author: Miguel Caiza <miguel14caiza@gmail.com>
+Date:   Fri Aug 30 10:42:47 2024 -0500
+
+    Exam U3
+
+[33mcommit 1cce50ca213ddf8dc5b845c78bd41ee5d888cd35[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Thu Aug 29 23:12:46 2024 -0500
+
+    exams folders V3.0
+
+[33mcommit d9126910877c29c4d07255ab3afe0ed206814cd3[m
+Author: Erick_Tufiño <eato2001@hotmail.com>
+Date:   Thu Aug 29 22:50:26 2024 -0500
+
+    exam
+
+[33mcommit 3d6030a6b29debba91d358f5d43158402227dfc9[m
+Author: Adrizzx <adrianpadilla824@gmail.com>
+Date:   Thu Aug 29 22:11:06 2024 -0500
+
+    exam 3 java an javascript
+
+[33mcommit 9e97775a512ec5a107f4c44fee7e64edd75bc50a[m
+Author: Kleiner <kleinerarmas70@gmail.com>
+Date:   Thu Aug 29 20:15:13 2024 -0500
+
+     archivo subido
+
+[33mcommit 80d4f207c7d8adafcffd8f9ad56d042b50ed9567[m
+Author: k0c0h <chiribogakerly@gmail.com>
+Date:   Thu Aug 29 16:10:38 2024 -0500
+
+    folder V1.0
+
+[33mcommit 18a30d018b357f52378563d2d7536f04cb3da3b5[m
+Author: k0c0h <chiribogakerly@gmail.com>
+Date:   Thu Aug 29 16:00:21 2024 -0500
+
+    folder V1.0
+
+[33mcommit f7b2ed2eb4a1e705e32871c5aade197fa1d32762[m
+Author: Edgar Damián Toscano Coro <damiantoscano101@gmail.com>
+Date:   Mon Aug 26 20:14:46 2024 -0500
+
+    Version 1.0
+
+[33mcommit 62f1632e76e77b46bcb59e85379d0d57c0cdc5ae[m
+Author: hsmera <hsmera@espe.edu.ec>
+Date:   Mon Aug 26 07:10:11 2024 -0500
+
+    Update ws, hw
+
+[33mcommit 2839c1f6c02a7742a0878f167c90d0832493e248[m
+Merge: d34dfca7e 4af64ec78
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Mon Aug 26 07:08:22 2024 -0500
+
+    Merge branch 'main' of https://github.com/elascano/ESPE2405-OOPSW14539
+
+[33mcommit d34dfca7efe729b12616816fa22b828f83c25894[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Mon Aug 26 07:08:17 2024 -0500
+
+    hw folders V3.0
+
+[33mcommit 4af64ec7893d0a50367c236e726009d95bdc57e4[m
+Author: Zaith Alejandro Manangon Vinueza <a.manangon09@gmail.com>
+Date:   Mon Aug 26 05:12:18 2024 -0500
+
+    hw
+
+[33mcommit e0f0a965dfe1c80958206b43f5d043a3ad443f17[m
+Author: Miguel Caiza <miguel14caiza@gmail.com>
+Date:   Sun Aug 25 22:08:17 2024 -0500
+
+    Desing Patters Homewors
+
+[33mcommit fa1aaccb8722b06c6466ae8a3f766a11d5353d9f[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Sat Aug 24 04:32:44 2024 -0500
+
+    hw folders V3.0
+
+[33mcommit 623d343d0031043f9f9a71ab911307459a5461cc[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Sat Aug 24 03:47:14 2024 -0500
+
+    hw folders V3.0
+
+[33mcommit 3bc79059250b234eedcb0742d1c656afe18e59e6[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Sat Aug 24 03:00:28 2024 -0500
+
+    hw folders V3.0
+
+[33mcommit 1e3bb57013a396c97ba46073eda6ed913ec859c3[m
+Author: leydiespe <espelady34@gmail.com>
+Date:   Fri Aug 23 23:05:21 2024 -0500
+
+    v1.0
+
+[33mcommit af6c1e0a98527397787390b048b3ede28db69dcd[m
+Merge: fd67ddbd4 0ed2012a6
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Fri Aug 23 13:13:14 2024 -0500
+
+    Merge branch 'main' of https://github.com/elascano/ESPE2405-OOPSW14539
+
+[33mcommit fd67ddbd4402c5b40c7f04a6b132321518e480cb[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Fri Aug 23 13:13:08 2024 -0500
+
+    hw folders V3.0
+
+[33mcommit 0ed2012a651078cc40dbd7e0e8024420a23f1434[m
+Author: Leidy04S <leidysaraguro691@gmail.com>
+Date:   Fri Aug 23 13:03:48 2024 -0500
+
+    Folder
+
+[33mcommit 27ad92457b65d2095052f3c722beef659d469bab[m
+Author: Andrea Katherine Raura Negrete <rauraandrea0@gmail.com>
+Date:   Fri Aug 23 12:53:03 2024 -0500
+
+    hw design patterns
+
+[33mcommit 0b778f016b944369670b50050c1b7ad5416b7b36[m
+Author: leydiespe <espelady34@gmail.com>
+Date:   Fri Aug 23 12:50:48 2024 -0500
+
+    .
+
+[33mcommit 745fa4d1f8e7db89d8c11b7147a936959b0d0952[m
+Author: leydiespe <espelady34@gmail.com>
+Date:   Fri Aug 23 12:45:15 2024 -0500
+
+    v1.0
+
+[33mcommit b4ae59c761a0bfa9872cf15627cb0e886cbceee1[m
+Author: David Pilaguano <plusmats@gmail.com>
+Date:   Fri Aug 23 12:39:37 2024 -0500
+
+    hw
+
+[33mcommit 968a09fa14b504aeb7bb7485eba1f8ccb0ee0ea0[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:29:55 2024 -0500
+
+    up up up
+
+[33mcommit 45315d5f52f8f61a315afabeb9eaca88b60a0129[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:27:39 2024 -0500
+
+    Add files via upload
+
+[33mcommit 7e5f0219bbb630c445aec8169c426bb34ad81a94[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:26:01 2024 -0500
+
+    Add files via upload
+
+[33mcommit 424d12e7527652fd7c31756d31e76fe50cf3396c[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:25:23 2024 -0500
+
+    Delete hw/llumiquinga/u3/hw21FindPitfalls/.h
+
+[33mcommit b8979bae9ae7d861e994ce024a23679b8cb61d48[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:25:01 2024 -0500
+
+    Add files via upload
+
+[33mcommit 3aad5787500c4328d5d4b5f8d1fe1750c9afed40[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:24:31 2024 -0500
+
+    Delete hw/llumiquinga/u3/hw21FindPitfalls/hw21FindPitfalls.pdf
+
+[33mcommit 3b78f1723d010b8675f5952a59fa63f80eb3650a[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 12:24:20 2024 -0500
+
+    Create .h
+
+[33mcommit dfa72d93b318d4481360dd24dfbc7da50e7af46f[m
+Author: Edgar Damián Toscano Coro <damiantoscano101@gmail.com>
+Date:   Fri Aug 23 11:59:05 2024 -0500
+
+    Version 2.0
+
+[33mcommit 8e78370a7eb80f30549a6781ebfb612f21ab6e6b[m
+Author: Frank Marco Alvarado Grefa <frankmarcogrefa@gmail.com>
+Date:   Fri Aug 23 10:28:23 2024 -0500
+
+    udpate
+
+[33mcommit 69b6583c946b1f622860d9f8913d44eaa5b477f4[m
+Author: Frank Marco Alvarado Grefa <frankmarcogrefa@gmail.com>
+Date:   Fri Aug 23 10:25:51 2024 -0500
+
+    update
+
+[33mcommit a3063c127564e75192fa9c066befcaf4fd18d0e7[m
+Author: Frank Marco Alvarado Grefa <frankmarcogrefa@gmail.com>
+Date:   Fri Aug 23 10:06:09 2024 -0500
+
+    update
+
+[33mcommit 45c185c5ee6d089b2baffee941ff4c7c7497793b[m
+Author: Julio César Blacio Machuca <jcblaciomachuca@gmail.com>
+Date:   Fri Aug 23 09:31:15 2024 -0500
+
+    hw folders V3.0
+
+[33mcommit bb04d44b2ce4b02b8ec32d1f35a4f5f6414994c4[m
+Author: Adrizzx <adrianpadilla824@gmail.com>
+Date:   Fri Aug 23 09:13:08 2024 -0500
+
+    hw
+
+[33mcommit 6257298f597e0c339e4950a6e9749ac55ac0ad0e[m
+Merge: dbbe93495 e023b1f25
+Author: k0c0h <chiribogakerly@gmail.com>
+Date:   Fri Aug 23 08:25:31 2024 -0500
+
+    personal folder V1.0
+
+[33mcommit dbbe93495a2a3584700f258f676f98e24b3773a3[m
+Author: k0c0h <chiribogakerly@gmail.com>
+Date:   Fri Aug 23 08:14:19 2024 -0500
+
+    personal folder V1.0
+
+[33mcommit e023b1f25c31b7dd49fefb41c1ab79645522e98a[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 07:51:50 2024 -0500
+
+    up up up
+
+[33mcommit 1eafa74dbf1f8517802cc6269d5fd8a2f335b863[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 07:49:58 2024 -0500
+
+    up up up
+
+[33mcommit 53cdfe01ab1718533a94df940c94e20ec4b46c6b[m
+Author: Jerson Stiven Llumiquinga Moreno <jersonllumiquingam23@gmail.com>
+Date:   Fri Aug 23 07:48:38 2024 -0500
+
+    up!!!1
+
+[33mcommit ae7535c1edc002fd3962e3c873f19d02d790c

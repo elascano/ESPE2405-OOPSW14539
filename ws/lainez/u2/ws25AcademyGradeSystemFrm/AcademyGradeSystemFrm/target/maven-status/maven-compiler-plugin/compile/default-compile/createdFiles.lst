@@ -32,7 +32,6 @@ ec\edu\espe\academygradesystemfrm\FrmReadStudentGrade.class
 ec\edu\espe\academygradesystemfrm\FrmReadProfessor$2.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$5.class
 ec\edu\espe\academygradesystemfrm\FrmLogIn$3.class
-ec\edu\espe\academygradesystemfrm\FrmCreateProfessor$3.class
 ec\edu\espe\academygradesystemfrm\FrmCreateProfessor.class
 ec\edu\espe\academygradesystemfrm\model\CreateStudent.class
 ec\edu\espe\academygradesystemfrm\FrmAcademyGradeRegister$1.class

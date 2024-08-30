@@ -32,11 +32,6 @@ replay_pid*
 <<<<<<< HEAD
 >>>>>>> 075c1081d3538a08176777474a183a1a6b24474d
 >>>>>>> 9e8a528b77f9ce8047bf123a8daa8d6ed98c6e8d
-<<<<<<< HEAD
-/ws/mera/u2/ws 22/UnitTest/nbproject/private/
-/hw/mera/u3/Maze/nbproject/private/
-/hw/mera/u3/Maze/build/
-=======
 /ws/anrrango/u2/ws24GUI/Queez20242507/target/
 /ws/anrrango/u2/ws24GUI/Queez20242507/nbproject/
 =======
@@ -73,4 +68,3 @@ replay_pid*
 /hw/blacio/u3/HW25_26 Singleton_AbstractFactoryPatterns/HW25 Singleton/HW25_AbstractFactory/target/
 /hw/blacio/u3/HW27_28 TemplateAndCompsitePatterns/HW28_Composite/target/
 /hw/blacio/u3/HW29_30 Observer_StrategyPatterns/HW29_Observer/target/
->>>>>>> 2839c1f6c02a7742a0878f167c90d0832493e248
