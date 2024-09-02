@@ -238,4 +238,9 @@ public  class Product {
     /**
      * @param size the size to set
      */
+    public void setSize(String size) {
+        this.size = size;
+    }
     
+   
+}
