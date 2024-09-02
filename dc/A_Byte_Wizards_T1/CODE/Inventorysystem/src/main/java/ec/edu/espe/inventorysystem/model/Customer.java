@@ -2,14 +2,7 @@
 package ec.edu.espe.inventorysystem.model;
 
 
-public class Customer {
-    
-    private String id;
-    private String name;
-    private String address;
-    private String email;
-    private String phone;
-    private String purchaseHistory;
+
 
     public Customer(String id, String name, String address, String email, String phone, String purchaseHistory) {
         this.id = id;
