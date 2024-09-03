@@ -8,7 +8,7 @@ import ec.espe.edu.mazegenerator.model.Room;
 
 /**
  *
- * @author Yostin Sisalema,Code Master,DCCO-ESPE
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public interface IMazeGenerator {
     public void generateMaze(Room[][] maze, int entranceX, int entranceY, int exitX, int exitY);

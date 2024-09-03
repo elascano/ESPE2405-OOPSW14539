@@ -8,7 +8,7 @@ import java.util.Random;
 
 /**
  *
- * @author PAOLA-SSD
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class RandomGenerator {
     private Random random = new Random();

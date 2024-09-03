@@ -9,7 +9,7 @@ import java.util.Random;
 
 /**
  *
- * @author Yostin Sisalema,Code Master,DCCO-ESPE
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class MazeController {
     private final Maze maze;
