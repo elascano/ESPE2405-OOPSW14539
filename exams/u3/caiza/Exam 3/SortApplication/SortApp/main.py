@@ -7,3 +7,4 @@ if __name__ == "__main__":
     view = SortView(root)
     controller = SortController(view)
     root.mainloop()
+    ##python -m SortApp.main
