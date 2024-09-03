@@ -41,7 +41,7 @@ class SortingContext:
         elif size > 10:
             self.strategy = QuickSort()
         else:
-            raise ValueError("El tamaño de la matriz debe ser mayor a 1.")
+            raise ValueError("The size of the array must be greater than 1.")
 
     def sort(self, data):
         return self.strategy.sort(data)
