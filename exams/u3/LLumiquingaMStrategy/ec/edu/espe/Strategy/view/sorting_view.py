@@ -1,12 +1,12 @@
 class SortingView:
     def get_numbers_from_user(self):
         try:
-            size = int(input("Ingrese la cantidad de números a ordenar: "))
+            size = int(input("Enter the number of numbers to sort: "))
             numbers = []
             for i in range(size):
-                num = int(input(f"Ingrese el número {i+1}: "))
+                num = int(input(f"Enter the number {i+1}: "))Enter the number of numbers to sort
                 numbers.append(num)
             return numbers
         except ValueError:
-            print("Entrada no válida, por favor ingrese números enteros.")
+            print("Invalid input, please enter integers.")
             return self.get_numbers_from_user()
