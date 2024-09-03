@@ -10,7 +10,7 @@ class SortingController:
         self.sorting_context.set_strategy(data)
         sorted_data = self.sorting_context.sort(data)
         algorithm = self.sorting_context.strategy.__class__.__name__
-        print(f"Usando {algorithm}")
-        print("Números ordenados:", sorted_data)
+        print(f"Using {algorithm}")
+        print("Ordered numbers:", sorted_data)
         self.db_handler.save_sorting_record(data, sorted_data, algorithm)
-        print("Registro guardado en MongoDB.")
+        print("Record saved in MongoDB.")
