@@ -1,7 +1,6 @@
 
 package ec.edu.espe.inventorysystem.model;
 
-
 public class Customer {
     
     private String id;

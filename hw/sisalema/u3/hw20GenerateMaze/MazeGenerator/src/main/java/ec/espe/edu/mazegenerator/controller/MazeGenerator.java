@@ -10,7 +10,7 @@ import java.util.Stack;
 
 /**
  *
- * @author Yostin Sisalema,Code Master,DCCO-ESPE
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class MazeGenerator implements IMazeGenerator {
     protected RandomGenerator randomGenerator;

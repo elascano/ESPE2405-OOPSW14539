@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Yostin Sisalema,Code Master,DCCO-ESPE
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class MazeSimulator {
     public static void main(String[] args) {

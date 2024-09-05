@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting App</title>
+</head>
+<body>
+    <h1>Enter Elements to Sort</h1>
+    <form id="sortForm">
+        <input type="text" id="elements" placeholder="Enter elements separated by commas">
+        <button type="submit">Sort</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('sortForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const elements = document.getElementById('elements').value.split(',').map(Number);
+            try {
+                const response = await fetch('/sort', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ elements: elements })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                document.getElementById('result').innerText = `Unsorted: ${result.unsorted}, Size: ${result.size}, Algorithm: ${result.algorithm}, Sorted: ${result.sorted}`;
+            } catch (error) {
+                console.error('Error:', error);
+                document.getElementById('result').innerText = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

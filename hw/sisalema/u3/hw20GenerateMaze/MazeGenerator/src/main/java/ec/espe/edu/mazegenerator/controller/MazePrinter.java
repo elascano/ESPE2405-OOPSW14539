@@ -8,7 +8,7 @@ import ec.espe.edu.mazegenerator.model.Maze;
 
 /**
  *
- * @author Yostin Sisalema
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class MazePrinter {
         public String getMazeAsString(Maze maze, int entranceX, int entranceY, int exitX, int exitY) {

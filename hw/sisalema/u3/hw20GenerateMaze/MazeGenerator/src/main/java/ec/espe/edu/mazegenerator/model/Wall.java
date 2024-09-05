@@ -6,7 +6,7 @@ package ec.espe.edu.mazegenerator.model;
 
 /**
  *
- * @author Yostin Sisalema
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class Wall {
     private String direction;

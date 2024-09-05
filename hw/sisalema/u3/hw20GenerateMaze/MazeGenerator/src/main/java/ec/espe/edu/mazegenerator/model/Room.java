@@ -6,7 +6,7 @@ package ec.espe.edu.mazegenerator.model;
 
 /**
  *
- * @author Yostin Sisalema,Code Master,DCCO-ESPE
+ * @author Sigcha Kenned, PPS,DCCO-ESPE
  */
 public class Room {
     private Wall[] walls;
